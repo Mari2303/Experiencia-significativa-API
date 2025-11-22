@@ -1,0 +1,43 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net9.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Implementations\BaseModelService\**" />
+    <Compile Remove="Implementations\ModelDomainService\**" />
+    <Compile Remove="Interfaces\IBaseModelService\**" />
+    <Compile Remove="Interfaces\IModelDomainService\**" />
+    <EmbeddedResource Remove="Implementations\BaseModelService\**" />
+    <EmbeddedResource Remove="Implementations\ModelDomainService\**" />
+    <EmbeddedResource Remove="Interfaces\IBaseModelService\**" />
+    <EmbeddedResource Remove="Interfaces\IModelDomainService\**" />
+    <None Remove="Implementations\BaseModelService\**" />
+    <None Remove="Implementations\ModelDomainService\**" />
+    <None Remove="Interfaces\IBaseModelService\**" />
+    <None Remove="Interfaces\IModelDomainService\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="AutoMapper" Version="15.0.1" />
+    <PackageReference Include="BCrypt.Net-Next" Version="4.0.3" />
+    <PackageReference Include="FluentValidation" Version="12.0.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Hosting.Abstractions" Version="2.3.0" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="9.0.7" />
+    <PackageReference Include="Microsoft.Extensions.Configuration.Binder" Version="9.0.7" />
+    <PackageReference Include="Microsoft.SqlServer.Server" Version="1.0.0" />
+    <PackageReference Include="QuestPDF" Version="2025.7.3" />
+    <PackageReference Include="System.IdentityModel.Tokens.Jwt" Version="8.13.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Builders\Builders.csproj" />
+    <ProjectReference Include="..\Entity\Entity.csproj" />
+    <ProjectReference Include="..\Repository\Repository.csproj" />
+    <ProjectReference Include="..\Utilities\Utilities.csproj" />
+  </ItemGroup>
+
+</Project>

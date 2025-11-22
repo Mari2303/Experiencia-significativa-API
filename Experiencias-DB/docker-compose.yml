@@ -1,0 +1,77 @@
+version: "3.8"
+
+services:
+  # 🗄️ SQL Server - DEVELOP
+  exp-sqlserver-develop:
+    image: mcr.microsoft.com/mssql/server:2022-latest
+    container_name: exp-sqlserver-develop
+    restart: always
+    environment:
+      ACCEPT_EULA: "Y"
+      MSSQL_SA_PASSWORD: "Admin123!"
+      MSSQL_PID: "Developer"
+    ports:
+      - "1438:1433"
+    volumes:
+      - sqldata_develop:/var/opt/mssql
+    networks:
+      - network_experiencesig
+
+  # 🗄️ SQL Server - QA
+  exp-sqlserver-qa:
+    image: mcr.microsoft.com/mssql/server:2022-latest
+    container_name: exp-sqlserver-qa
+    restart: always
+    environment:
+      ACCEPT_EULA: "Y"
+      MSSQL_SA_PASSWORD: "Admin123!"
+      MSSQL_PID: "Developer"
+    ports:
+      - "1436:1433"
+    volumes:
+      - sqldata_qa:/var/opt/mssql
+    networks:
+      - network_experiencesig
+
+  # 🗄️ SQL Server - STAGING
+  exp-sqlserver-staging:
+    image: mcr.microsoft.com/mssql/server:2022-latest
+    container_name: exp-sqlserver-staging
+    restart: always
+    environment:
+      ACCEPT_EULA: "Y"
+      MSSQL_SA_PASSWORD: "Admin123!"
+      MSSQL_PID: "Developer"
+    ports:
+      - "1437:1433"
+    volumes:
+      - sqldata_staging:/var/opt/mssql
+    networks:
+      - network_experiencesig
+
+  # 🗄️ SQL Server - PROD
+  exp-sqlserver-prod:
+    image: mcr.microsoft.com/mssql/server:2022-latest
+    container_name: exp-sqlserver-prod
+    restart: always
+    environment:
+      ACCEPT_EULA: "Y"
+      MSSQL_SA_PASSWORD: "Admin123!"
+      MSSQL_PID: "Developer"
+    ports:
+      - "1435:1433"
+    volumes:
+      - sqldata_prod:/var/opt/mssql
+    networks:
+      - network_experiencesig
+
+volumes:
+  sqldata_develop:
+  sqldata_qa:
+  sqldata_staging:
+  sqldata_prod:
+
+networks:
+  network_experiencesig:
+    external: true
+

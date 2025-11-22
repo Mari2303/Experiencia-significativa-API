@@ -1,0 +1,12 @@
+# Run
+dotnet run --project "API"
+
+# Clean
+dotnet clean
+
+# Build
+dotnet build
+
+# Migration
+dotnet ef migrations add InitialMigration --project Entity
+dotnet ef database update --project Entity

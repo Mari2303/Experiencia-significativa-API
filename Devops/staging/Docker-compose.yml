@@ -1,0 +1,22 @@
+version: "3.8"
+
+services:
+  # 🌐 API principal - STAGING
+  exp-api-staging:
+    container_name: experiencia-api-staging
+    build:
+      context: ../..
+      dockerfile: API/Dockerfile
+    restart: always
+    env_file:
+      - .env.staging
+    ports:
+      - "5102:8080"
+    networks:
+      - network_experiencesig
+    labels:
+      - com.experienciasig.environment=staging
+
+networks:
+  network_experiencesig:
+    external: true

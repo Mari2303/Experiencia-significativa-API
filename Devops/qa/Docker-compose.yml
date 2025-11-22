@@ -1,0 +1,22 @@
+version: "3.8"
+
+services:
+  # 🌐 API principal - QA
+  exp-api-qa:
+    container_name: experiencia-api-qa
+    build:
+      context: ../..
+      dockerfile: API/Dockerfile
+    restart: always
+    env_file:
+      - .env.qa
+    ports:
+      - "5101:8080"
+    networks:
+      - network_experiencesig
+    labels:
+      - com.experienciasig.environment=qa
+
+networks:
+  network_experiencesig:
+    external: true
