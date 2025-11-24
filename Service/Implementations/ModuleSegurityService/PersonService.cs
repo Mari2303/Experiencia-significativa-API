@@ -33,7 +33,7 @@ namespace Service.Implementations.ModuleSegurityService
 
 
 
-        // Método para crear persona desde PersonRequest
+        // Método para crear persona desde PersonRequest creación de usuario asociado a un rol por defecto "Profesor"
         public async Task<UserRegisterResponseRequest> CreatePersonAsync(UserRegisterRequest request)
         {
             await _unitOfWork.BeginTransactionAsync();
@@ -41,7 +41,7 @@ namespace Service.Implementations.ModuleSegurityService
             try
             {
                 PersonValidatorHelper.Validate(request);
-
+                PasswordHelper.ValidatePassword(request.Password);
                 var defaultRole = await _roleRepository.GetByNameRol("Profesor")
                     ?? throw new Exception("El rol 'Profesor' no existe.");
 
@@ -100,13 +100,6 @@ namespace Service.Implementations.ModuleSegurityService
                 throw;
             }
         }
-
-
-
-
-
-
-
 
 
 
