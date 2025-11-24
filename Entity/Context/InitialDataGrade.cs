@@ -40,7 +40,9 @@ namespace Entity.Context
                 DeletedAt = null!
             };
 
-            // Registrar los datos en EF Core
+
+
+            // Registrar los datos en EF Core 
             modelBuilder.Entity<Grade>().HasData(
                 GradePrimer, GradeSecun, GradeMedi
             );
