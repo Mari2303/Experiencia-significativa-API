@@ -72,7 +72,7 @@ namespace Entity.Context
 
 
 
-            // Registrar los datos en EF Core
+            // Registrar los datos en EF Core 
             modelBuilder.Entity<Grade>().HasData(
                 GradePrimer, GradePri, GradeMedi, GradeBasi, GradeCle, GradeAnter
             );
