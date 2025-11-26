@@ -35,7 +35,7 @@ namespace Service.Extensions
             if (!string.IsNullOrWhiteSpace(request.ThematicLocation))
                 experience.ThematicLocation = request.ThematicLocation;
 
-            if (request.Developmenttime != DateTime.MinValue)
+            if (!string.IsNullOrWhiteSpace(request.Developmenttime))
                 experience.Developmenttime = request.Developmenttime;
 
             if (!string.IsNullOrWhiteSpace(request.Recognition))
@@ -63,9 +63,8 @@ namespace Service.Extensions
                 }).ToList();
             }
 
-           
             // Datos de institucion
-          
+
             if (request.InstitutionUpdate != null)
             {
                 if (experience.Institution == null)
@@ -78,6 +77,21 @@ namespace Service.Extensions
 
                 if (!string.IsNullOrWhiteSpace(inst.CodeDane))
                     experience.Institution.CodeDane = inst.CodeDane;
+
+                if (!string.IsNullOrWhiteSpace(inst.NameRector))
+                    experience.Institution.NameRector = inst.NameRector;
+
+                if (!string.IsNullOrWhiteSpace(inst.EmailInstitucional))
+                    experience.Institution.EmailInstitucional = inst.EmailInstitucional;
+
+                if (!string.IsNullOrWhiteSpace(inst.Caracteristic))
+                    experience.Institution.Caracteristic = inst.Caracteristic;
+
+                if (!string.IsNullOrWhiteSpace(inst.TerritorialEntity))
+                    experience.Institution.TerritorialEntity = inst.TerritorialEntity;
+
+                if (!string.IsNullOrWhiteSpace(inst.TestsKnow))
+                    experience.Institution.TestsKnow = inst.TestsKnow;
 
                 if (!string.IsNullOrWhiteSpace(inst.Address))
                     experience.Institution.Address = inst.Address;
@@ -112,7 +126,7 @@ namespace Service.Extensions
 
 
                 // Documentos
-       
+
                 if (request.DocumentsUpdate != null && request.DocumentsUpdate.Any())
                 {
                     experience.Documents = request.DocumentsUpdate.Select(d => new Document
