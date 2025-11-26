@@ -7,12 +7,15 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="MigrationSqlServe\**" />
     <Compile Remove="MigrationsSqlServer\**" />
     <Compile Remove="MigrationsSqlServe\**" />
     <Compile Remove="Migrations\**" />
+    <EmbeddedResource Remove="MigrationSqlServe\**" />
     <EmbeddedResource Remove="MigrationsSqlServer\**" />
     <EmbeddedResource Remove="MigrationsSqlServe\**" />
     <EmbeddedResource Remove="Migrations\**" />
+    <None Remove="MigrationSqlServe\**" />
     <None Remove="MigrationsSqlServer\**" />
     <None Remove="MigrationsSqlServe\**" />
     <None Remove="Migrations\**" />

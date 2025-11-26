@@ -62,7 +62,7 @@ namespace Service.Implementations.ModelOperationService
 
                 await _experienceRepository.AddAsync(experience);
 
-                // 🔔 ENVIAR NOTIFICACIÓN AL ADMIN VÍA SIGNALR
+                // ENVIAR NOTIFICACIÓN AL ADMIN VÍA SIGNALR
                 await _hubContext.Clients.All.SendAsync("ReceiveNotification", new
                 {
                     Title = "Nueva experiencia registrada",
