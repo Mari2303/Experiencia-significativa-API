@@ -14,7 +14,7 @@ namespace Entity.Requests.EntityData.EntityDataRequest
     public  class ExperienceInfoRequest
     {
         public string NameExperiences { get; set; } = string.Empty;
-        public DateTime Developmenttime { get; set; }
+        public string Developmenttime { get; set; }
         public int StateExperienceId { get; set; }
         public string EvaluationResult { get; set; }
 
