@@ -33,7 +33,7 @@ namespace Service.Implementations.ModuleSegurityService
 
 
 
-        // Método para crear persona desde PersonRequest
+        // Método para crear persona desde PersonRequest y crea usuarios en estado de innactivo por defecto asocuandoles un rol 
         public async Task<UserRegisterResponseRequest> CreatePersonAsync(UserRegisterRequest request)
         {
             await _unitOfWork.BeginTransactionAsync();

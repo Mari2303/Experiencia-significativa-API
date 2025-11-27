@@ -121,7 +121,7 @@ public static class ExperiencePdfGenerator
                 Field(col, "Nombre de la Experiencia Significativa", data.NameExperiences);
                 Field(col, "Estado de desarrollo en el que se encuentra la Experiencia Significativa", data.StateExperience?.Name);
                 Field(col, "Área principal que se desarrolla", data.ThematicLocation);
-                Field(col, "Tiempo de desarrollo", data.Developmenttime.ToString("yyyy-MM-dd"));
+                Field(col, "Tiempo de desarrollo", data.Developmenttime);
 
 
                 // ENFOQUE TEMÁTICO
