@@ -1,9 +1,6 @@
-﻿
-
-/*
-using Moq;
-using Service.Implementations;
-using Service.Interfaces;
+﻿using Moq;
+using Service.Implementations.ModuleSegurityService;
+using Service.Interfaces.IModuleSegurityService;
 using Utilities.JwtAuthentication;
 using Xunit;
 
@@ -20,56 +17,63 @@ namespace Tests.Services
             _service = new JwtAuthenticationService(_jwtAuthMock.Object);
         }
 
-
-
-        // prueba unitaria para el método Authenticate de JwtAuthenticationService
+        // ------------------------------------------------------------
+        // Authenticate - Credenciales válidas
+        // ------------------------------------------------------------
         [Fact]
         public void Authenticate_ValidCredentials_ReturnsToken()
         {
             // Arrange
-            var user = "Maria";
-            var password = "123";
-            var expectedToken = "fake-jwt-token";
+            string user = "Maria";
+            string password = "123";
+            string role = "Admin";
+            int userId = 1;
+
+            string expectedToken = "fake-jwt-token";
 
             _jwtAuthMock
-                .Setup(x => x.Authenticate(user, password))
+                .Setup(x => x.Authenticate(user, password, role, userId))
                 .Returns(expectedToken);
 
             // Act
-            var result = _service.Authenticate(user, password);
+            var result = _service.Authenticate(user, password, role, userId);
 
             // Assert
             Assert.Equal(expectedToken, result);
         }
 
-        // prueba unitaria para el método Authenticate de JwtAuthenticationService con credenciales inválidas
-
+        // ------------------------------------------------------------
+        // Authenticate - Credenciales inválidas
+        // ------------------------------------------------------------
         [Fact]
         public void Authenticate_InvalidCredentials_ReturnsNull()
         {
             // Arrange
-            var user = "maria";
-            var password = "123";
+            string user = "Maria";
+            string password = "wrong";
+            string role = "Admin";
+            int userId = 1;
 
             _jwtAuthMock
-                .Setup(x => x.Authenticate(user, password))
+                .Setup(x => x.Authenticate(user, password, role, userId))
                 .Returns((string)null);
 
             // Act
-            var result = _service.Authenticate(user, password);
+            var result = _service.Authenticate(user, password, role, userId);
 
             // Assert
             Assert.Null(result);
         }
 
-        // prueba unitaria para el método EncryptMD5 de JwtAuthenticationService con una contraseña válida
-
+        // ------------------------------------------------------------
+        // EncryptMD5 - Contraseña válida
+        // ------------------------------------------------------------
         [Fact]
         public void EncryptMD5_ValidPassword_ReturnsHash()
         {
             // Arrange
-            var password = "1234";
-            var expectedHash = "5f4dcc3b5aa765d61d8327deb882cf99"; // ejemplo
+            string password = "1234";
+            string expectedHash = "5f4dcc3b5aa765d61d8327deb882cf99";
 
             _jwtAuthMock
                 .Setup(x => x.EncryptMD5(password))
@@ -82,8 +86,9 @@ namespace Tests.Services
             Assert.Equal(expectedHash, result);
         }
 
-        // prueba unitaria para el método EncryptMD5 de JwtAuthenticationService con una contraseña nula
-
+        // ------------------------------------------------------------
+        // EncryptMD5 - Contraseña nula
+        // ------------------------------------------------------------
         [Fact]
         public void EncryptMD5_NullPassword_ReturnsNull()
         {
@@ -99,14 +104,15 @@ namespace Tests.Services
             Assert.Null(result);
         }
 
-        // prueba unitaria para el método RenewToken de JwtAuthenticationService con un token válido
-
+        // ------------------------------------------------------------
+        // RenewToken - Token válido
+        // ------------------------------------------------------------
         [Fact]
         public void RenewToken_ValidToken_ReturnsNewToken()
         {
             // Arrange
-            var oldToken = "old-token";
-            var newToken = "new-token";
+            string oldToken = "old-token";
+            string newToken = "new-token";
 
             _jwtAuthMock
                 .Setup(x => x.RenewToken(oldToken))
@@ -119,20 +125,21 @@ namespace Tests.Services
             Assert.Equal(newToken, result);
         }
 
-        // prueba unitaria para el método RenewToken de JwtAuthenticationService con un token inválido
-
+        // ------------------------------------------------------------
+        // RenewToken - Token inválido
+        // ------------------------------------------------------------
         [Fact]
-        public void RenewToken_InvalidToken_ReturnsErrorMessage()
+        public void RenewToken_InvalidToken_ReturnsNull()
         {
             // Arrange
-            var oldToken = "invalid-token";
+            string invalidToken = "invalid-token";
 
             _jwtAuthMock
-                .Setup(x => x.RenewToken(oldToken))
+                .Setup(x => x.RenewToken(invalidToken))
                 .Returns((string)null);
 
             // Act
-            var result = _service.RenewToken(oldToken);
+            var result = _service.RenewToken(invalidToken);
 
             // Assert
             Assert.Null(result);
@@ -140,4 +147,4 @@ namespace Tests.Services
     }
 }
 
-*/
+

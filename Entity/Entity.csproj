@@ -43,6 +43,7 @@
 
   <ItemGroup>
     <Folder Include="MigrationsPostgres\" />
+    <Folder Include="MigrationSql\" />
   </ItemGroup>
 
 </Project>
