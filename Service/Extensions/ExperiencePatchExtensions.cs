@@ -1,269 +1,277 @@
 ﻿using Entity.Models.ModuleGeographic;
 using Entity.Models.ModuleOperation;
-using Entity.Requests.EntityData.EntityDataRequest;
 using Entity.Requests.EntityData.EntityUpdateRequest;
 
-namespace Service.Extensions 
+namespace Service.Extensions
 {
-    /// <summary>
-    /// Clase estática que contiene métodos de extensión para aplicar cambios parciales (PATCH) 
-    /// a la entidad <see cref="Experience"/> a partir de un objeto <see cref="ExperiencePatchDTO"/>.
-    /// </summary>
     public static class ExperiencePatchExtensions
     {
-        /// <summary>
-        /// Aplica los cambios enviados en un <see cref="ExperiencePatchDTO"/> sobre la entidad <see cref="Experience"/>.
-        /// Solo actualiza los valores que no son nulos o vacíos.
-        /// </summary>
-        /// <param name="experience">Entidad <see cref="Experience"/> existente en la base de datos.</param>
-        /// <param name="dto">Objeto con los nuevos valores a actualizar parcialmente.</param>
+        static bool HasValue(string? s) => !string.IsNullOrWhiteSpace(s);
+        static bool HasList<T>(IEnumerable<T>? list) => list != null && list.Any();
+        static bool HasNumber(int? n) => n.HasValue && n.Value > 0;
+
         public static void ApplyPatch(this Experience experience, ExperienceUpdateRequest request)
         {
-            if (experience == null || request == null)
-                return;
+            if (experience == null || request == null) return;
 
-           
-            // Datos de la experiencia 
-         
+            
+            if (HasValue(request.NameExperiences))
+                experience.NameExperiences = request.NameExperiences!;
 
-            if (!string.IsNullOrWhiteSpace(request.NameExperiences))
-                experience.NameExperiences = request.NameExperiences;
+            if (HasValue(request.Code))
+                experience.Code = request.Code!;
 
-            if (!string.IsNullOrWhiteSpace(request.Code))
-                experience.Code = request.Code;
+            if (HasValue(request.ThematicLocation))
+                experience.ThematicLocation = request.ThematicLocation!;
 
-            if (!string.IsNullOrWhiteSpace(request.ThematicLocation))
-                experience.ThematicLocation = request.ThematicLocation;
+            if (HasValue(request.Developmenttime))
+                experience.Developmenttime = request.Developmenttime!;
 
-            if (!string.IsNullOrWhiteSpace(request.Developmenttime))
-                experience.Developmenttime = request.Developmenttime;
+            if (HasValue(request.Recognition))
+                experience.Recognition = request.Recognition!;
 
-            if (!string.IsNullOrWhiteSpace(request.Recognition))
-                experience.Recognition = request.Recognition;
+            if (HasValue(request.Socialization))
+                experience.Socialization = request.Socialization!;
 
-            if (!string.IsNullOrWhiteSpace(request.Socialization))
-                experience.Socialization = request.Socialization;
+            if (HasNumber(request.StateExperienceId))
+                experience.StateExperienceId = request.StateExperienceId!.Value;
 
-            if (request.StateExperienceId > 0)
-                experience.StateExperienceId = request.StateExperienceId;
-
-
-          
-            // Datos de lider
-           
-            if (request.Leaders != null && request.Leaders.Any())
+            // ---------- LEADERS (parcial, no borrar) ----------
+            if (HasList(request.Leaders))
             {
-                experience.Leaders = request.Leaders.Select(l => new Leader
+                foreach (var l in request.Leaders!)
                 {
-                    NameLeaders = l.NameLeaders,
-                    IdentityDocument = l.IdentityDocument,
-                    Email = l.Email,
-                    Phone = l.Phone,
-                    Position = l.Position
-                }).ToList();
+                    // usar IdentityDocument como llave natural, si viene
+                    var existing = !string.IsNullOrWhiteSpace(l.IdentityDocument)
+                        ? experience.Leaders.FirstOrDefault(x => x.IdentityDocument == l.IdentityDocument)
+                        : null;
+
+                    if (existing != null)
+                    {
+                        if (HasValue(l.NameLeaders)) existing.NameLeaders = l.NameLeaders!;
+                        if (HasValue(l.Email)) existing.Email = l.Email!;
+                        if (l.Phone.HasValue) existing.Phone = l.Phone.Value;
+                        if (HasValue(l.Position)) existing.Position = l.Position!;
+                    }
+                    else
+                    {
+                        // solo agregar si trae al menos un valor relevante
+                        if (HasValue(l.NameLeaders) || HasValue(l.IdentityDocument) || l.Phone.HasValue)
+                        {
+                            experience.Leaders.Add(new Leader
+                            {
+                                NameLeaders = l.NameLeaders,
+                                IdentityDocument = l.IdentityDocument,
+                                Email = l.Email,
+                                Phone = l.Phone ?? 0,
+                                Position = l.Position
+                            });
+                        }
+                    }
+                }
             }
 
-            // Datos de institucion
-
+            
             if (request.InstitutionUpdate != null)
             {
-                if (experience.Institution == null)
-                    experience.Institution = new Institution();
+                if (experience.Institution == null) experience.Institution = new Institution();
 
                 var inst = request.InstitutionUpdate;
+                if (HasValue(inst.Name)) experience.Institution.Name = inst.Name!;
+                if (HasValue(inst.CodeDane)) experience.Institution.CodeDane = inst.CodeDane!;
+                if (HasValue(inst.NameRector)) experience.Institution.NameRector = inst.NameRector!;
+                if (HasValue(inst.EmailInstitucional)) experience.Institution.EmailInstitucional = inst.EmailInstitucional!;
+                if (HasValue(inst.Caracteristic)) experience.Institution.Caracteristic = inst.Caracteristic!;
+                if (HasValue(inst.TerritorialEntity)) experience.Institution.TerritorialEntity = inst.TerritorialEntity!;
+                if (HasValue(inst.TestsKnow)) experience.Institution.TestsKnow = inst.TestsKnow!;
+                if (HasValue(inst.Address)) experience.Institution.Address = inst.Address!;
 
-                if (!string.IsNullOrWhiteSpace(inst.Name))
-                    experience.Institution.Name = inst.Name;
-
-                if (!string.IsNullOrWhiteSpace(inst.CodeDane))
-                    experience.Institution.CodeDane = inst.CodeDane;
-
-                if (!string.IsNullOrWhiteSpace(inst.NameRector))
-                    experience.Institution.NameRector = inst.NameRector;
-
-                if (!string.IsNullOrWhiteSpace(inst.EmailInstitucional))
-                    experience.Institution.EmailInstitucional = inst.EmailInstitucional;
-
-                if (!string.IsNullOrWhiteSpace(inst.Caracteristic))
-                    experience.Institution.Caracteristic = inst.Caracteristic;
-
-                if (!string.IsNullOrWhiteSpace(inst.TerritorialEntity))
-                    experience.Institution.TerritorialEntity = inst.TerritorialEntity;
-
-                if (!string.IsNullOrWhiteSpace(inst.TestsKnow))
-                    experience.Institution.TestsKnow = inst.TestsKnow;
-
-                if (!string.IsNullOrWhiteSpace(inst.Address))
-                    experience.Institution.Address = inst.Address;
-
-                if (inst.Departaments != null && inst.Departaments.Any())
+                if (HasList(inst.Departaments))
                 {
-                    experience.Institution.Departaments = inst.Departaments.Select(d =>
-                        new Departament { Name = d.Name }).ToList();
+                    foreach (var d in inst.Departaments!)
+                        if (!experience.Institution.Departaments.Any(x => x.Name == d.Name))
+                            experience.Institution.Departaments.Add(new Departament { Name = d.Name });
                 }
 
-                if (inst.Municipalities != null && inst.Municipalities.Any())
+                if (HasList(inst.Municipalities))
                 {
-                    experience.Institution.Municipalitis = inst.Municipalities.Select(m =>
-                        new Municipality { Name = m.Name }).ToList();
+                    foreach (var m in inst.Municipalities!)
+                        if (!experience.Institution.Municipalitis.Any(x => x.Name == m.Name))
+                            experience.Institution.Municipalitis.Add(new Municipality { Name = m.Name });
                 }
 
-                if (inst.Communes != null && inst.Communes.Any())
+                if (HasList(inst.Communes))
                 {
-                    experience.Institution.Communes = inst.Communes.Select(c =>
-                        new Commune { Name = c.Name }).ToList();
+                    foreach (var c in inst.Communes!)
+                        if (!experience.Institution.Communes.Any(x => x.Name == c.Name))
+                            experience.Institution.Communes.Add(new Commune { Name = c.Name });
                 }
 
-                if (inst.EEZones != null && inst.EEZones.Any())
+                if (HasList(inst.EEZones))
                 {
-                    experience.Institution.EEZones = inst.EEZones.Select(z =>
-                        new EEZone { Name = z.Name }).ToList();
+                    foreach (var z in inst.EEZones!)
+                        if (!experience.Institution.EEZones.Any(x => x.Name == z.Name))
+                            experience.Institution.EEZones.Add(new EEZone { Name = z.Name });
                 }
+            }
 
-
-
-
-
-
-                // Documentos
-
-                if (request.DocumentsUpdate != null && request.DocumentsUpdate.Any())
-                {
-                    experience.Documents = request.DocumentsUpdate.Select(d => new Document
+          
+            if (HasList(request.DocumentsUpdate))
             {
-                        Name = d.Name,
-                        UrlLink = d.UrlLink,
-                        UrlPdf = d.UrlPdf,
-                        UrlPdfExperience = d.UrlPdfExperience
-                    }).ToList();
-                }
-
-                
-                // Objectos y sus relaciones
-
-                if (request.ObjectivesUpdate != null && request.ObjectivesUpdate.Any())
+                foreach (var d in request.DocumentsUpdate!)
                 {
-                    experience.Objectives = request.ObjectivesUpdate.Select(o =>
+                    var existing = experience.Documents.FirstOrDefault(x => x.Name == d.Name);
+                    if (existing != null)
                     {
-                        var obj = new Objective
+                        if (HasValue(d.UrlLink)) existing.UrlLink = d.UrlLink!;
+                        if (HasValue(d.UrlPdf)) existing.UrlPdf = d.UrlPdf!;
+                        if (HasValue(d.UrlPdfExperience)) existing.UrlPdfExperience = d.UrlPdfExperience!;
+                    }
+                    else
+                    {
+                        // agregar solo si trae algo relevante
+                        if (HasValue(d.Name))
                         {
-                            DescriptionProblem = o.DescriptionProblem,
-                            ObjectiveExperience = o.ObjectiveExperience,
-                            EnfoqueExperience = o.EnfoqueExperience,
-                            Methodologias = o.Methodologias,
-                            InnovationExperience = o.InnovationExperience,
-                            Pmi = o.Pmi,
-                            Nnaj = o.Nnaj,
-                            CreatedAt = DateTime.UtcNow
-                        };
-
-                        if (o.SupportInformationsUpdate != null)
-                {
-                            obj.SupportInformations = o.SupportInformationsUpdate.Select(s => new SupportInformation
-                        {
-                           
-                                MetaphoricalPhrase = s.MetaphoricalPhrase,
-                                Testimony = s.Testimony,
-                                FollowEvaluation = s.FollowEvaluation
-                            }).ToList();
-                        }
-                            
-                        if (o.MonitoringsUpdate != null)
-                        {
-                            obj.Monitorings = o.MonitoringsUpdate.Select(m => new Monitoring
+                            experience.Documents.Add(new Document
                             {
-                                MonitoringEvaluation = m.MonitoringEvaluation,
-                                Sustainability = m.Sustainability,
-                                Tranfer = m.Tranfer,
-                                Result = m.Result
-                            }).ToList();
+                                Name = d.Name,
+                                UrlLink = d.UrlLink,
+                                UrlPdf = d.UrlPdf,
+                                UrlPdfExperience = d.UrlPdfExperience
+                            });
+                        }
+                    }
                 }
+            }
 
-                        return obj;
-
-                    }).ToList();
+          
+            if (HasList(request.ThematicLineIds))
+            {
+                foreach (var id in request.ThematicLineIds!)
+                {
+                    if (id <= 0) continue;
+                    if (!experience.ExperienceLineThematics.Any(x => x.LineThematicId == id))
+                    {
+                        experience.ExperienceLineThematics.Add(new ExperienceLineThematic
+                        {
+                            LineThematicId = id,
+                            State = true,
+                            CreatedAt = DateTime.UtcNow
+                        });
+                    }
+                }
             }
 
            
-              
-                //  Desarrollo
-               
-                if (request.DevelopmentsUpdate != null && request.DevelopmentsUpdate.Any())
+            if (HasList(request.GradesUpdate))
             {
-                    experience.Developments = request.DevelopmentsUpdate.Select(d => new Development
+                foreach (var g in request.GradesUpdate!)
+                {
+                    if (g.Id <= 0) continue;
+
+                    var existing = experience.ExperienceGrades.FirstOrDefault(x => x.GradeId == g.Id);
+                    if (existing != null)
+                    {
+                        if (HasValue(g.Description)) existing.Description = g.Description!;
+                    }
+                    else
+                    {
+                        experience.ExperienceGrades.Add(new ExperienceGrade
+                        {
+                            GradeId = g.Id,
+                            Description = g.Description,
+                            State = true,
+                            CreatedAt = DateTime.UtcNow
+                        });
+                    }
+                }
+            }
+
+           
+            if (HasList(request.PopulationGradeIds))
+            {
+                foreach (var id in request.PopulationGradeIds!)
+                {
+                    if (id <= 0) continue;
+                    if (!experience.ExperiencePopulations.Any(x => x.PopulationGradeId == id))
+                    {
+                        experience.ExperiencePopulations.Add(new ExperiencePopulation
+                        {
+                            PopulationGradeId = id,
+                            State = true,
+                            CreatedAt = DateTime.UtcNow
+                        });
+                    }
+                }
+            }
+
+          
+            if (HasList(request.ObjectivesUpdate))
+            {
+                foreach (var o in request.ObjectivesUpdate!)
+                {
+                    var obj = new Objective
+                    {
+                        DescriptionProblem = o.DescriptionProblem,
+                        ObjectiveExperience = o.ObjectiveExperience,
+                        EnfoqueExperience = o.EnfoqueExperience,
+                        Methodologias = o.Methodologias,
+                        InnovationExperience = o.InnovationExperience,
+                        Pmi = o.Pmi,
+                        Nnaj = o.Nnaj,
+                        CreatedAt = DateTime.UtcNow
+                    };
+                    // soportes y monitoreos si vienen
+                    if (HasList(o.SupportInformationsUpdate))
+                        obj.SupportInformations = o.SupportInformationsUpdate!.Select(s => new SupportInformation
+                        {
+                            MetaphoricalPhrase = s.MetaphoricalPhrase,
+                            Testimony = s.Testimony,
+                            FollowEvaluation = s.FollowEvaluation
+                        }).ToList();
+
+                    if (HasList(o.MonitoringsUpdate))
+                        obj.Monitorings = o.MonitoringsUpdate!.Select(m => new Monitoring
+                        {
+                            MonitoringEvaluation = m.MonitoringEvaluation,
+                            Sustainability = m.Sustainability,
+                            Tranfer = m.Tranfer,
+                            Result = m.Result
+                        }).ToList();
+
+                    experience.Objectives.Add(obj);
+                }
+            }
+
+            if (HasList(request.DevelopmentsUpdate))
+            {
+                foreach (var d in request.DevelopmentsUpdate!)
+                    experience.Developments.Add(new Development
                     {
                         CrossCuttingProject = d.CrossCuttingProject,
                         Population = d.Population,
                         PedagogicalStrategies = d.PedagogicalStrategies,
                         Coverage = d.Coverage,
                         CovidPandemic = d.CovidPandemic
-                    }).ToList();
-                }
-
-                // Departamentos 
-                if (request.InstitutionUpdate.Departaments != null && request.InstitutionUpdate.Departaments.Any())
-                    experience.Institution.Departaments = request.InstitutionUpdate.Departaments
-                        .Select(d => new Departament { Name = d.Name })
-                        .ToList();
-
-                // Linea tematicas
-
-                if (request.ThematicLineIds != null && request.ThematicLineIds.Any())
-                {
-                    experience.ExperienceLineThematics = request.ThematicLineIds.Select(id =>
-                        new ExperienceLineThematic
-                        {
-                            LineThematicId = id,
-                            State = true,
-                            CreatedAt = DateTime.UtcNow
-                        }).ToList();
+                    });
             }
 
-               
-                // grados
-          
-                if (request.GradesUpdate != null && request.GradesUpdate.Any())
+            if (HasList(request.HistoryExperiencesUpdate))
             {
-                    experience.ExperienceGrades = request.GradesUpdate.Select(g =>
-                        new ExperienceGrade
-                {
-                            GradeId = g.Id,
-                            Description = g.Description
-                        }).ToList();
-                }
-
-               
-                // poblacion
-
-                if (request.PopulationGradeIds != null && request.PopulationGradeIds.Any())
-                {
-                    experience.ExperiencePopulations = request.PopulationGradeIds.Select(id =>
-                        new ExperiencePopulation
+                foreach (var h in request.HistoryExperiencesUpdate!)
+                    experience.HistoryExperiences.Add(new HistoryExperience
                     {
-                            PopulationGradeId = id,
-                            State = true,
-                            CreatedAt = DateTime.UtcNow
-                        }).ToList();
-                    }
-
-                
-                // historial
-               
-                if (request.HistoryExperiencesUpdate != null && request.HistoryExperiencesUpdate.Any())
-                {
-                    experience.HistoryExperiences = request.HistoryExperiencesUpdate.Select(h =>
-                        new HistoryExperience
-                        {
-                            Action = h.Action,
-                            TableName = h.TableName,
-                            UserId = h.UserId,
-                            CreatedAt = DateTime.UtcNow
-                        }).ToList();
-                }
+                        Action = h.Action,
+                        TableName = h.TableName,
+                        UserId = h.UserId,
+                        CreatedAt = DateTime.UtcNow
+                    });
             }
         }
     }
 }
+
+
 
 
 

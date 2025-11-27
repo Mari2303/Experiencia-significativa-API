@@ -8,10 +8,10 @@ namespace Entity.Requests.EntityData.EntityUpdateRequest
 {
     public class DocumentUpdateRequest
     {
-        public string Name { get; set; } = string.Empty;
-        public string UrlLink { get; set; } = string.Empty;
-        public string UrlPdf { get; set; } = string.Empty;
-        public string UrlPdfExperience { get; set; } = string.Empty;
+        public string? Name { get; set; } = string.Empty;
+        public string? UrlLink { get; set; } = string.Empty;
+        public string? UrlPdf { get; set; } = string.Empty;
+        public string? UrlPdfExperience { get; set; } = string.Empty;
 
 
     }

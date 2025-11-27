@@ -11,7 +11,7 @@ namespace Repository.Interfaces.IModuleOperationRepository
 
 
         Task UpdateAsync(Experience experience);
-
+        Task PatchSaveAsync();
         Task<Experience?> GetByIdAsync(int id);
 
         Task<IEnumerable<Experience>> GetAllAsync();

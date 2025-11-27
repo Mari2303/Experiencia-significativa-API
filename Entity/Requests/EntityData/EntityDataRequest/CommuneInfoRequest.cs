@@ -8,6 +8,6 @@ namespace Entity.Requests.EntityData.EntityDataRequest
 {
     public class CommuneInfoRequest
     {
-        public string Name { get; set; } = string.Empty;
+        public string? Name { get; set; } = string.Empty;
     }
 }

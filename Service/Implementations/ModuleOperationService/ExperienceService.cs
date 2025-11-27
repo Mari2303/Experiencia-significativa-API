@@ -102,34 +102,30 @@ namespace Service.Implementations.ModelOperationService
             if (experience == null)
                 return false;
 
-            // Obtener roles del usuario
+            // Roles
             var roles = await _userRepository.GetRolesByUserId(request.UserId);
 
-            // ADMIN = edición ilimitada
             if (roles.Contains("SUPERADMIN"))
             {
                 experience.ApplyPatch(request);
-                await _experienceRepository.UpdateAsync(experience);
-                await NotifyAdmins(experience);
+                await _experienceRepository.PatchSaveAsync(); // <— AQUI VA
                 return true;
             }
 
-            // Si NO es admin  validar permiso
             var permission = await _permissionRepo.GetByExperienceIdAsync(request.ExperienceId);
 
             if (permission == null || !permission.Approved)
                 throw new Exception("No tienes permiso para editar esta experiencia.");
 
-            // Validar expiración
             if (permission.ExpiresAt == null || permission.ExpiresAt < DateTime.UtcNow)
                 throw new Exception("El tiempo de edición expiró. Debes solicitar permiso nuevamente.");
 
-            // APLICAR PATCH 
             experience.ApplyPatch(request);
-            await _experienceRepository.UpdateAsync(experience);
+            await _experienceRepository.PatchSaveAsync(); // <— AQUI TAMBIÉN
 
             return true;
         }
+
 
 
         private async Task NotifyAdmins(Experience experience)

@@ -131,6 +131,11 @@ namespace Repository.Implementations.ModuleOperationRepository
             await _context.SaveChangesAsync();
         }
 
+        public async Task PatchSaveAsync()
+        {
+            await _context.SaveChangesAsync();
+        }
+
 
 
         public async Task<Experience?> GetByIdAsync(int id)

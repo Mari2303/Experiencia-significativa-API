@@ -8,6 +8,6 @@ namespace Entity.Requests.EntityData.EntityDataRequest
 {
     public class DepartamentInfoRequest
     {
-        public string Name { get; set; } = string.Empty;
+        public string? Name { get; set; } = string.Empty;
     }
 }
