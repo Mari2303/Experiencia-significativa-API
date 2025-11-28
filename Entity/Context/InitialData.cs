@@ -824,16 +824,7 @@ namespace Entity.Context
                 DeletedAt = null!
             };
 
-            var RoleFormPermissionExpere = new RoleFormPermission()
-            {
-                Id = 22,
-                RoleId = 2,
-                FormId = 19, // Experiencia
-                PermissionId = 2, // Solo lectura
-                State = true,
-                CreatedAt = currentDate,
-                DeletedAt = null!
-            };
+          
 
 
             // Roles - Forms - Permissions (Admin: solo Inicio y Experiencia)
@@ -861,7 +852,6 @@ namespace Entity.Context
       RoleFormPermissionLineThematic,
       RoleFormPermissionPopulationGrade,
       RoleFormPermissionState,
-      RoleFormPermissionExpere,
       RoleFormPermissionExperi
   );
 
