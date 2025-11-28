@@ -1,269 +1,255 @@
 ﻿using Entity.Models.ModuleGeographic;
 using Entity.Models.ModuleOperation;
-using Entity.Requests.EntityData.EntityDataRequest;
 using Entity.Requests.EntityData.EntityUpdateRequest;
 
-namespace Service.Extensions 
+public static class ExperiencePatchExtensions
 {
-    /// <summary>
-    /// Clase estática que contiene métodos de extensión para aplicar cambios parciales (PATCH) 
-    /// a la entidad <see cref="Experience"/> a partir de un objeto <see cref="ExperiencePatchDTO"/>.
-    /// </summary>
-    public static class ExperiencePatchExtensions
+    public static void ApplyPatch(this Experience experience, ExperienceUpdateRequest request)
     {
-        /// <summary>
-        /// Aplica los cambios enviados en un <see cref="ExperiencePatchDTO"/> sobre la entidad <see cref="Experience"/>.
-        /// Solo actualiza los valores que no son nulos o vacíos.
-        /// </summary>
-        /// <param name="experience">Entidad <see cref="Experience"/> existente en la base de datos.</param>
-        /// <param name="dto">Objeto con los nuevos valores a actualizar parcialmente.</param>
-        public static void ApplyPatch(this Experience experience, ExperienceUpdateRequest request)
+        if (experience == null || request == null)
+            return;
+
+        // =======================
+        // CAMPOS BÁSICOS
+        // =======================
+        if (request.NameExperiences != null)
+            experience.NameExperiences = request.NameExperiences;
+
+        if (request.Code != null)
+            experience.Code = request.Code;
+
+        if (request.ThematicLocation != null)
+            experience.ThematicLocation = request.ThematicLocation;
+
+        if (request.Developmenttime.HasValue)
+            experience.Developmenttime = request.Developmenttime.Value;
+
+        if (request.Recognition != null)
+            experience.Recognition = request.Recognition;
+
+        if (request.Socialization != null)
+            experience.Socialization = request.Socialization;
+
+        if (request.StateExperienceId.HasValue && request.StateExperienceId.Value > 0)
+            experience.StateExperienceId = request.StateExperienceId.Value;
+
+
+        // =======================
+        // LÍDERES (PATCH REAL)
+        // =======================
+        if (request.Leaders != null)
         {
-            if (experience == null || request == null)
-                return;
-
-           
-            // Datos de la experiencia 
-         
-
-            if (!string.IsNullOrWhiteSpace(request.NameExperiences))
-                experience.NameExperiences = request.NameExperiences;
-
-            if (!string.IsNullOrWhiteSpace(request.Code))
-                experience.Code = request.Code;
-
-            if (!string.IsNullOrWhiteSpace(request.ThematicLocation))
-                experience.ThematicLocation = request.ThematicLocation;
-
-            if (!string.IsNullOrWhiteSpace(request.Developmenttime))
-                experience.Developmenttime = request.Developmenttime;
-
-            if (!string.IsNullOrWhiteSpace(request.Recognition))
-                experience.Recognition = request.Recognition;
-
-            if (!string.IsNullOrWhiteSpace(request.Socialization))
-                experience.Socialization = request.Socialization;
-
-            if (request.StateExperienceId > 0)
-                experience.StateExperienceId = request.StateExperienceId;
-
-
-          
-            // Datos de lider
-           
-            if (request.Leaders != null && request.Leaders.Any())
+            foreach (var l in request.Leaders)
             {
-                experience.Leaders = request.Leaders.Select(l => new Leader
+                var existing = experience.Leaders
+                    .FirstOrDefault(x => x.IdentityDocument == l.IdentityDocument);
+
+                if (existing != null)
                 {
-                    NameLeaders = l.NameLeaders,
-                    IdentityDocument = l.IdentityDocument,
-                    Email = l.Email,
-                    Phone = l.Phone,
-                    Position = l.Position
-                }).ToList();
+                    if (l.NameLeaders != null) existing.NameLeaders = l.NameLeaders;
+                    if (l.Email != null) existing.Email = l.Email;
+                    if (l.Phone != 0) existing.Phone = l.Phone;
+                    if (l.Position != null) existing.Position = l.Position;
+                }
+                else
+                {
+                    experience.Leaders.Add(new Leader
+                    {
+                        NameLeaders = l.NameLeaders,
+                        IdentityDocument = l.IdentityDocument,
+                        Email = l.Email,
+                        Phone = l.Phone,
+                        Position = l.Position
+                    });
+                }
+            }
+        }
+
+
+        // =======================
+        // INSTITUCIÓN (PATCH REAL)
+        // =======================
+        if (request.InstitutionUpdate != null)
+        {
+            if (experience.Institution == null)
+                experience.Institution = new Institution();
+
+            var inst = request.InstitutionUpdate;
+
+            if (inst.Name != null) experience.Institution.Name = inst.Name;
+            if (inst.CodeDane != null) experience.Institution.CodeDane = inst.CodeDane;
+            if (inst.NameRector != null) experience.Institution.NameRector = inst.NameRector;
+            if (inst.EmailInstitucional != null) experience.Institution.EmailInstitucional = inst.EmailInstitucional;
+            if (inst.Caracteristic != null) experience.Institution.Caracteristic = inst.Caracteristic;
+            if (inst.TerritorialEntity != null) experience.Institution.TerritorialEntity = inst.TerritorialEntity;
+            if (inst.TestsKnow != null) experience.Institution.TestsKnow = inst.TestsKnow;
+            if (inst.Address != null) experience.Institution.Address = inst.Address;
+
+            // Departamentos agregados, no reemplazados
+            if (inst.Departaments != null)
+            {
+                foreach (var d in inst.Departaments)
+                {
+                    if (!experience.Institution.Departaments.Any(x => x.Name == d.Name))
+                        experience.Institution.Departaments.Add(new Departament { Name = d.Name });
+                }
             }
 
-            // Datos de institucion
-
-            if (request.InstitutionUpdate != null)
+            // Municipios
+            if (inst.Municipalities != null)
             {
-                if (experience.Institution == null)
-                    experience.Institution = new Institution();
-
-                var inst = request.InstitutionUpdate;
-
-                if (!string.IsNullOrWhiteSpace(inst.Name))
-                    experience.Institution.Name = inst.Name;
-
-                if (!string.IsNullOrWhiteSpace(inst.CodeDane))
-                    experience.Institution.CodeDane = inst.CodeDane;
-
-                if (!string.IsNullOrWhiteSpace(inst.NameRector))
-                    experience.Institution.NameRector = inst.NameRector;
-
-                if (!string.IsNullOrWhiteSpace(inst.EmailInstitucional))
-                    experience.Institution.EmailInstitucional = inst.EmailInstitucional;
-
-                if (!string.IsNullOrWhiteSpace(inst.Caracteristic))
-                    experience.Institution.Caracteristic = inst.Caracteristic;
-
-                if (!string.IsNullOrWhiteSpace(inst.TerritorialEntity))
-                    experience.Institution.TerritorialEntity = inst.TerritorialEntity;
-
-                if (!string.IsNullOrWhiteSpace(inst.TestsKnow))
-                    experience.Institution.TestsKnow = inst.TestsKnow;
-
-                if (!string.IsNullOrWhiteSpace(inst.Address))
-                    experience.Institution.Address = inst.Address;
-
-                if (inst.Departaments != null && inst.Departaments.Any())
+                foreach (var m in inst.Municipalities)
                 {
-                    experience.Institution.Departaments = inst.Departaments.Select(d =>
-                        new Departament { Name = d.Name }).ToList();
+                    if (!experience.Institution.Municipalitis.Any(x => x.Name == m.Name))
+                        experience.Institution.Municipalitis.Add(new Municipality { Name = m.Name });
                 }
+            }
 
-                if (inst.Municipalities != null && inst.Municipalities.Any())
-                {
-                    experience.Institution.Municipalitis = inst.Municipalities.Select(m =>
-                        new Municipality { Name = m.Name }).ToList();
-                }
-
-                if (inst.Communes != null && inst.Communes.Any())
-                {
-                    experience.Institution.Communes = inst.Communes.Select(c =>
-                        new Commune { Name = c.Name }).ToList();
-                }
-
-                if (inst.EEZones != null && inst.EEZones.Any())
-                {
-                    experience.Institution.EEZones = inst.EEZones.Select(z =>
-                        new EEZone { Name = z.Name }).ToList();
-                }
-
-
-
-
-
-
-                // Documentos
-
-                if (request.DocumentsUpdate != null && request.DocumentsUpdate.Any())
-                {
-                    experience.Documents = request.DocumentsUpdate.Select(d => new Document
+            // Comunas
+            if (inst.Communes != null)
             {
+                foreach (var c in inst.Communes)
+                {
+                    if (!experience.Institution.Communes.Any(x => x.Name == c.Name))
+                        experience.Institution.Communes.Add(new Commune { Name = c.Name });
+                }
+            }
+
+            // Zonas
+            if (inst.EEZones != null)
+            {
+                foreach (var z in inst.EEZones)
+                {
+                    if (!experience.Institution.EEZones.Any(x => x.Name == z.Name))
+                        experience.Institution.EEZones.Add(new EEZone { Name = z.Name });
+                }
+            }
+        }
+
+
+        // =======================
+        // DOCUMENTOS (PATCH REAL)
+        // =======================
+        if (request.DocumentsUpdate != null)
+        {
+            foreach (var d in request.DocumentsUpdate)
+            {
+                var existing = experience.Documents.FirstOrDefault(x => x.Name == d.Name);
+
+                if (existing != null)
+                {
+                    if (d.UrlLink != null) existing.UrlLink = d.UrlLink;
+                    if (d.UrlPdf != null) existing.UrlPdf = d.UrlPdf;
+                    if (d.UrlPdfExperience != null) existing.UrlPdfExperience = d.UrlPdfExperience;
+                }
+                else
+                {
+                    experience.Documents.Add(new Document
+                    {
                         Name = d.Name,
                         UrlLink = d.UrlLink,
                         UrlPdf = d.UrlPdf,
                         UrlPdfExperience = d.UrlPdfExperience
-                    }).ToList();
+                    });
                 }
-
-                
-                // Objectos y sus relaciones
-
-                if (request.ObjectivesUpdate != null && request.ObjectivesUpdate.Any())
-                {
-                    experience.Objectives = request.ObjectivesUpdate.Select(o =>
-                    {
-                        var obj = new Objective
-                        {
-                            DescriptionProblem = o.DescriptionProblem,
-                            ObjectiveExperience = o.ObjectiveExperience,
-                            EnfoqueExperience = o.EnfoqueExperience,
-                            Methodologias = o.Methodologias,
-                            InnovationExperience = o.InnovationExperience,
-                            Pmi = o.Pmi,
-                            Nnaj = o.Nnaj,
-                            CreatedAt = DateTime.UtcNow
-                        };
-
-                        if (o.SupportInformationsUpdate != null)
-                {
-                            obj.SupportInformations = o.SupportInformationsUpdate.Select(s => new SupportInformation
-                        {
-                           
-                                MetaphoricalPhrase = s.MetaphoricalPhrase,
-                                Testimony = s.Testimony,
-                                FollowEvaluation = s.FollowEvaluation
-                            }).ToList();
-                        }
-                            
-                        if (o.MonitoringsUpdate != null)
-                        {
-                            obj.Monitorings = o.MonitoringsUpdate.Select(m => new Monitoring
-                            {
-                                MonitoringEvaluation = m.MonitoringEvaluation,
-                                Sustainability = m.Sustainability,
-                                Tranfer = m.Tranfer,
-                                Result = m.Result
-                            }).ToList();
-                }
-
-                        return obj;
-
-                    }).ToList();
             }
+        }
 
-           
-              
-                //  Desarrollo
-               
-                if (request.DevelopmentsUpdate != null && request.DevelopmentsUpdate.Any())
+        // =======================
+        // LÍNEAS TEMÁTICAS
+        // =======================
+        if (request.ThematicLineIds != null)
+        {
+            foreach (var id in request.ThematicLineIds)
             {
-                    experience.Developments = request.DevelopmentsUpdate.Select(d => new Development
-                    {
-                        CrossCuttingProject = d.CrossCuttingProject,
-                        Population = d.Population,
-                        PedagogicalStrategies = d.PedagogicalStrategies,
-                        Coverage = d.Coverage,
-                        CovidPandemic = d.CovidPandemic
-                    }).ToList();
-                }
+                if (id <= 0)
+                    continue;
 
-                // Departamentos 
-                if (request.InstitutionUpdate.Departaments != null && request.InstitutionUpdate.Departaments.Any())
-                    experience.Institution.Departaments = request.InstitutionUpdate.Departaments
-                        .Select(d => new Departament { Name = d.Name })
-                        .ToList();
-
-                // Linea tematicas
-
-                if (request.ThematicLineIds != null && request.ThematicLineIds.Any())
+                if (!experience.ExperienceLineThematics.Any(x => x.LineThematicId == id))
                 {
-                    experience.ExperienceLineThematics = request.ThematicLineIds.Select(id =>
-                        new ExperienceLineThematic
-                        {
-                            LineThematicId = id,
-                            State = true,
-                            CreatedAt = DateTime.UtcNow
-                        }).ToList();
+                    experience.ExperienceLineThematics.Add(new ExperienceLineThematic
+                    {
+                        LineThematicId = id,
+                        State = true,
+                        CreatedAt = DateTime.UtcNow
+                    });
+                }
             }
+        }
 
-               
-                // grados
-          
-                if (request.GradesUpdate != null && request.GradesUpdate.Any())
+        // =======================
+        // GRADOS
+        // =======================
+        if (request.GradesUpdate != null)
+        {
+            foreach (var g in request.GradesUpdate)
             {
-                    experience.ExperienceGrades = request.GradesUpdate.Select(g =>
-                        new ExperienceGrade
+                if (g.Id <= 0)
+                    continue;
+
+                var existing = experience.ExperienceGrades
+                    .FirstOrDefault(x => x.GradeId == g.Id);
+
+                if (existing != null)
                 {
-                            GradeId = g.Id,
-                            Description = g.Description
-                        }).ToList();
+                    if (!string.IsNullOrWhiteSpace(g.Description))
+                        existing.Description = g.Description;
                 }
-
-               
-                // poblacion
-
-                if (request.PopulationGradeIds != null && request.PopulationGradeIds.Any())
+                else
                 {
-                    experience.ExperiencePopulations = request.PopulationGradeIds.Select(id =>
-                        new ExperiencePopulation
+                    experience.ExperienceGrades.Add(new ExperienceGrade
                     {
-                            PopulationGradeId = id,
-                            State = true,
-                            CreatedAt = DateTime.UtcNow
-                        }).ToList();
-                    }
-
-                
-                // historial
-               
-                if (request.HistoryExperiencesUpdate != null && request.HistoryExperiencesUpdate.Any())
-                {
-                    experience.HistoryExperiences = request.HistoryExperiencesUpdate.Select(h =>
-                        new HistoryExperience
-                        {
-                            Action = h.Action,
-                            TableName = h.TableName,
-                            UserId = h.UserId,
-                            CreatedAt = DateTime.UtcNow
-                        }).ToList();
+                        GradeId = g.Id,
+                        Description = g.Description,
+                        State = true,
+                        CreatedAt = DateTime.UtcNow
+                    });
                 }
+            }
+        }
+
+        // =======================
+        // POBLACIONES
+        // =======================
+        if (request.PopulationGradeIds != null)
+        {
+            foreach (var id in request.PopulationGradeIds)
+            {
+                if (id <= 0)
+                    continue;
+
+                if (!experience.ExperiencePopulations.Any(x => x.PopulationGradeId == id))
+                {
+                    experience.ExperiencePopulations.Add(new ExperiencePopulation
+                    {
+                        PopulationGradeId = id,
+                        State = true,
+                        CreatedAt = DateTime.UtcNow
+                    });
+                }
+            }
+        }
+
+
+        // =======================
+        // HISTORIAL
+        // =======================
+        if (request.HistoryExperiencesUpdate != null)
+        {
+            foreach (var h in request.HistoryExperiencesUpdate)
+            {
+                experience.HistoryExperiences.Add(new HistoryExperience
+                {
+                    Action = h.Action,
+                    TableName = h.TableName,
+                    UserId = h.UserId,
+                    CreatedAt = DateTime.UtcNow
+                });
             }
         }
     }
 }
+
 
 
 

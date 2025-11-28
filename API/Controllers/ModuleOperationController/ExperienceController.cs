@@ -73,7 +73,7 @@ namespace API.Controllers.ModuleOperationController
 
 
 
-        [Authorize(Roles = "SUPERADMIN")]
+        [Authorize]
         [HttpPatch("patch")]
         public async Task<IActionResult> Patch([FromBody] ExperienceUpdateRequest request)
         {
