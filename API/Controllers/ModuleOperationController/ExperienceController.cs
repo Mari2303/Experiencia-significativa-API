@@ -129,7 +129,7 @@ namespace API.Controllers.ModuleOperationController
         }
 
 
-        [Authorize(Roles = "SUPERADMIN")]
+        [Authorize]
         [HttpGet("detail/Form/{id}")]
         public async Task<IActionResult> GetDetail(int id)
         {
