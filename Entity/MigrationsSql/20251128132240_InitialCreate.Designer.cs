@@ -12,15 +12,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Entity.MigrationsSqlServer
 {
     [DbContext(typeof(ApplicationContext))]
-<<<<<<<< HEAD:Entity/MigrationsSqlServer/20251124231825_InitialCreate.Designer.cs
-    [Migration("20251124231825_InitialCreate")]
-========
-<<<<<<<< HEAD:Entity/MigrationsSqlServer/20251124231825_InitialCreate.Designer.cs
-    [Migration("20251124231825_InitialCreate")]
-========
-    [Migration("20251126225001_InitialCreate")]
->>>>>>>> 0a32592 (Commit Correction DeveloTime):Entity/MigrationsSqlServer/20251126225001_InitialCreate.Designer.cs
->>>>>>>> ac9c60348704fb1fed7cd40219aeb13beb0ef374:Entity/MigrationsSqlServer/20251126225001_InitialCreate.Designer.cs
+    [Migration("20251128132240_InitialCreate")]
     partial class InitialCreate
     {
         /// <inheritdoc />
@@ -77,15 +69,7 @@ namespace Entity.MigrationsSqlServer
                         new
                         {
                             Id = 1,
-<<<<<<<< HEAD:Entity/MigrationsSqlServer/20251124231825_InitialCreate.Designer.cs
-                            CreatedAt = new DateTime(2025, 11, 24, 18, 18, 24, 284, DateTimeKind.Utc).AddTicks(2443),
-========
-<<<<<<<< HEAD:Entity/MigrationsSqlServer/20251124231825_InitialCreate.Designer.cs
-                            CreatedAt = new DateTime(2025, 11, 24, 18, 18, 24, 284, DateTimeKind.Utc).AddTicks(2443),
-========
-                            CreatedAt = new DateTime(2025, 11, 26, 17, 50, 0, 734, DateTimeKind.Utc).AddTicks(4913),
->>>>>>>> 0a32592 (Commit Correction DeveloTime):Entity/MigrationsSqlServer/20251126225001_InitialCreate.Designer.cs
->>>>>>>> ac9c60348704fb1fed7cd40219aeb13beb0ef374:Entity/MigrationsSqlServer/20251126225001_InitialCreate.Designer.cs
+                            CreatedAt = new DateTime(2025, 11, 28, 8, 22, 39, 934, DateTimeKind.Utc).AddTicks(6341),
                             Description = "Vista principal del sistema.",
                             Icon = "fa-solid fa-house",
                             Name = "Inicio",
@@ -96,15 +80,7 @@ namespace Entity.MigrationsSqlServer
                         new
                         {
                             Id = 2,
-<<<<<<<< HEAD:Entity/MigrationsSqlServer/20251124231825_InitialCreate.Designer.cs
-                            CreatedAt = new DateTime(2025, 11, 24, 18, 18, 24, 284, DateTimeKind.Utc).AddTicks(2443),
-========
-<<<<<<<< HEAD:Entity/MigrationsSqlServer/20251124231825_InitialCreate.Designer.cs
-                            CreatedAt = new DateTime(2025, 11, 24, 18, 18, 24, 284, DateTimeKind.Utc).AddTicks(2443),
-========
-                            CreatedAt = new DateTime(2025, 11, 26, 17, 50, 0, 734, DateTimeKind.Utc).AddTicks(4913),
->>>>>>>> 0a32592 (Commit Correction DeveloTime):Entity/MigrationsSqlServer/20251126225001_InitialCreate.Designer.cs
->>>>>>>> ac9c60348704fb1fed7cd40219aeb13beb0ef374:Entity/MigrationsSqlServer/20251126225001_InitialCreate.Designer.cs
+                            CreatedAt = new DateTime(2025, 11, 28, 8, 22, 39, 934, DateTimeKind.Utc).AddTicks(6341),
                             Description = "Gestión de experiencias significativas.",
                             Icon = "fa-solid fa-star",
                             Name = "Experiencia",
@@ -115,15 +91,7 @@ namespace Entity.MigrationsSqlServer
                         new
                         {
                             Id = 3,
-<<<<<<<< HEAD:Entity/MigrationsSqlServer/20251124231825_InitialCreate.Designer.cs
-                            CreatedAt = new DateTime(2025, 11, 24, 18, 18, 24, 284, DateTimeKind.Utc).AddTicks(2443),
-========
-<<<<<<<< HEAD:Entity/MigrationsSqlServer/20251124231825_InitialCreate.Designer.cs
-                            CreatedAt = new DateTime(2025, 11, 24, 18, 18, 24, 284, DateTimeKind.Utc).AddTicks(2443),
-========
-                            CreatedAt = new DateTime(2025, 11, 26, 17, 50, 0, 734, DateTimeKind.Utc).AddTicks(4913),
->>>>>>>> 0a32592 (Commit Correction DeveloTime):Entity/MigrationsSqlServer/20251126225001_InitialCreate.Designer.cs
->>>>>>>> ac9c60348704fb1fed7cd40219aeb13beb0ef374:Entity/MigrationsSqlServer/20251126225001_InitialCreate.Designer.cs
+                            CreatedAt = new DateTime(2025, 11, 28, 8, 22, 39, 934, DateTimeKind.Utc).AddTicks(6341),
                             Description = "Gestión de evaluaciones.",
                             Icon = "fa-solid fa-clipboard-check",
                             Name = "Evaluación",
@@ -134,15 +102,7 @@ namespace Entity.MigrationsSqlServer
                         new
                         {
                             Id = 4,
-<<<<<<<< HEAD:Entity/MigrationsSqlServer/20251124231825_InitialCreate.Designer.cs
-                            CreatedAt = new DateTime(2025, 11, 24, 18, 18, 24, 284, DateTimeKind.Utc).AddTicks(2443),
-========
-<<<<<<<< HEAD:Entity/MigrationsSqlServer/20251124231825_InitialCreate.Designer.cs
-                            CreatedAt = new DateTime(2025, 11, 24, 18, 18, 24, 284, DateTimeKind.Utc).AddTicks(2443),
-========
-                            CreatedAt = new DateTime(2025, 11, 26, 17, 50, 0, 734, DateTimeKind.Utc).AddTicks(4913),
->>>>>>>> 0a32592 (Commit Correction DeveloTime):Entity/MigrationsSqlServer/20251126225001_InitialCreate.Designer.cs
->>>>>>>> ac9c60348704fb1fed7cd40219aeb13beb0ef374:Entity/MigrationsSqlServer/20251126225001_InitialCreate.Designer.cs
+                            CreatedAt = new DateTime(2025, 11, 28, 8, 22, 39, 934, DateTimeKind.Utc).AddTicks(6341),
                             Description = "Gestión de roles del sistema.",
                             Icon = "fa-solid fa-users-gear",
                             Name = "Roles",
@@ -153,15 +113,7 @@ namespace Entity.MigrationsSqlServer
                         new
                         {
                             Id = 5,
-<<<<<<<< HEAD:Entity/MigrationsSqlServer/20251124231825_InitialCreate.Designer.cs
-                            CreatedAt = new DateTime(2025, 11, 24, 18, 18, 24, 284, DateTimeKind.Utc).AddTicks(2443),
-========
-<<<<<<<< HEAD:Entity/MigrationsSqlServer/20251124231825_InitialCreate.Designer.cs
-                            CreatedAt = new DateTime(2025, 11, 24, 18, 18, 24, 284, DateTimeKind.Utc).AddTicks(2443),
-========
-                            CreatedAt = new DateTime(2025, 11, 26, 17, 50, 0, 734, DateTimeKind.Utc).AddTicks(4913),
->>>>>>>> 0a32592 (Commit Correction DeveloTime):Entity/MigrationsSqlServer/20251126225001_InitialCreate.Designer.cs
->>>>>>>> ac9c60348704fb1fed7cd40219aeb13beb0ef374:Entity/MigrationsSqlServer/20251126225001_InitialCreate.Designer.cs
+                            CreatedAt = new DateTime(2025, 11, 28, 8, 22, 39, 934, DateTimeKind.Utc).AddTicks(6341),
                             Description = "Gestión de usuarios.",
                             Icon = "fa-solid fa-users",
                             Name = "Usuarios",
@@ -172,15 +124,7 @@ namespace Entity.MigrationsSqlServer
                         new
                         {
                             Id = 6,
-<<<<<<<< HEAD:Entity/MigrationsSqlServer/20251124231825_InitialCreate.Designer.cs
-                            CreatedAt = new DateTime(2025, 11, 24, 18, 18, 24, 284, DateTimeKind.Utc).AddTicks(2443),
-========
-<<<<<<<< HEAD:Entity/MigrationsSqlServer/20251124231825_InitialCreate.Designer.cs
-                            CreatedAt = new DateTime(2025, 11, 24, 18, 18, 24, 284, DateTimeKind.Utc).AddTicks(2443),
-========
-                            CreatedAt = new DateTime(2025, 11, 26, 17, 50, 0, 734, DateTimeKind.Utc).AddTicks(4913),
->>>>>>>> 0a32592 (Commit Correction DeveloTime):Entity/MigrationsSqlServer/20251126225001_InitialCreate.Designer.cs
->>>>>>>> ac9c60348704fb1fed7cd40219aeb13beb0ef374:Entity/MigrationsSqlServer/20251126225001_InitialCreate.Designer.cs
+                            CreatedAt = new DateTime(2025, 11, 28, 8, 22, 39, 934, DateTimeKind.Utc).AddTicks(6341),
                             Description = "Gestión de personas.",
                             Icon = "fa-solid fa-user",
                             Name = "Personas",
@@ -191,15 +135,7 @@ namespace Entity.MigrationsSqlServer
                         new
                         {
                             Id = 7,
-<<<<<<<< HEAD:Entity/MigrationsSqlServer/20251124231825_InitialCreate.Designer.cs
-                            CreatedAt = new DateTime(2025, 11, 24, 18, 18, 24, 284, DateTimeKind.Utc).AddTicks(2443),
-========
-<<<<<<<< HEAD:Entity/MigrationsSqlServer/20251124231825_InitialCreate.Designer.cs
-                            CreatedAt = new DateTime(2025, 11, 24, 18, 18, 24, 284, DateTimeKind.Utc).AddTicks(2443),
-========
-                            CreatedAt = new DateTime(2025, 11, 26, 17, 50, 0, 734, DateTimeKind.Utc).AddTicks(4913),
->>>>>>>> 0a32592 (Commit Correction DeveloTime):Entity/MigrationsSqlServer/20251126225001_InitialCreate.Designer.cs
->>>>>>>> ac9c60348704fb1fed7cd40219aeb13beb0ef374:Entity/MigrationsSqlServer/20251126225001_InitialCreate.Designer.cs
+                            CreatedAt = new DateTime(2025, 11, 28, 8, 22, 39, 934, DateTimeKind.Utc).AddTicks(6341),
                             Description = "Formulario de seguimiento.",
                             Icon = "fa-solid fa-building-user",
                             Name = "Seguimiento",
@@ -210,15 +146,7 @@ namespace Entity.MigrationsSqlServer
                         new
                         {
                             Id = 10,
-<<<<<<<< HEAD:Entity/MigrationsSqlServer/20251124231825_InitialCreate.Designer.cs
-                            CreatedAt = new DateTime(2025, 11, 24, 18, 18, 24, 284, DateTimeKind.Utc).AddTicks(2443),
-========
-<<<<<<<< HEAD:Entity/MigrationsSqlServer/20251124231825_InitialCreate.Designer.cs
-                            CreatedAt = new DateTime(2025, 11, 24, 18, 18, 24, 284, DateTimeKind.Utc).AddTicks(2443),
-========
-                            CreatedAt = new DateTime(2025, 11, 26, 17, 50, 0, 734, DateTimeKind.Utc).AddTicks(4913),
->>>>>>>> 0a32592 (Commit Correction DeveloTime):Entity/MigrationsSqlServer/20251126225001_InitialCreate.Designer.cs
->>>>>>>> ac9c60348704fb1fed7cd40219aeb13beb0ef374:Entity/MigrationsSqlServer/20251126225001_InitialCreate.Designer.cs
+                            CreatedAt = new DateTime(2025, 11, 28, 8, 22, 39, 934, DateTimeKind.Utc).AddTicks(6341),
                             Description = "Manages the forms available in the system, allowing the creation, modification, and deletion of forms associated with different functionalities and modules.",
                             Icon = "fa-solid fa-window-restore",
                             Name = "Formularios",
@@ -229,15 +157,7 @@ namespace Entity.MigrationsSqlServer
                         new
                         {
                             Id = 9,
-<<<<<<<< HEAD:Entity/MigrationsSqlServer/20251124231825_InitialCreate.Designer.cs
-                            CreatedAt = new DateTime(2025, 11, 24, 18, 18, 24, 284, DateTimeKind.Utc).AddTicks(2443),
-========
-<<<<<<<< HEAD:Entity/MigrationsSqlServer/20251124231825_InitialCreate.Designer.cs
-                            CreatedAt = new DateTime(2025, 11, 24, 18, 18, 24, 284, DateTimeKind.Utc).AddTicks(2443),
-========
-                            CreatedAt = new DateTime(2025, 11, 26, 17, 50, 0, 734, DateTimeKind.Utc).AddTicks(4913),
->>>>>>>> 0a32592 (Commit Correction DeveloTime):Entity/MigrationsSqlServer/20251126225001_InitialCreate.Designer.cs
->>>>>>>> ac9c60348704fb1fed7cd40219aeb13beb0ef374:Entity/MigrationsSqlServer/20251126225001_InitialCreate.Designer.cs
+                            CreatedAt = new DateTime(2025, 11, 28, 8, 22, 39, 934, DateTimeKind.Utc).AddTicks(6341),
                             Description = "Manages system modules, allowing users to define, modify, and assign modules available to them based on established roles and permissions.",
                             Icon = "fa-solid fa-window-maximize",
                             Name = "Modulos",
@@ -248,15 +168,7 @@ namespace Entity.MigrationsSqlServer
                         new
                         {
                             Id = 8,
-<<<<<<<< HEAD:Entity/MigrationsSqlServer/20251124231825_InitialCreate.Designer.cs
-                            CreatedAt = new DateTime(2025, 11, 24, 18, 18, 24, 284, DateTimeKind.Utc).AddTicks(2443),
-========
-<<<<<<<< HEAD:Entity/MigrationsSqlServer/20251124231825_InitialCreate.Designer.cs
-                            CreatedAt = new DateTime(2025, 11, 24, 18, 18, 24, 284, DateTimeKind.Utc).AddTicks(2443),
-========
-                            CreatedAt = new DateTime(2025, 11, 26, 17, 50, 0, 734, DateTimeKind.Utc).AddTicks(4913),
->>>>>>>> 0a32592 (Commit Correction DeveloTime):Entity/MigrationsSqlServer/20251126225001_InitialCreate.Designer.cs
->>>>>>>> ac9c60348704fb1fed7cd40219aeb13beb0ef374:Entity/MigrationsSqlServer/20251126225001_InitialCreate.Designer.cs
+                            CreatedAt = new DateTime(2025, 11, 28, 8, 22, 39, 934, DateTimeKind.Utc).AddTicks(6341),
                             Description = "Allows you to assign specific permissions to users and roles, controlling access to functions, forms, and modules according to the system's needs and security policies.",
                             Icon = "fa-solid fa-user-lock",
                             Name = "Permisos",
@@ -267,15 +179,7 @@ namespace Entity.MigrationsSqlServer
                         new
                         {
                             Id = 11,
-<<<<<<<< HEAD:Entity/MigrationsSqlServer/20251124231825_InitialCreate.Designer.cs
-                            CreatedAt = new DateTime(2025, 11, 24, 18, 18, 24, 284, DateTimeKind.Utc).AddTicks(2443),
-========
-<<<<<<<< HEAD:Entity/MigrationsSqlServer/20251124231825_InitialCreate.Designer.cs
-                            CreatedAt = new DateTime(2025, 11, 24, 18, 18, 24, 284, DateTimeKind.Utc).AddTicks(2443),
-========
-                            CreatedAt = new DateTime(2025, 11, 26, 17, 50, 0, 734, DateTimeKind.Utc).AddTicks(4913),
->>>>>>>> 0a32592 (Commit Correction DeveloTime):Entity/MigrationsSqlServer/20251126225001_InitialCreate.Designer.cs
->>>>>>>> ac9c60348704fb1fed7cd40219aeb13beb0ef374:Entity/MigrationsSqlServer/20251126225001_InitialCreate.Designer.cs
+                            CreatedAt = new DateTime(2025, 11, 28, 8, 22, 39, 934, DateTimeKind.Utc).AddTicks(6341),
                             Description = "Gestiona los roles de usuario dentro del sistema, permitiendo la asignación, modificación y eliminación de permisos según las responsabilidades y niveles de acceso de cada usuario.",
                             Icon = "fa-solid fa-window-restore",
                             Name = "Asignación de Roles",
@@ -286,15 +190,7 @@ namespace Entity.MigrationsSqlServer
                         new
                         {
                             Id = 12,
-<<<<<<<< HEAD:Entity/MigrationsSqlServer/20251124231825_InitialCreate.Designer.cs
-                            CreatedAt = new DateTime(2025, 11, 24, 18, 18, 24, 284, DateTimeKind.Utc).AddTicks(2443),
-========
-<<<<<<<< HEAD:Entity/MigrationsSqlServer/20251124231825_InitialCreate.Designer.cs
-                            CreatedAt = new DateTime(2025, 11, 24, 18, 18, 24, 284, DateTimeKind.Utc).AddTicks(2443),
-========
-                            CreatedAt = new DateTime(2025, 11, 26, 17, 50, 0, 734, DateTimeKind.Utc).AddTicks(4913),
->>>>>>>> 0a32592 (Commit Correction DeveloTime):Entity/MigrationsSqlServer/20251126225001_InitialCreate.Designer.cs
->>>>>>>> ac9c60348704fb1fed7cd40219aeb13beb0ef374:Entity/MigrationsSqlServer/20251126225001_InitialCreate.Designer.cs
+                            CreatedAt = new DateTime(2025, 11, 28, 8, 22, 39, 934, DateTimeKind.Utc).AddTicks(6341),
                             Description = "Gestiona la relación entre formularios y módulos del sistema, permitiendo organizar, vincular y estructurar los formularios dentro de las diferentes secciones o áreas funcionales.",
                             Icon = "fa-solid fa-window-restore",
                             Name = "Asignación de Formularios",
@@ -305,15 +201,7 @@ namespace Entity.MigrationsSqlServer
                         new
                         {
                             Id = 13,
-<<<<<<<< HEAD:Entity/MigrationsSqlServer/20251124231825_InitialCreate.Designer.cs
-                            CreatedAt = new DateTime(2025, 11, 24, 18, 18, 24, 284, DateTimeKind.Utc).AddTicks(2443),
-========
-<<<<<<<< HEAD:Entity/MigrationsSqlServer/20251124231825_InitialCreate.Designer.cs
-                            CreatedAt = new DateTime(2025, 11, 24, 18, 18, 24, 284, DateTimeKind.Utc).AddTicks(2443),
-========
-                            CreatedAt = new DateTime(2025, 11, 26, 17, 50, 0, 734, DateTimeKind.Utc).AddTicks(4913),
->>>>>>>> 0a32592 (Commit Correction DeveloTime):Entity/MigrationsSqlServer/20251126225001_InitialCreate.Designer.cs
->>>>>>>> ac9c60348704fb1fed7cd40219aeb13beb0ef374:Entity/MigrationsSqlServer/20251126225001_InitialCreate.Designer.cs
+                            CreatedAt = new DateTime(2025, 11, 28, 8, 22, 39, 934, DateTimeKind.Utc).AddTicks(6341),
                             Description = "Gestiona la relación entre roles y formularios del sistema, permitiendo definir, organizar y controlar los permisos de acceso y acciones que cada rol puede realizar sobre los diferentes formularios.",
                             Icon = "fa-solid fa-window-restore",
                             Name = "Asignación por permisos",
@@ -324,15 +212,7 @@ namespace Entity.MigrationsSqlServer
                         new
                         {
                             Id = 14,
-<<<<<<<< HEAD:Entity/MigrationsSqlServer/20251124231825_InitialCreate.Designer.cs
-                            CreatedAt = new DateTime(2025, 11, 24, 18, 18, 24, 284, DateTimeKind.Utc).AddTicks(2443),
-========
-<<<<<<<< HEAD:Entity/MigrationsSqlServer/20251124231825_InitialCreate.Designer.cs
-                            CreatedAt = new DateTime(2025, 11, 24, 18, 18, 24, 284, DateTimeKind.Utc).AddTicks(2443),
-========
-                            CreatedAt = new DateTime(2025, 11, 26, 17, 50, 0, 734, DateTimeKind.Utc).AddTicks(4913),
->>>>>>>> 0a32592 (Commit Correction DeveloTime):Entity/MigrationsSqlServer/20251126225001_InitialCreate.Designer.cs
->>>>>>>> ac9c60348704fb1fed7cd40219aeb13beb0ef374:Entity/MigrationsSqlServer/20251126225001_InitialCreate.Designer.cs
+                            CreatedAt = new DateTime(2025, 11, 28, 8, 22, 39, 934, DateTimeKind.Utc).AddTicks(6341),
                             Description = "Formulario de Criterios",
                             Icon = "fa-solid fa-window-restore",
                             Name = "Asignación de Criterios",
@@ -343,15 +223,7 @@ namespace Entity.MigrationsSqlServer
                         new
                         {
                             Id = 15,
-<<<<<<<< HEAD:Entity/MigrationsSqlServer/20251124231825_InitialCreate.Designer.cs
-                            CreatedAt = new DateTime(2025, 11, 24, 18, 18, 24, 284, DateTimeKind.Utc).AddTicks(2443),
-========
-<<<<<<<< HEAD:Entity/MigrationsSqlServer/20251124231825_InitialCreate.Designer.cs
-                            CreatedAt = new DateTime(2025, 11, 24, 18, 18, 24, 284, DateTimeKind.Utc).AddTicks(2443),
-========
-                            CreatedAt = new DateTime(2025, 11, 26, 17, 50, 0, 734, DateTimeKind.Utc).AddTicks(4913),
->>>>>>>> 0a32592 (Commit Correction DeveloTime):Entity/MigrationsSqlServer/20251126225001_InitialCreate.Designer.cs
->>>>>>>> ac9c60348704fb1fed7cd40219aeb13beb0ef374:Entity/MigrationsSqlServer/20251126225001_InitialCreate.Designer.cs
+                            CreatedAt = new DateTime(2025, 11, 28, 8, 22, 39, 934, DateTimeKind.Utc).AddTicks(6341),
                             Description = "Formulario de Grados",
                             Icon = "fa-solid fa-window-restore",
                             Name = "Asignación de Grados",
@@ -362,15 +234,7 @@ namespace Entity.MigrationsSqlServer
                         new
                         {
                             Id = 16,
-<<<<<<<< HEAD:Entity/MigrationsSqlServer/20251124231825_InitialCreate.Designer.cs
-                            CreatedAt = new DateTime(2025, 11, 24, 18, 18, 24, 284, DateTimeKind.Utc).AddTicks(2443),
-========
-<<<<<<<< HEAD:Entity/MigrationsSqlServer/20251124231825_InitialCreate.Designer.cs
-                            CreatedAt = new DateTime(2025, 11, 24, 18, 18, 24, 284, DateTimeKind.Utc).AddTicks(2443),
-========
-                            CreatedAt = new DateTime(2025, 11, 26, 17, 50, 0, 734, DateTimeKind.Utc).AddTicks(4913),
->>>>>>>> 0a32592 (Commit Correction DeveloTime):Entity/MigrationsSqlServer/20251126225001_InitialCreate.Designer.cs
->>>>>>>> ac9c60348704fb1fed7cd40219aeb13beb0ef374:Entity/MigrationsSqlServer/20251126225001_InitialCreate.Designer.cs
+                            CreatedAt = new DateTime(2025, 11, 28, 8, 22, 39, 934, DateTimeKind.Utc).AddTicks(6341),
                             Description = "Formulario de Líenas Temáticas",
                             Icon = "fa-solid fa-window-restore",
                             Name = "Asignación de Líneas Temáticas",
@@ -381,15 +245,7 @@ namespace Entity.MigrationsSqlServer
                         new
                         {
                             Id = 17,
-<<<<<<<< HEAD:Entity/MigrationsSqlServer/20251124231825_InitialCreate.Designer.cs
-                            CreatedAt = new DateTime(2025, 11, 24, 18, 18, 24, 284, DateTimeKind.Utc).AddTicks(2443),
-========
-<<<<<<<< HEAD:Entity/MigrationsSqlServer/20251124231825_InitialCreate.Designer.cs
-                            CreatedAt = new DateTime(2025, 11, 24, 18, 18, 24, 284, DateTimeKind.Utc).AddTicks(2443),
-========
-                            CreatedAt = new DateTime(2025, 11, 26, 17, 50, 0, 734, DateTimeKind.Utc).AddTicks(4913),
->>>>>>>> 0a32592 (Commit Correction DeveloTime):Entity/MigrationsSqlServer/20251126225001_InitialCreate.Designer.cs
->>>>>>>> ac9c60348704fb1fed7cd40219aeb13beb0ef374:Entity/MigrationsSqlServer/20251126225001_InitialCreate.Designer.cs
+                            CreatedAt = new DateTime(2025, 11, 28, 8, 22, 39, 934, DateTimeKind.Utc).AddTicks(6341),
                             Description = "Formulario de grupo poblacional",
                             Icon = "fa-solid fa-window-restore",
                             Name = "Asignación de Grupo Poblacional",
@@ -400,15 +256,7 @@ namespace Entity.MigrationsSqlServer
                         new
                         {
                             Id = 18,
-<<<<<<<< HEAD:Entity/MigrationsSqlServer/20251124231825_InitialCreate.Designer.cs
-                            CreatedAt = new DateTime(2025, 11, 24, 18, 18, 24, 284, DateTimeKind.Utc).AddTicks(2443),
-========
-<<<<<<<< HEAD:Entity/MigrationsSqlServer/20251124231825_InitialCreate.Designer.cs
-                            CreatedAt = new DateTime(2025, 11, 24, 18, 18, 24, 284, DateTimeKind.Utc).AddTicks(2443),
-========
-                            CreatedAt = new DateTime(2025, 11, 26, 17, 50, 0, 734, DateTimeKind.Utc).AddTicks(4913),
->>>>>>>> 0a32592 (Commit Correction DeveloTime):Entity/MigrationsSqlServer/20251126225001_InitialCreate.Designer.cs
->>>>>>>> ac9c60348704fb1fed7cd40219aeb13beb0ef374:Entity/MigrationsSqlServer/20251126225001_InitialCreate.Designer.cs
+                            CreatedAt = new DateTime(2025, 11, 28, 8, 22, 39, 934, DateTimeKind.Utc).AddTicks(6341),
                             Description = "Formulario del estado",
                             Icon = "fa-solid fa-window-restore",
                             Name = "Asignación de Estado",
@@ -419,15 +267,7 @@ namespace Entity.MigrationsSqlServer
                         new
                         {
                             Id = 19,
-<<<<<<<< HEAD:Entity/MigrationsSqlServer/20251124231825_InitialCreate.Designer.cs
-                            CreatedAt = new DateTime(2025, 11, 24, 18, 18, 24, 284, DateTimeKind.Utc).AddTicks(2443),
-========
-<<<<<<<< HEAD:Entity/MigrationsSqlServer/20251124231825_InitialCreate.Designer.cs
-                            CreatedAt = new DateTime(2025, 11, 24, 18, 18, 24, 284, DateTimeKind.Utc).AddTicks(2443),
-========
-                            CreatedAt = new DateTime(2025, 11, 26, 17, 50, 0, 734, DateTimeKind.Utc).AddTicks(4913),
->>>>>>>> 0a32592 (Commit Correction DeveloTime):Entity/MigrationsSqlServer/20251126225001_InitialCreate.Designer.cs
->>>>>>>> ac9c60348704fb1fed7cd40219aeb13beb0ef374:Entity/MigrationsSqlServer/20251126225001_InitialCreate.Designer.cs
+                            CreatedAt = new DateTime(2025, 11, 28, 8, 22, 39, 934, DateTimeKind.Utc).AddTicks(6341),
                             Description = "permite hacer el seguimiento de edicion de los formularios",
                             Icon = "fa-solid fa-window-restore",
                             Name = "gestion experiencia",
@@ -471,15 +311,7 @@ namespace Entity.MigrationsSqlServer
                         {
                             Id = 1,
                             Code = "01",
-<<<<<<<< HEAD:Entity/MigrationsSqlServer/20251124231825_InitialCreate.Designer.cs
-                            CreatedAt = new DateTime(2025, 11, 24, 18, 18, 24, 284, DateTimeKind.Utc).AddTicks(2443),
-========
-<<<<<<<< HEAD:Entity/MigrationsSqlServer/20251124231825_InitialCreate.Designer.cs
-                            CreatedAt = new DateTime(2025, 11, 24, 18, 18, 24, 284, DateTimeKind.Utc).AddTicks(2443),
-========
-                            CreatedAt = new DateTime(2025, 11, 26, 17, 50, 0, 734, DateTimeKind.Utc).AddTicks(4913),
->>>>>>>> 0a32592 (Commit Correction DeveloTime):Entity/MigrationsSqlServer/20251126225001_InitialCreate.Designer.cs
->>>>>>>> ac9c60348704fb1fed7cd40219aeb13beb0ef374:Entity/MigrationsSqlServer/20251126225001_InitialCreate.Designer.cs
+                            CreatedAt = new DateTime(2025, 11, 28, 8, 22, 39, 934, DateTimeKind.Utc).AddTicks(6341),
                             Name = "Pertinencia",
                             State = true
                         },
@@ -487,15 +319,7 @@ namespace Entity.MigrationsSqlServer
                         {
                             Id = 2,
                             Code = "02",
-<<<<<<<< HEAD:Entity/MigrationsSqlServer/20251124231825_InitialCreate.Designer.cs
-                            CreatedAt = new DateTime(2025, 11, 24, 18, 18, 24, 284, DateTimeKind.Utc).AddTicks(2443),
-========
-<<<<<<<< HEAD:Entity/MigrationsSqlServer/20251124231825_InitialCreate.Designer.cs
-                            CreatedAt = new DateTime(2025, 11, 24, 18, 18, 24, 284, DateTimeKind.Utc).AddTicks(2443),
-========
-                            CreatedAt = new DateTime(2025, 11, 26, 17, 50, 0, 734, DateTimeKind.Utc).AddTicks(4913),
->>>>>>>> 0a32592 (Commit Correction DeveloTime):Entity/MigrationsSqlServer/20251126225001_InitialCreate.Designer.cs
->>>>>>>> ac9c60348704fb1fed7cd40219aeb13beb0ef374:Entity/MigrationsSqlServer/20251126225001_InitialCreate.Designer.cs
+                            CreatedAt = new DateTime(2025, 11, 28, 8, 22, 39, 934, DateTimeKind.Utc).AddTicks(6341),
                             Name = "Fundamentación",
                             State = true
                         },
@@ -503,15 +327,7 @@ namespace Entity.MigrationsSqlServer
                         {
                             Id = 3,
                             Code = "03",
-<<<<<<<< HEAD:Entity/MigrationsSqlServer/20251124231825_InitialCreate.Designer.cs
-                            CreatedAt = new DateTime(2025, 11, 24, 18, 18, 24, 284, DateTimeKind.Utc).AddTicks(2443),
-========
-<<<<<<<< HEAD:Entity/MigrationsSqlServer/20251124231825_InitialCreate.Designer.cs
-                            CreatedAt = new DateTime(2025, 11, 24, 18, 18, 24, 284, DateTimeKind.Utc).AddTicks(2443),
-========
-                            CreatedAt = new DateTime(2025, 11, 26, 17, 50, 0, 734, DateTimeKind.Utc).AddTicks(4913),
->>>>>>>> 0a32592 (Commit Correction DeveloTime):Entity/MigrationsSqlServer/20251126225001_InitialCreate.Designer.cs
->>>>>>>> ac9c60348704fb1fed7cd40219aeb13beb0ef374:Entity/MigrationsSqlServer/20251126225001_InitialCreate.Designer.cs
+                            CreatedAt = new DateTime(2025, 11, 28, 8, 22, 39, 934, DateTimeKind.Utc).AddTicks(6341),
                             Name = "Innovación",
                             State = true
                         },
@@ -519,15 +335,7 @@ namespace Entity.MigrationsSqlServer
                         {
                             Id = 4,
                             Code = "04",
-<<<<<<<< HEAD:Entity/MigrationsSqlServer/20251124231825_InitialCreate.Designer.cs
-                            CreatedAt = new DateTime(2025, 11, 24, 18, 18, 24, 284, DateTimeKind.Utc).AddTicks(2443),
-========
-<<<<<<<< HEAD:Entity/MigrationsSqlServer/20251124231825_InitialCreate.Designer.cs
-                            CreatedAt = new DateTime(2025, 11, 24, 18, 18, 24, 284, DateTimeKind.Utc).AddTicks(2443),
-========
-                            CreatedAt = new DateTime(2025, 11, 26, 17, 50, 0, 734, DateTimeKind.Utc).AddTicks(4913),
->>>>>>>> 0a32592 (Commit Correction DeveloTime):Entity/MigrationsSqlServer/20251126225001_InitialCreate.Designer.cs
->>>>>>>> ac9c60348704fb1fed7cd40219aeb13beb0ef374:Entity/MigrationsSqlServer/20251126225001_InitialCreate.Designer.cs
+                            CreatedAt = new DateTime(2025, 11, 28, 8, 22, 39, 934, DateTimeKind.Utc).AddTicks(6341),
                             Name = "Resultados",
                             State = true
                         },
@@ -535,15 +343,7 @@ namespace Entity.MigrationsSqlServer
                         {
                             Id = 5,
                             Code = "05",
-<<<<<<<< HEAD:Entity/MigrationsSqlServer/20251124231825_InitialCreate.Designer.cs
-                            CreatedAt = new DateTime(2025, 11, 24, 18, 18, 24, 284, DateTimeKind.Utc).AddTicks(2443),
-========
-<<<<<<<< HEAD:Entity/MigrationsSqlServer/20251124231825_InitialCreate.Designer.cs
-                            CreatedAt = new DateTime(2025, 11, 24, 18, 18, 24, 284, DateTimeKind.Utc).AddTicks(2443),
-========
-                            CreatedAt = new DateTime(2025, 11, 26, 17, 50, 0, 734, DateTimeKind.Utc).AddTicks(4913),
->>>>>>>> 0a32592 (Commit Correction DeveloTime):Entity/MigrationsSqlServer/20251126225001_InitialCreate.Designer.cs
->>>>>>>> ac9c60348704fb1fed7cd40219aeb13beb0ef374:Entity/MigrationsSqlServer/20251126225001_InitialCreate.Designer.cs
+                            CreatedAt = new DateTime(2025, 11, 28, 8, 22, 39, 934, DateTimeKind.Utc).AddTicks(6341),
                             Name = "Empoderamiento",
                             State = true
                         },
@@ -551,15 +351,7 @@ namespace Entity.MigrationsSqlServer
                         {
                             Id = 6,
                             Code = "06",
-<<<<<<<< HEAD:Entity/MigrationsSqlServer/20251124231825_InitialCreate.Designer.cs
-                            CreatedAt = new DateTime(2025, 11, 24, 18, 18, 24, 284, DateTimeKind.Utc).AddTicks(2443),
-========
-<<<<<<<< HEAD:Entity/MigrationsSqlServer/20251124231825_InitialCreate.Designer.cs
-                            CreatedAt = new DateTime(2025, 11, 24, 18, 18, 24, 284, DateTimeKind.Utc).AddTicks(2443),
-========
-                            CreatedAt = new DateTime(2025, 11, 26, 17, 50, 0, 734, DateTimeKind.Utc).AddTicks(4913),
->>>>>>>> 0a32592 (Commit Correction DeveloTime):Entity/MigrationsSqlServer/20251126225001_InitialCreate.Designer.cs
->>>>>>>> ac9c60348704fb1fed7cd40219aeb13beb0ef374:Entity/MigrationsSqlServer/20251126225001_InitialCreate.Designer.cs
+                            CreatedAt = new DateTime(2025, 11, 28, 8, 22, 39, 934, DateTimeKind.Utc).AddTicks(6341),
                             Name = "Seguimiento y valoración",
                             State = true
                         },
@@ -567,15 +359,7 @@ namespace Entity.MigrationsSqlServer
                         {
                             Id = 7,
                             Code = "07",
-<<<<<<<< HEAD:Entity/MigrationsSqlServer/20251124231825_InitialCreate.Designer.cs
-                            CreatedAt = new DateTime(2025, 11, 24, 18, 18, 24, 284, DateTimeKind.Utc).AddTicks(2443),
-========
-<<<<<<<< HEAD:Entity/MigrationsSqlServer/20251124231825_InitialCreate.Designer.cs
-                            CreatedAt = new DateTime(2025, 11, 24, 18, 18, 24, 284, DateTimeKind.Utc).AddTicks(2443),
-========
-                            CreatedAt = new DateTime(2025, 11, 26, 17, 50, 0, 734, DateTimeKind.Utc).AddTicks(4913),
->>>>>>>> 0a32592 (Commit Correction DeveloTime):Entity/MigrationsSqlServer/20251126225001_InitialCreate.Designer.cs
->>>>>>>> ac9c60348704fb1fed7cd40219aeb13beb0ef374:Entity/MigrationsSqlServer/20251126225001_InitialCreate.Designer.cs
+                            CreatedAt = new DateTime(2025, 11, 28, 8, 22, 39, 934, DateTimeKind.Utc).AddTicks(6341),
                             Name = "Transformación",
                             State = true
                         },
@@ -583,15 +367,7 @@ namespace Entity.MigrationsSqlServer
                         {
                             Id = 8,
                             Code = "08",
-<<<<<<<< HEAD:Entity/MigrationsSqlServer/20251124231825_InitialCreate.Designer.cs
-                            CreatedAt = new DateTime(2025, 11, 24, 18, 18, 24, 284, DateTimeKind.Utc).AddTicks(2443),
-========
-<<<<<<<< HEAD:Entity/MigrationsSqlServer/20251124231825_InitialCreate.Designer.cs
-                            CreatedAt = new DateTime(2025, 11, 24, 18, 18, 24, 284, DateTimeKind.Utc).AddTicks(2443),
-========
-                            CreatedAt = new DateTime(2025, 11, 26, 17, 50, 0, 734, DateTimeKind.Utc).AddTicks(4913),
->>>>>>>> 0a32592 (Commit Correction DeveloTime):Entity/MigrationsSqlServer/20251126225001_InitialCreate.Designer.cs
->>>>>>>> ac9c60348704fb1fed7cd40219aeb13beb0ef374:Entity/MigrationsSqlServer/20251126225001_InitialCreate.Designer.cs
+                            CreatedAt = new DateTime(2025, 11, 28, 8, 22, 39, 934, DateTimeKind.Utc).AddTicks(6341),
                             Name = "Sostenibilidad",
                             State = true
                         },
@@ -599,15 +375,7 @@ namespace Entity.MigrationsSqlServer
                         {
                             Id = 9,
                             Code = "09",
-<<<<<<<< HEAD:Entity/MigrationsSqlServer/20251124231825_InitialCreate.Designer.cs
-                            CreatedAt = new DateTime(2025, 11, 24, 18, 18, 24, 284, DateTimeKind.Utc).AddTicks(2443),
-========
-<<<<<<<< HEAD:Entity/MigrationsSqlServer/20251124231825_InitialCreate.Designer.cs
-                            CreatedAt = new DateTime(2025, 11, 24, 18, 18, 24, 284, DateTimeKind.Utc).AddTicks(2443),
-========
-                            CreatedAt = new DateTime(2025, 11, 26, 17, 50, 0, 734, DateTimeKind.Utc).AddTicks(4913),
->>>>>>>> 0a32592 (Commit Correction DeveloTime):Entity/MigrationsSqlServer/20251126225001_InitialCreate.Designer.cs
->>>>>>>> ac9c60348704fb1fed7cd40219aeb13beb0ef374:Entity/MigrationsSqlServer/20251126225001_InitialCreate.Designer.cs
+                            CreatedAt = new DateTime(2025, 11, 28, 8, 22, 39, 934, DateTimeKind.Utc).AddTicks(6341),
                             Name = "Transferencia",
                             State = true
                         });
@@ -651,15 +419,7 @@ namespace Entity.MigrationsSqlServer
                         {
                             Id = 1,
                             Code = "01",
-<<<<<<<< HEAD:Entity/MigrationsSqlServer/20251124231825_InitialCreate.Designer.cs
-                            CreatedAt = new DateTime(2025, 11, 24, 18, 18, 24, 284, DateTimeKind.Utc).AddTicks(2443),
-========
-<<<<<<<< HEAD:Entity/MigrationsSqlServer/20251124231825_InitialCreate.Designer.cs
-                            CreatedAt = new DateTime(2025, 11, 24, 18, 18, 24, 284, DateTimeKind.Utc).AddTicks(2443),
-========
-                            CreatedAt = new DateTime(2025, 11, 26, 17, 50, 0, 734, DateTimeKind.Utc).AddTicks(4913),
->>>>>>>> 0a32592 (Commit Correction DeveloTime):Entity/MigrationsSqlServer/20251126225001_InitialCreate.Designer.cs
->>>>>>>> ac9c60348704fb1fed7cd40219aeb13beb0ef374:Entity/MigrationsSqlServer/20251126225001_InitialCreate.Designer.cs
+                            CreatedAt = new DateTime(2025, 11, 28, 8, 22, 39, 934, DateTimeKind.Utc).AddTicks(6341),
                             Description = "",
                             Name = "Primaria Infancia (Jardin-transicion)",
                             State = true
@@ -668,15 +428,7 @@ namespace Entity.MigrationsSqlServer
                         {
                             Id = 2,
                             Code = "02",
-<<<<<<<< HEAD:Entity/MigrationsSqlServer/20251124231825_InitialCreate.Designer.cs
-                            CreatedAt = new DateTime(2025, 11, 24, 18, 18, 24, 284, DateTimeKind.Utc).AddTicks(2443),
-========
-<<<<<<<< HEAD:Entity/MigrationsSqlServer/20251124231825_InitialCreate.Designer.cs
-                            CreatedAt = new DateTime(2025, 11, 24, 18, 18, 24, 284, DateTimeKind.Utc).AddTicks(2443),
-========
-                            CreatedAt = new DateTime(2025, 11, 26, 17, 50, 0, 734, DateTimeKind.Utc).AddTicks(4913),
->>>>>>>> 0a32592 (Commit Correction DeveloTime):Entity/MigrationsSqlServer/20251126225001_InitialCreate.Designer.cs
->>>>>>>> ac9c60348704fb1fed7cd40219aeb13beb0ef374:Entity/MigrationsSqlServer/20251126225001_InitialCreate.Designer.cs
+                            CreatedAt = new DateTime(2025, 11, 28, 8, 22, 39, 934, DateTimeKind.Utc).AddTicks(6341),
                             Description = "",
                             Name = "Primaria",
                             State = true
@@ -685,15 +437,7 @@ namespace Entity.MigrationsSqlServer
                         {
                             Id = 4,
                             Code = "04",
-<<<<<<<< HEAD:Entity/MigrationsSqlServer/20251124231825_InitialCreate.Designer.cs
-                            CreatedAt = new DateTime(2025, 11, 24, 18, 18, 24, 284, DateTimeKind.Utc).AddTicks(2443),
-========
-<<<<<<<< HEAD:Entity/MigrationsSqlServer/20251124231825_InitialCreate.Designer.cs
-                            CreatedAt = new DateTime(2025, 11, 24, 18, 18, 24, 284, DateTimeKind.Utc).AddTicks(2443),
-========
-                            CreatedAt = new DateTime(2025, 11, 26, 17, 50, 0, 734, DateTimeKind.Utc).AddTicks(4913),
->>>>>>>> 0a32592 (Commit Correction DeveloTime):Entity/MigrationsSqlServer/20251126225001_InitialCreate.Designer.cs
->>>>>>>> ac9c60348704fb1fed7cd40219aeb13beb0ef374:Entity/MigrationsSqlServer/20251126225001_InitialCreate.Designer.cs
+                            CreatedAt = new DateTime(2025, 11, 28, 8, 22, 39, 934, DateTimeKind.Utc).AddTicks(6341),
                             Description = "",
                             Name = "Media",
                             State = true
@@ -702,15 +446,7 @@ namespace Entity.MigrationsSqlServer
                         {
                             Id = 3,
                             Code = "03",
-<<<<<<<< HEAD:Entity/MigrationsSqlServer/20251124231825_InitialCreate.Designer.cs
-                            CreatedAt = new DateTime(2025, 11, 24, 18, 18, 24, 284, DateTimeKind.Utc).AddTicks(2443),
-========
-<<<<<<<< HEAD:Entity/MigrationsSqlServer/20251124231825_InitialCreate.Designer.cs
-                            CreatedAt = new DateTime(2025, 11, 24, 18, 18, 24, 284, DateTimeKind.Utc).AddTicks(2443),
-========
-                            CreatedAt = new DateTime(2025, 11, 26, 17, 50, 0, 734, DateTimeKind.Utc).AddTicks(4913),
->>>>>>>> 0a32592 (Commit Correction DeveloTime):Entity/MigrationsSqlServer/20251126225001_InitialCreate.Designer.cs
->>>>>>>> ac9c60348704fb1fed7cd40219aeb13beb0ef374:Entity/MigrationsSqlServer/20251126225001_InitialCreate.Designer.cs
+                            CreatedAt = new DateTime(2025, 11, 28, 8, 22, 39, 934, DateTimeKind.Utc).AddTicks(6341),
                             Description = "",
                             Name = "Basic",
                             State = true
@@ -719,15 +455,7 @@ namespace Entity.MigrationsSqlServer
                         {
                             Id = 5,
                             Code = "05",
-<<<<<<<< HEAD:Entity/MigrationsSqlServer/20251124231825_InitialCreate.Designer.cs
-                            CreatedAt = new DateTime(2025, 11, 24, 18, 18, 24, 284, DateTimeKind.Utc).AddTicks(2443),
-========
-<<<<<<<< HEAD:Entity/MigrationsSqlServer/20251124231825_InitialCreate.Designer.cs
-                            CreatedAt = new DateTime(2025, 11, 24, 18, 18, 24, 284, DateTimeKind.Utc).AddTicks(2443),
-========
-                            CreatedAt = new DateTime(2025, 11, 26, 17, 50, 0, 734, DateTimeKind.Utc).AddTicks(4913),
->>>>>>>> 0a32592 (Commit Correction DeveloTime):Entity/MigrationsSqlServer/20251126225001_InitialCreate.Designer.cs
->>>>>>>> ac9c60348704fb1fed7cd40219aeb13beb0ef374:Entity/MigrationsSqlServer/20251126225001_InitialCreate.Designer.cs
+                            CreatedAt = new DateTime(2025, 11, 28, 8, 22, 39, 934, DateTimeKind.Utc).AddTicks(6341),
                             Description = "",
                             Name = "CLEI",
                             State = true
@@ -736,15 +464,7 @@ namespace Entity.MigrationsSqlServer
                         {
                             Id = 6,
                             Code = "06",
-<<<<<<<< HEAD:Entity/MigrationsSqlServer/20251124231825_InitialCreate.Designer.cs
-                            CreatedAt = new DateTime(2025, 11, 24, 18, 18, 24, 284, DateTimeKind.Utc).AddTicks(2443),
-========
-<<<<<<<< HEAD:Entity/MigrationsSqlServer/20251124231825_InitialCreate.Designer.cs
-                            CreatedAt = new DateTime(2025, 11, 24, 18, 18, 24, 284, DateTimeKind.Utc).AddTicks(2443),
-========
-                            CreatedAt = new DateTime(2025, 11, 26, 17, 50, 0, 734, DateTimeKind.Utc).AddTicks(4913),
->>>>>>>> 0a32592 (Commit Correction DeveloTime):Entity/MigrationsSqlServer/20251126225001_InitialCreate.Designer.cs
->>>>>>>> ac9c60348704fb1fed7cd40219aeb13beb0ef374:Entity/MigrationsSqlServer/20251126225001_InitialCreate.Designer.cs
+                            CreatedAt = new DateTime(2025, 11, 28, 8, 22, 39, 934, DateTimeKind.Utc).AddTicks(6341),
                             Description = "",
                             Name = "Todas las anteriores",
                             State = true
@@ -785,15 +505,7 @@ namespace Entity.MigrationsSqlServer
                         {
                             Id = 1,
                             Code = "01",
-<<<<<<<< HEAD:Entity/MigrationsSqlServer/20251124231825_InitialCreate.Designer.cs
-                            CreatedAt = new DateTime(2025, 11, 24, 18, 18, 24, 284, DateTimeKind.Utc).AddTicks(2443),
-========
-<<<<<<<< HEAD:Entity/MigrationsSqlServer/20251124231825_InitialCreate.Designer.cs
-                            CreatedAt = new DateTime(2025, 11, 24, 18, 18, 24, 284, DateTimeKind.Utc).AddTicks(2443),
-========
-                            CreatedAt = new DateTime(2025, 11, 26, 17, 50, 0, 734, DateTimeKind.Utc).AddTicks(4913),
->>>>>>>> 0a32592 (Commit Correction DeveloTime):Entity/MigrationsSqlServer/20251126225001_InitialCreate.Designer.cs
->>>>>>>> ac9c60348704fb1fed7cd40219aeb13beb0ef374:Entity/MigrationsSqlServer/20251126225001_InitialCreate.Designer.cs
+                            CreatedAt = new DateTime(2025, 11, 28, 8, 22, 39, 934, DateTimeKind.Utc).AddTicks(6341),
                             Name = "Ciencia y Tecnología",
                             State = true
                         },
@@ -801,15 +513,7 @@ namespace Entity.MigrationsSqlServer
                         {
                             Id = 2,
                             Code = "02",
-<<<<<<<< HEAD:Entity/MigrationsSqlServer/20251124231825_InitialCreate.Designer.cs
-                            CreatedAt = new DateTime(2025, 11, 24, 18, 18, 24, 284, DateTimeKind.Utc).AddTicks(2443),
-========
-<<<<<<<< HEAD:Entity/MigrationsSqlServer/20251124231825_InitialCreate.Designer.cs
-                            CreatedAt = new DateTime(2025, 11, 24, 18, 18, 24, 284, DateTimeKind.Utc).AddTicks(2443),
-========
-                            CreatedAt = new DateTime(2025, 11, 26, 17, 50, 0, 734, DateTimeKind.Utc).AddTicks(4913),
->>>>>>>> 0a32592 (Commit Correction DeveloTime):Entity/MigrationsSqlServer/20251126225001_InitialCreate.Designer.cs
->>>>>>>> ac9c60348704fb1fed7cd40219aeb13beb0ef374:Entity/MigrationsSqlServer/20251126225001_InitialCreate.Designer.cs
+                            CreatedAt = new DateTime(2025, 11, 28, 8, 22, 39, 934, DateTimeKind.Utc).AddTicks(6341),
                             Name = "Educación Ambiental",
                             State = true
                         },
@@ -817,15 +521,7 @@ namespace Entity.MigrationsSqlServer
                         {
                             Id = 3,
                             Code = "03",
-<<<<<<<< HEAD:Entity/MigrationsSqlServer/20251124231825_InitialCreate.Designer.cs
-                            CreatedAt = new DateTime(2025, 11, 24, 18, 18, 24, 284, DateTimeKind.Utc).AddTicks(2443),
-========
-<<<<<<<< HEAD:Entity/MigrationsSqlServer/20251124231825_InitialCreate.Designer.cs
-                            CreatedAt = new DateTime(2025, 11, 24, 18, 18, 24, 284, DateTimeKind.Utc).AddTicks(2443),
-========
-                            CreatedAt = new DateTime(2025, 11, 26, 17, 50, 0, 734, DateTimeKind.Utc).AddTicks(4913),
->>>>>>>> 0a32592 (Commit Correction DeveloTime):Entity/MigrationsSqlServer/20251126225001_InitialCreate.Designer.cs
->>>>>>>> ac9c60348704fb1fed7cd40219aeb13beb0ef374:Entity/MigrationsSqlServer/20251126225001_InitialCreate.Designer.cs
+                            CreatedAt = new DateTime(2025, 11, 28, 8, 22, 39, 934, DateTimeKind.Utc).AddTicks(6341),
                             Name = "Interculturalidad Bilingüismo",
                             State = true
                         },
@@ -833,15 +529,7 @@ namespace Entity.MigrationsSqlServer
                         {
                             Id = 4,
                             Code = "04",
-<<<<<<<< HEAD:Entity/MigrationsSqlServer/20251124231825_InitialCreate.Designer.cs
-                            CreatedAt = new DateTime(2025, 11, 24, 18, 18, 24, 284, DateTimeKind.Utc).AddTicks(2443),
-========
-<<<<<<<< HEAD:Entity/MigrationsSqlServer/20251124231825_InitialCreate.Designer.cs
-                            CreatedAt = new DateTime(2025, 11, 24, 18, 18, 24, 284, DateTimeKind.Utc).AddTicks(2443),
-========
-                            CreatedAt = new DateTime(2025, 11, 26, 17, 50, 0, 734, DateTimeKind.Utc).AddTicks(4913),
->>>>>>>> 0a32592 (Commit Correction DeveloTime):Entity/MigrationsSqlServer/20251126225001_InitialCreate.Designer.cs
->>>>>>>> ac9c60348704fb1fed7cd40219aeb13beb0ef374:Entity/MigrationsSqlServer/20251126225001_InitialCreate.Designer.cs
+                            CreatedAt = new DateTime(2025, 11, 28, 8, 22, 39, 934, DateTimeKind.Utc).AddTicks(6341),
                             Name = "Arte, Cultura y Patrimonio",
                             State = true
                         },
@@ -849,15 +537,7 @@ namespace Entity.MigrationsSqlServer
                         {
                             Id = 5,
                             Code = "05",
-<<<<<<<< HEAD:Entity/MigrationsSqlServer/20251124231825_InitialCreate.Designer.cs
-                            CreatedAt = new DateTime(2025, 11, 24, 18, 18, 24, 284, DateTimeKind.Utc).AddTicks(2443),
-========
-<<<<<<<< HEAD:Entity/MigrationsSqlServer/20251124231825_InitialCreate.Designer.cs
-                            CreatedAt = new DateTime(2025, 11, 24, 18, 18, 24, 284, DateTimeKind.Utc).AddTicks(2443),
-========
-                            CreatedAt = new DateTime(2025, 11, 26, 17, 50, 0, 734, DateTimeKind.Utc).AddTicks(4913),
->>>>>>>> 0a32592 (Commit Correction DeveloTime):Entity/MigrationsSqlServer/20251126225001_InitialCreate.Designer.cs
->>>>>>>> ac9c60348704fb1fed7cd40219aeb13beb0ef374:Entity/MigrationsSqlServer/20251126225001_InitialCreate.Designer.cs
+                            CreatedAt = new DateTime(2025, 11, 28, 8, 22, 39, 934, DateTimeKind.Utc).AddTicks(6341),
                             Name = "Habilidades Comunicativas",
                             State = true
                         },
@@ -865,15 +545,7 @@ namespace Entity.MigrationsSqlServer
                         {
                             Id = 6,
                             Code = "06",
-<<<<<<<< HEAD:Entity/MigrationsSqlServer/20251124231825_InitialCreate.Designer.cs
-                            CreatedAt = new DateTime(2025, 11, 24, 18, 18, 24, 284, DateTimeKind.Utc).AddTicks(2443),
-========
-<<<<<<<< HEAD:Entity/MigrationsSqlServer/20251124231825_InitialCreate.Designer.cs
-                            CreatedAt = new DateTime(2025, 11, 24, 18, 18, 24, 284, DateTimeKind.Utc).AddTicks(2443),
-========
-                            CreatedAt = new DateTime(2025, 11, 26, 17, 50, 0, 734, DateTimeKind.Utc).AddTicks(4913),
->>>>>>>> 0a32592 (Commit Correction DeveloTime):Entity/MigrationsSqlServer/20251126225001_InitialCreate.Designer.cs
->>>>>>>> ac9c60348704fb1fed7cd40219aeb13beb0ef374:Entity/MigrationsSqlServer/20251126225001_InitialCreate.Designer.cs
+                            CreatedAt = new DateTime(2025, 11, 28, 8, 22, 39, 934, DateTimeKind.Utc).AddTicks(6341),
                             Name = "Academica Curricular",
                             State = true
                         },
@@ -881,15 +553,7 @@ namespace Entity.MigrationsSqlServer
                         {
                             Id = 7,
                             Code = "07",
-<<<<<<<< HEAD:Entity/MigrationsSqlServer/20251124231825_InitialCreate.Designer.cs
-                            CreatedAt = new DateTime(2025, 11, 24, 18, 18, 24, 284, DateTimeKind.Utc).AddTicks(2443),
-========
-<<<<<<<< HEAD:Entity/MigrationsSqlServer/20251124231825_InitialCreate.Designer.cs
-                            CreatedAt = new DateTime(2025, 11, 24, 18, 18, 24, 284, DateTimeKind.Utc).AddTicks(2443),
-========
-                            CreatedAt = new DateTime(2025, 11, 26, 17, 50, 0, 734, DateTimeKind.Utc).AddTicks(4913),
->>>>>>>> 0a32592 (Commit Correction DeveloTime):Entity/MigrationsSqlServer/20251126225001_InitialCreate.Designer.cs
->>>>>>>> ac9c60348704fb1fed7cd40219aeb13beb0ef374:Entity/MigrationsSqlServer/20251126225001_InitialCreate.Designer.cs
+                            CreatedAt = new DateTime(2025, 11, 28, 8, 22, 39, 934, DateTimeKind.Utc).AddTicks(6341),
                             Name = "Inclusion Diversidad",
                             State = true
                         },
@@ -897,15 +561,7 @@ namespace Entity.MigrationsSqlServer
                         {
                             Id = 8,
                             Code = "08",
-<<<<<<<< HEAD:Entity/MigrationsSqlServer/20251124231825_InitialCreate.Designer.cs
-                            CreatedAt = new DateTime(2025, 11, 24, 18, 18, 24, 284, DateTimeKind.Utc).AddTicks(2443),
-========
-<<<<<<<< HEAD:Entity/MigrationsSqlServer/20251124231825_InitialCreate.Designer.cs
-                            CreatedAt = new DateTime(2025, 11, 24, 18, 18, 24, 284, DateTimeKind.Utc).AddTicks(2443),
-========
-                            CreatedAt = new DateTime(2025, 11, 26, 17, 50, 0, 734, DateTimeKind.Utc).AddTicks(4913),
->>>>>>>> 0a32592 (Commit Correction DeveloTime):Entity/MigrationsSqlServer/20251126225001_InitialCreate.Designer.cs
->>>>>>>> ac9c60348704fb1fed7cd40219aeb13beb0ef374:Entity/MigrationsSqlServer/20251126225001_InitialCreate.Designer.cs
+                            CreatedAt = new DateTime(2025, 11, 28, 8, 22, 39, 934, DateTimeKind.Utc).AddTicks(6341),
                             Name = "Convivencia Escolar (Ciencias Sociales y Políticas)",
                             State = true
                         },
@@ -913,15 +569,7 @@ namespace Entity.MigrationsSqlServer
                         {
                             Id = 9,
                             Code = "09",
-<<<<<<<< HEAD:Entity/MigrationsSqlServer/20251124231825_InitialCreate.Designer.cs
-                            CreatedAt = new DateTime(2025, 11, 24, 18, 18, 24, 284, DateTimeKind.Utc).AddTicks(2443),
-========
-<<<<<<<< HEAD:Entity/MigrationsSqlServer/20251124231825_InitialCreate.Designer.cs
-                            CreatedAt = new DateTime(2025, 11, 24, 18, 18, 24, 284, DateTimeKind.Utc).AddTicks(2443),
-========
-                            CreatedAt = new DateTime(2025, 11, 26, 17, 50, 0, 734, DateTimeKind.Utc).AddTicks(4913),
->>>>>>>> 0a32592 (Commit Correction DeveloTime):Entity/MigrationsSqlServer/20251126225001_InitialCreate.Designer.cs
->>>>>>>> ac9c60348704fb1fed7cd40219aeb13beb0ef374:Entity/MigrationsSqlServer/20251126225001_InitialCreate.Designer.cs
+                            CreatedAt = new DateTime(2025, 11, 28, 8, 22, 39, 934, DateTimeKind.Utc).AddTicks(6341),
                             Name = "Danza, Deporte y Recreación",
                             State = true
                         });
@@ -961,15 +609,7 @@ namespace Entity.MigrationsSqlServer
                         {
                             Id = 1,
                             Code = "01",
-<<<<<<<< HEAD:Entity/MigrationsSqlServer/20251124231825_InitialCreate.Designer.cs
-                            CreatedAt = new DateTime(2025, 11, 24, 18, 18, 24, 284, DateTimeKind.Utc).AddTicks(2443),
-========
-<<<<<<<< HEAD:Entity/MigrationsSqlServer/20251124231825_InitialCreate.Designer.cs
-                            CreatedAt = new DateTime(2025, 11, 24, 18, 18, 24, 284, DateTimeKind.Utc).AddTicks(2443),
-========
-                            CreatedAt = new DateTime(2025, 11, 26, 17, 50, 0, 734, DateTimeKind.Utc).AddTicks(4913),
->>>>>>>> 0a32592 (Commit Correction DeveloTime):Entity/MigrationsSqlServer/20251126225001_InitialCreate.Designer.cs
->>>>>>>> ac9c60348704fb1fed7cd40219aeb13beb0ef374:Entity/MigrationsSqlServer/20251126225001_InitialCreate.Designer.cs
+                            CreatedAt = new DateTime(2025, 11, 28, 8, 22, 39, 934, DateTimeKind.Utc).AddTicks(6341),
                             Name = "Negritudes",
                             State = true
                         },
@@ -977,15 +617,7 @@ namespace Entity.MigrationsSqlServer
                         {
                             Id = 2,
                             Code = "02",
-<<<<<<<< HEAD:Entity/MigrationsSqlServer/20251124231825_InitialCreate.Designer.cs
-                            CreatedAt = new DateTime(2025, 11, 24, 18, 18, 24, 284, DateTimeKind.Utc).AddTicks(2443),
-========
-<<<<<<<< HEAD:Entity/MigrationsSqlServer/20251124231825_InitialCreate.Designer.cs
-                            CreatedAt = new DateTime(2025, 11, 24, 18, 18, 24, 284, DateTimeKind.Utc).AddTicks(2443),
-========
-                            CreatedAt = new DateTime(2025, 11, 26, 17, 50, 0, 734, DateTimeKind.Utc).AddTicks(4913),
->>>>>>>> 0a32592 (Commit Correction DeveloTime):Entity/MigrationsSqlServer/20251126225001_InitialCreate.Designer.cs
->>>>>>>> ac9c60348704fb1fed7cd40219aeb13beb0ef374:Entity/MigrationsSqlServer/20251126225001_InitialCreate.Designer.cs
+                            CreatedAt = new DateTime(2025, 11, 28, 8, 22, 39, 934, DateTimeKind.Utc).AddTicks(6341),
                             Name = "Afrodecendientes",
                             State = true
                         },
@@ -993,15 +625,7 @@ namespace Entity.MigrationsSqlServer
                         {
                             Id = 3,
                             Code = "03",
-<<<<<<<< HEAD:Entity/MigrationsSqlServer/20251124231825_InitialCreate.Designer.cs
-                            CreatedAt = new DateTime(2025, 11, 24, 18, 18, 24, 284, DateTimeKind.Utc).AddTicks(2443),
-========
-<<<<<<<< HEAD:Entity/MigrationsSqlServer/20251124231825_InitialCreate.Designer.cs
-                            CreatedAt = new DateTime(2025, 11, 24, 18, 18, 24, 284, DateTimeKind.Utc).AddTicks(2443),
-========
-                            CreatedAt = new DateTime(2025, 11, 26, 17, 50, 0, 734, DateTimeKind.Utc).AddTicks(4913),
->>>>>>>> 0a32592 (Commit Correction DeveloTime):Entity/MigrationsSqlServer/20251126225001_InitialCreate.Designer.cs
->>>>>>>> ac9c60348704fb1fed7cd40219aeb13beb0ef374:Entity/MigrationsSqlServer/20251126225001_InitialCreate.Designer.cs
+                            CreatedAt = new DateTime(2025, 11, 28, 8, 22, 39, 934, DateTimeKind.Utc).AddTicks(6341),
                             Name = "Palanquero",
                             State = true
                         },
@@ -1009,15 +633,7 @@ namespace Entity.MigrationsSqlServer
                         {
                             Id = 4,
                             Code = "04",
-<<<<<<<< HEAD:Entity/MigrationsSqlServer/20251124231825_InitialCreate.Designer.cs
-                            CreatedAt = new DateTime(2025, 11, 24, 18, 18, 24, 284, DateTimeKind.Utc).AddTicks(2443),
-========
-<<<<<<<< HEAD:Entity/MigrationsSqlServer/20251124231825_InitialCreate.Designer.cs
-                            CreatedAt = new DateTime(2025, 11, 24, 18, 18, 24, 284, DateTimeKind.Utc).AddTicks(2443),
-========
-                            CreatedAt = new DateTime(2025, 11, 26, 17, 50, 0, 734, DateTimeKind.Utc).AddTicks(4913),
->>>>>>>> 0a32592 (Commit Correction DeveloTime):Entity/MigrationsSqlServer/20251126225001_InitialCreate.Designer.cs
->>>>>>>> ac9c60348704fb1fed7cd40219aeb13beb0ef374:Entity/MigrationsSqlServer/20251126225001_InitialCreate.Designer.cs
+                            CreatedAt = new DateTime(2025, 11, 28, 8, 22, 39, 934, DateTimeKind.Utc).AddTicks(6341),
                             Name = "Rizal",
                             State = true
                         },
@@ -1025,15 +641,7 @@ namespace Entity.MigrationsSqlServer
                         {
                             Id = 5,
                             Code = "05",
-<<<<<<<< HEAD:Entity/MigrationsSqlServer/20251124231825_InitialCreate.Designer.cs
-                            CreatedAt = new DateTime(2025, 11, 24, 18, 18, 24, 284, DateTimeKind.Utc).AddTicks(2443),
-========
-<<<<<<<< HEAD:Entity/MigrationsSqlServer/20251124231825_InitialCreate.Designer.cs
-                            CreatedAt = new DateTime(2025, 11, 24, 18, 18, 24, 284, DateTimeKind.Utc).AddTicks(2443),
-========
-                            CreatedAt = new DateTime(2025, 11, 26, 17, 50, 0, 734, DateTimeKind.Utc).AddTicks(4913),
->>>>>>>> 0a32592 (Commit Correction DeveloTime):Entity/MigrationsSqlServer/20251126225001_InitialCreate.Designer.cs
->>>>>>>> ac9c60348704fb1fed7cd40219aeb13beb0ef374:Entity/MigrationsSqlServer/20251126225001_InitialCreate.Designer.cs
+                            CreatedAt = new DateTime(2025, 11, 28, 8, 22, 39, 934, DateTimeKind.Utc).AddTicks(6341),
                             Name = "Rom/Gitano",
                             State = true
                         },
@@ -1041,15 +649,7 @@ namespace Entity.MigrationsSqlServer
                         {
                             Id = 6,
                             Code = "06",
-<<<<<<<< HEAD:Entity/MigrationsSqlServer/20251124231825_InitialCreate.Designer.cs
-                            CreatedAt = new DateTime(2025, 11, 24, 18, 18, 24, 284, DateTimeKind.Utc).AddTicks(2443),
-========
-<<<<<<<< HEAD:Entity/MigrationsSqlServer/20251124231825_InitialCreate.Designer.cs
-                            CreatedAt = new DateTime(2025, 11, 24, 18, 18, 24, 284, DateTimeKind.Utc).AddTicks(2443),
-========
-                            CreatedAt = new DateTime(2025, 11, 26, 17, 50, 0, 734, DateTimeKind.Utc).AddTicks(4913),
->>>>>>>> 0a32592 (Commit Correction DeveloTime):Entity/MigrationsSqlServer/20251126225001_InitialCreate.Designer.cs
->>>>>>>> ac9c60348704fb1fed7cd40219aeb13beb0ef374:Entity/MigrationsSqlServer/20251126225001_InitialCreate.Designer.cs
+                            CreatedAt = new DateTime(2025, 11, 28, 8, 22, 39, 934, DateTimeKind.Utc).AddTicks(6341),
                             Name = "Victima del conficto",
                             State = true
                         },
@@ -1057,15 +657,7 @@ namespace Entity.MigrationsSqlServer
                         {
                             Id = 7,
                             Code = "07",
-<<<<<<<< HEAD:Entity/MigrationsSqlServer/20251124231825_InitialCreate.Designer.cs
-                            CreatedAt = new DateTime(2025, 11, 24, 18, 18, 24, 284, DateTimeKind.Utc).AddTicks(2443),
-========
-<<<<<<<< HEAD:Entity/MigrationsSqlServer/20251124231825_InitialCreate.Designer.cs
-                            CreatedAt = new DateTime(2025, 11, 24, 18, 18, 24, 284, DateTimeKind.Utc).AddTicks(2443),
-========
-                            CreatedAt = new DateTime(2025, 11, 26, 17, 50, 0, 734, DateTimeKind.Utc).AddTicks(4913),
->>>>>>>> 0a32592 (Commit Correction DeveloTime):Entity/MigrationsSqlServer/20251126225001_InitialCreate.Designer.cs
->>>>>>>> ac9c60348704fb1fed7cd40219aeb13beb0ef374:Entity/MigrationsSqlServer/20251126225001_InitialCreate.Designer.cs
+                            CreatedAt = new DateTime(2025, 11, 28, 8, 22, 39, 934, DateTimeKind.Utc).AddTicks(6341),
                             Name = "Diacapacidad",
                             State = true
                         },
@@ -1073,15 +665,7 @@ namespace Entity.MigrationsSqlServer
                         {
                             Id = 8,
                             Code = "08",
-<<<<<<<< HEAD:Entity/MigrationsSqlServer/20251124231825_InitialCreate.Designer.cs
-                            CreatedAt = new DateTime(2025, 11, 24, 18, 18, 24, 284, DateTimeKind.Utc).AddTicks(2443),
-========
-<<<<<<<< HEAD:Entity/MigrationsSqlServer/20251124231825_InitialCreate.Designer.cs
-                            CreatedAt = new DateTime(2025, 11, 24, 18, 18, 24, 284, DateTimeKind.Utc).AddTicks(2443),
-========
-                            CreatedAt = new DateTime(2025, 11, 26, 17, 50, 0, 734, DateTimeKind.Utc).AddTicks(4913),
->>>>>>>> 0a32592 (Commit Correction DeveloTime):Entity/MigrationsSqlServer/20251126225001_InitialCreate.Designer.cs
->>>>>>>> ac9c60348704fb1fed7cd40219aeb13beb0ef374:Entity/MigrationsSqlServer/20251126225001_InitialCreate.Designer.cs
+                            CreatedAt = new DateTime(2025, 11, 28, 8, 22, 39, 934, DateTimeKind.Utc).AddTicks(6341),
                             Name = "Talentos Excepcionales",
                             State = true
                         },
@@ -1089,15 +673,7 @@ namespace Entity.MigrationsSqlServer
                         {
                             Id = 9,
                             Code = "09",
-<<<<<<<< HEAD:Entity/MigrationsSqlServer/20251124231825_InitialCreate.Designer.cs
-                            CreatedAt = new DateTime(2025, 11, 24, 18, 18, 24, 284, DateTimeKind.Utc).AddTicks(2443),
-========
-<<<<<<<< HEAD:Entity/MigrationsSqlServer/20251124231825_InitialCreate.Designer.cs
-                            CreatedAt = new DateTime(2025, 11, 24, 18, 18, 24, 284, DateTimeKind.Utc).AddTicks(2443),
-========
-                            CreatedAt = new DateTime(2025, 11, 26, 17, 50, 0, 734, DateTimeKind.Utc).AddTicks(4913),
->>>>>>>> 0a32592 (Commit Correction DeveloTime):Entity/MigrationsSqlServer/20251126225001_InitialCreate.Designer.cs
->>>>>>>> ac9c60348704fb1fed7cd40219aeb13beb0ef374:Entity/MigrationsSqlServer/20251126225001_InitialCreate.Designer.cs
+                            CreatedAt = new DateTime(2025, 11, 28, 8, 22, 39, 934, DateTimeKind.Utc).AddTicks(6341),
                             Name = "Indigena",
                             State = true
                         },
@@ -1105,15 +681,7 @@ namespace Entity.MigrationsSqlServer
                         {
                             Id = 10,
                             Code = "10",
-<<<<<<<< HEAD:Entity/MigrationsSqlServer/20251124231825_InitialCreate.Designer.cs
-                            CreatedAt = new DateTime(2025, 11, 24, 18, 18, 24, 284, DateTimeKind.Utc).AddTicks(2443),
-========
-<<<<<<<< HEAD:Entity/MigrationsSqlServer/20251124231825_InitialCreate.Designer.cs
-                            CreatedAt = new DateTime(2025, 11, 24, 18, 18, 24, 284, DateTimeKind.Utc).AddTicks(2443),
-========
-                            CreatedAt = new DateTime(2025, 11, 26, 17, 50, 0, 734, DateTimeKind.Utc).AddTicks(4913),
->>>>>>>> 0a32592 (Commit Correction DeveloTime):Entity/MigrationsSqlServer/20251126225001_InitialCreate.Designer.cs
->>>>>>>> ac9c60348704fb1fed7cd40219aeb13beb0ef374:Entity/MigrationsSqlServer/20251126225001_InitialCreate.Designer.cs
+                            CreatedAt = new DateTime(2025, 11, 28, 8, 22, 39, 934, DateTimeKind.Utc).AddTicks(6341),
                             Name = "Trastornos Especificos",
                             State = true
                         },
@@ -1121,15 +689,7 @@ namespace Entity.MigrationsSqlServer
                         {
                             Id = 11,
                             Code = "11",
-<<<<<<<< HEAD:Entity/MigrationsSqlServer/20251124231825_InitialCreate.Designer.cs
-                            CreatedAt = new DateTime(2025, 11, 24, 18, 18, 24, 284, DateTimeKind.Utc).AddTicks(2443),
-========
-<<<<<<<< HEAD:Entity/MigrationsSqlServer/20251124231825_InitialCreate.Designer.cs
-                            CreatedAt = new DateTime(2025, 11, 24, 18, 18, 24, 284, DateTimeKind.Utc).AddTicks(2443),
-========
-                            CreatedAt = new DateTime(2025, 11, 26, 17, 50, 0, 734, DateTimeKind.Utc).AddTicks(4913),
->>>>>>>> 0a32592 (Commit Correction DeveloTime):Entity/MigrationsSqlServer/20251126225001_InitialCreate.Designer.cs
->>>>>>>> ac9c60348704fb1fed7cd40219aeb13beb0ef374:Entity/MigrationsSqlServer/20251126225001_InitialCreate.Designer.cs
+                            CreatedAt = new DateTime(2025, 11, 28, 8, 22, 39, 934, DateTimeKind.Utc).AddTicks(6341),
                             Name = "Ninguna de las anteriores",
                             State = true
                         });
@@ -1169,15 +729,7 @@ namespace Entity.MigrationsSqlServer
                         {
                             Id = 1,
                             Code = "01",
-<<<<<<<< HEAD:Entity/MigrationsSqlServer/20251124231825_InitialCreate.Designer.cs
-                            CreatedAt = new DateTime(2025, 11, 24, 18, 18, 24, 284, DateTimeKind.Utc).AddTicks(2443),
-========
-<<<<<<<< HEAD:Entity/MigrationsSqlServer/20251124231825_InitialCreate.Designer.cs
-                            CreatedAt = new DateTime(2025, 11, 24, 18, 18, 24, 284, DateTimeKind.Utc).AddTicks(2443),
-========
-                            CreatedAt = new DateTime(2025, 11, 26, 17, 50, 0, 734, DateTimeKind.Utc).AddTicks(4913),
->>>>>>>> 0a32592 (Commit Correction DeveloTime):Entity/MigrationsSqlServer/20251126225001_InitialCreate.Designer.cs
->>>>>>>> ac9c60348704fb1fed7cd40219aeb13beb0ef374:Entity/MigrationsSqlServer/20251126225001_InitialCreate.Designer.cs
+                            CreatedAt = new DateTime(2025, 11, 28, 8, 22, 39, 934, DateTimeKind.Utc).AddTicks(6341),
                             Name = "Naciente",
                             State = true
                         },
@@ -1185,15 +737,7 @@ namespace Entity.MigrationsSqlServer
                         {
                             Id = 2,
                             Code = "02",
-<<<<<<<< HEAD:Entity/MigrationsSqlServer/20251124231825_InitialCreate.Designer.cs
-                            CreatedAt = new DateTime(2025, 11, 24, 18, 18, 24, 284, DateTimeKind.Utc).AddTicks(2443),
-========
-<<<<<<<< HEAD:Entity/MigrationsSqlServer/20251124231825_InitialCreate.Designer.cs
-                            CreatedAt = new DateTime(2025, 11, 24, 18, 18, 24, 284, DateTimeKind.Utc).AddTicks(2443),
-========
-                            CreatedAt = new DateTime(2025, 11, 26, 17, 50, 0, 734, DateTimeKind.Utc).AddTicks(4913),
->>>>>>>> 0a32592 (Commit Correction DeveloTime):Entity/MigrationsSqlServer/20251126225001_InitialCreate.Designer.cs
->>>>>>>> ac9c60348704fb1fed7cd40219aeb13beb0ef374:Entity/MigrationsSqlServer/20251126225001_InitialCreate.Designer.cs
+                            CreatedAt = new DateTime(2025, 11, 28, 8, 22, 39, 934, DateTimeKind.Utc).AddTicks(6341),
                             Name = "Creciente",
                             State = true
                         },
@@ -1201,15 +745,7 @@ namespace Entity.MigrationsSqlServer
                         {
                             Id = 3,
                             Code = "03",
-<<<<<<<< HEAD:Entity/MigrationsSqlServer/20251124231825_InitialCreate.Designer.cs
-                            CreatedAt = new DateTime(2025, 11, 24, 18, 18, 24, 284, DateTimeKind.Utc).AddTicks(2443),
-========
-<<<<<<<< HEAD:Entity/MigrationsSqlServer/20251124231825_InitialCreate.Designer.cs
-                            CreatedAt = new DateTime(2025, 11, 24, 18, 18, 24, 284, DateTimeKind.Utc).AddTicks(2443),
-========
-                            CreatedAt = new DateTime(2025, 11, 26, 17, 50, 0, 734, DateTimeKind.Utc).AddTicks(4913),
->>>>>>>> 0a32592 (Commit Correction DeveloTime):Entity/MigrationsSqlServer/20251126225001_InitialCreate.Designer.cs
->>>>>>>> ac9c60348704fb1fed7cd40219aeb13beb0ef374:Entity/MigrationsSqlServer/20251126225001_InitialCreate.Designer.cs
+                            CreatedAt = new DateTime(2025, 11, 28, 8, 22, 39, 934, DateTimeKind.Utc).AddTicks(6341),
                             Name = "Inspiradora",
                             State = true
                         });
@@ -1593,9 +1129,8 @@ namespace Entity.MigrationsSqlServer
                     b.Property<DateTime?>("DeletedAt")
                         .HasColumnType("datetime2");
 
-                    b.Property<string>("Developmenttime")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                    b.Property<DateTime>("Developmenttime")
+                        .HasColumnType("datetime2");
 
                     b.Property<int>("InstitucionId")
                         .HasColumnType("int");
@@ -2135,15 +1670,7 @@ namespace Entity.MigrationsSqlServer
                         new
                         {
                             Id = 1,
-<<<<<<<< HEAD:Entity/MigrationsSqlServer/20251124231825_InitialCreate.Designer.cs
-                            CreatedAt = new DateTime(2025, 11, 24, 18, 18, 24, 284, DateTimeKind.Utc).AddTicks(2443),
-========
-<<<<<<<< HEAD:Entity/MigrationsSqlServer/20251124231825_InitialCreate.Designer.cs
-                            CreatedAt = new DateTime(2025, 11, 24, 18, 18, 24, 284, DateTimeKind.Utc).AddTicks(2443),
-========
-                            CreatedAt = new DateTime(2025, 11, 26, 17, 50, 0, 734, DateTimeKind.Utc).AddTicks(4913),
->>>>>>>> 0a32592 (Commit Correction DeveloTime):Entity/MigrationsSqlServer/20251126225001_InitialCreate.Designer.cs
->>>>>>>> ac9c60348704fb1fed7cd40219aeb13beb0ef374:Entity/MigrationsSqlServer/20251126225001_InitialCreate.Designer.cs
+                            CreatedAt = new DateTime(2025, 11, 28, 8, 22, 39, 934, DateTimeKind.Utc).AddTicks(6341),
                             FormId = 1,
                             ModuleId = 2,
                             State = true
@@ -2151,15 +1678,7 @@ namespace Entity.MigrationsSqlServer
                         new
                         {
                             Id = 2,
-<<<<<<<< HEAD:Entity/MigrationsSqlServer/20251124231825_InitialCreate.Designer.cs
-                            CreatedAt = new DateTime(2025, 11, 24, 18, 18, 24, 284, DateTimeKind.Utc).AddTicks(2443),
-========
-<<<<<<<< HEAD:Entity/MigrationsSqlServer/20251124231825_InitialCreate.Designer.cs
-                            CreatedAt = new DateTime(2025, 11, 24, 18, 18, 24, 284, DateTimeKind.Utc).AddTicks(2443),
-========
-                            CreatedAt = new DateTime(2025, 11, 26, 17, 50, 0, 734, DateTimeKind.Utc).AddTicks(4913),
->>>>>>>> 0a32592 (Commit Correction DeveloTime):Entity/MigrationsSqlServer/20251126225001_InitialCreate.Designer.cs
->>>>>>>> ac9c60348704fb1fed7cd40219aeb13beb0ef374:Entity/MigrationsSqlServer/20251126225001_InitialCreate.Designer.cs
+                            CreatedAt = new DateTime(2025, 11, 28, 8, 22, 39, 934, DateTimeKind.Utc).AddTicks(6341),
                             FormId = 2,
                             ModuleId = 2,
                             State = true
@@ -2167,15 +1686,7 @@ namespace Entity.MigrationsSqlServer
                         new
                         {
                             Id = 3,
-<<<<<<<< HEAD:Entity/MigrationsSqlServer/20251124231825_InitialCreate.Designer.cs
-                            CreatedAt = new DateTime(2025, 11, 24, 18, 18, 24, 284, DateTimeKind.Utc).AddTicks(2443),
-========
-<<<<<<<< HEAD:Entity/MigrationsSqlServer/20251124231825_InitialCreate.Designer.cs
-                            CreatedAt = new DateTime(2025, 11, 24, 18, 18, 24, 284, DateTimeKind.Utc).AddTicks(2443),
-========
-                            CreatedAt = new DateTime(2025, 11, 26, 17, 50, 0, 734, DateTimeKind.Utc).AddTicks(4913),
->>>>>>>> 0a32592 (Commit Correction DeveloTime):Entity/MigrationsSqlServer/20251126225001_InitialCreate.Designer.cs
->>>>>>>> ac9c60348704fb1fed7cd40219aeb13beb0ef374:Entity/MigrationsSqlServer/20251126225001_InitialCreate.Designer.cs
+                            CreatedAt = new DateTime(2025, 11, 28, 8, 22, 39, 934, DateTimeKind.Utc).AddTicks(6341),
                             FormId = 3,
                             ModuleId = 2,
                             State = true
@@ -2183,15 +1694,7 @@ namespace Entity.MigrationsSqlServer
                         new
                         {
                             Id = 4,
-<<<<<<<< HEAD:Entity/MigrationsSqlServer/20251124231825_InitialCreate.Designer.cs
-                            CreatedAt = new DateTime(2025, 11, 24, 18, 18, 24, 284, DateTimeKind.Utc).AddTicks(2443),
-========
-<<<<<<<< HEAD:Entity/MigrationsSqlServer/20251124231825_InitialCreate.Designer.cs
-                            CreatedAt = new DateTime(2025, 11, 24, 18, 18, 24, 284, DateTimeKind.Utc).AddTicks(2443),
-========
-                            CreatedAt = new DateTime(2025, 11, 26, 17, 50, 0, 734, DateTimeKind.Utc).AddTicks(4913),
->>>>>>>> 0a32592 (Commit Correction DeveloTime):Entity/MigrationsSqlServer/20251126225001_InitialCreate.Designer.cs
->>>>>>>> ac9c60348704fb1fed7cd40219aeb13beb0ef374:Entity/MigrationsSqlServer/20251126225001_InitialCreate.Designer.cs
+                            CreatedAt = new DateTime(2025, 11, 28, 8, 22, 39, 934, DateTimeKind.Utc).AddTicks(6341),
                             FormId = 4,
                             ModuleId = 1,
                             State = true
@@ -2199,15 +1702,7 @@ namespace Entity.MigrationsSqlServer
                         new
                         {
                             Id = 5,
-<<<<<<<< HEAD:Entity/MigrationsSqlServer/20251124231825_InitialCreate.Designer.cs
-                            CreatedAt = new DateTime(2025, 11, 24, 18, 18, 24, 284, DateTimeKind.Utc).AddTicks(2443),
-========
-<<<<<<<< HEAD:Entity/MigrationsSqlServer/20251124231825_InitialCreate.Designer.cs
-                            CreatedAt = new DateTime(2025, 11, 24, 18, 18, 24, 284, DateTimeKind.Utc).AddTicks(2443),
-========
-                            CreatedAt = new DateTime(2025, 11, 26, 17, 50, 0, 734, DateTimeKind.Utc).AddTicks(4913),
->>>>>>>> 0a32592 (Commit Correction DeveloTime):Entity/MigrationsSqlServer/20251126225001_InitialCreate.Designer.cs
->>>>>>>> ac9c60348704fb1fed7cd40219aeb13beb0ef374:Entity/MigrationsSqlServer/20251126225001_InitialCreate.Designer.cs
+                            CreatedAt = new DateTime(2025, 11, 28, 8, 22, 39, 934, DateTimeKind.Utc).AddTicks(6341),
                             FormId = 5,
                             ModuleId = 1,
                             State = true
@@ -2215,15 +1710,7 @@ namespace Entity.MigrationsSqlServer
                         new
                         {
                             Id = 6,
-<<<<<<<< HEAD:Entity/MigrationsSqlServer/20251124231825_InitialCreate.Designer.cs
-                            CreatedAt = new DateTime(2025, 11, 24, 18, 18, 24, 284, DateTimeKind.Utc).AddTicks(2443),
-========
-<<<<<<<< HEAD:Entity/MigrationsSqlServer/20251124231825_InitialCreate.Designer.cs
-                            CreatedAt = new DateTime(2025, 11, 24, 18, 18, 24, 284, DateTimeKind.Utc).AddTicks(2443),
-========
-                            CreatedAt = new DateTime(2025, 11, 26, 17, 50, 0, 734, DateTimeKind.Utc).AddTicks(4913),
->>>>>>>> 0a32592 (Commit Correction DeveloTime):Entity/MigrationsSqlServer/20251126225001_InitialCreate.Designer.cs
->>>>>>>> ac9c60348704fb1fed7cd40219aeb13beb0ef374:Entity/MigrationsSqlServer/20251126225001_InitialCreate.Designer.cs
+                            CreatedAt = new DateTime(2025, 11, 28, 8, 22, 39, 934, DateTimeKind.Utc).AddTicks(6341),
                             FormId = 6,
                             ModuleId = 1,
                             State = true
@@ -2231,15 +1718,7 @@ namespace Entity.MigrationsSqlServer
                         new
                         {
                             Id = 7,
-<<<<<<<< HEAD:Entity/MigrationsSqlServer/20251124231825_InitialCreate.Designer.cs
-                            CreatedAt = new DateTime(2025, 11, 24, 18, 18, 24, 284, DateTimeKind.Utc).AddTicks(2443),
-========
-<<<<<<<< HEAD:Entity/MigrationsSqlServer/20251124231825_InitialCreate.Designer.cs
-                            CreatedAt = new DateTime(2025, 11, 24, 18, 18, 24, 284, DateTimeKind.Utc).AddTicks(2443),
-========
-                            CreatedAt = new DateTime(2025, 11, 26, 17, 50, 0, 734, DateTimeKind.Utc).AddTicks(4913),
->>>>>>>> 0a32592 (Commit Correction DeveloTime):Entity/MigrationsSqlServer/20251126225001_InitialCreate.Designer.cs
->>>>>>>> ac9c60348704fb1fed7cd40219aeb13beb0ef374:Entity/MigrationsSqlServer/20251126225001_InitialCreate.Designer.cs
+                            CreatedAt = new DateTime(2025, 11, 28, 8, 22, 39, 934, DateTimeKind.Utc).AddTicks(6341),
                             FormId = 7,
                             ModuleId = 2,
                             State = true
@@ -2247,15 +1726,7 @@ namespace Entity.MigrationsSqlServer
                         new
                         {
                             Id = 8,
-<<<<<<<< HEAD:Entity/MigrationsSqlServer/20251124231825_InitialCreate.Designer.cs
-                            CreatedAt = new DateTime(2025, 11, 24, 18, 18, 24, 284, DateTimeKind.Utc).AddTicks(2443),
-========
-<<<<<<<< HEAD:Entity/MigrationsSqlServer/20251124231825_InitialCreate.Designer.cs
-                            CreatedAt = new DateTime(2025, 11, 24, 18, 18, 24, 284, DateTimeKind.Utc).AddTicks(2443),
-========
-                            CreatedAt = new DateTime(2025, 11, 26, 17, 50, 0, 734, DateTimeKind.Utc).AddTicks(4913),
->>>>>>>> 0a32592 (Commit Correction DeveloTime):Entity/MigrationsSqlServer/20251126225001_InitialCreate.Designer.cs
->>>>>>>> ac9c60348704fb1fed7cd40219aeb13beb0ef374:Entity/MigrationsSqlServer/20251126225001_InitialCreate.Designer.cs
+                            CreatedAt = new DateTime(2025, 11, 28, 8, 22, 39, 934, DateTimeKind.Utc).AddTicks(6341),
                             FormId = 8,
                             ModuleId = 1,
                             State = true
@@ -2263,15 +1734,7 @@ namespace Entity.MigrationsSqlServer
                         new
                         {
                             Id = 10,
-<<<<<<<< HEAD:Entity/MigrationsSqlServer/20251124231825_InitialCreate.Designer.cs
-                            CreatedAt = new DateTime(2025, 11, 24, 18, 18, 24, 284, DateTimeKind.Utc).AddTicks(2443),
-========
-<<<<<<<< HEAD:Entity/MigrationsSqlServer/20251124231825_InitialCreate.Designer.cs
-                            CreatedAt = new DateTime(2025, 11, 24, 18, 18, 24, 284, DateTimeKind.Utc).AddTicks(2443),
-========
-                            CreatedAt = new DateTime(2025, 11, 26, 17, 50, 0, 734, DateTimeKind.Utc).AddTicks(4913),
->>>>>>>> 0a32592 (Commit Correction DeveloTime):Entity/MigrationsSqlServer/20251126225001_InitialCreate.Designer.cs
->>>>>>>> ac9c60348704fb1fed7cd40219aeb13beb0ef374:Entity/MigrationsSqlServer/20251126225001_InitialCreate.Designer.cs
+                            CreatedAt = new DateTime(2025, 11, 28, 8, 22, 39, 934, DateTimeKind.Utc).AddTicks(6341),
                             FormId = 10,
                             ModuleId = 1,
                             State = true
@@ -2279,15 +1742,7 @@ namespace Entity.MigrationsSqlServer
                         new
                         {
                             Id = 9,
-<<<<<<<< HEAD:Entity/MigrationsSqlServer/20251124231825_InitialCreate.Designer.cs
-                            CreatedAt = new DateTime(2025, 11, 24, 18, 18, 24, 284, DateTimeKind.Utc).AddTicks(2443),
-========
-<<<<<<<< HEAD:Entity/MigrationsSqlServer/20251124231825_InitialCreate.Designer.cs
-                            CreatedAt = new DateTime(2025, 11, 24, 18, 18, 24, 284, DateTimeKind.Utc).AddTicks(2443),
-========
-                            CreatedAt = new DateTime(2025, 11, 26, 17, 50, 0, 734, DateTimeKind.Utc).AddTicks(4913),
->>>>>>>> 0a32592 (Commit Correction DeveloTime):Entity/MigrationsSqlServer/20251126225001_InitialCreate.Designer.cs
->>>>>>>> ac9c60348704fb1fed7cd40219aeb13beb0ef374:Entity/MigrationsSqlServer/20251126225001_InitialCreate.Designer.cs
+                            CreatedAt = new DateTime(2025, 11, 28, 8, 22, 39, 934, DateTimeKind.Utc).AddTicks(6341),
                             FormId = 9,
                             ModuleId = 1,
                             State = true
@@ -2295,15 +1750,7 @@ namespace Entity.MigrationsSqlServer
                         new
                         {
                             Id = 11,
-<<<<<<<< HEAD:Entity/MigrationsSqlServer/20251124231825_InitialCreate.Designer.cs
-                            CreatedAt = new DateTime(2025, 11, 24, 18, 18, 24, 284, DateTimeKind.Utc).AddTicks(2443),
-========
-<<<<<<<< HEAD:Entity/MigrationsSqlServer/20251124231825_InitialCreate.Designer.cs
-                            CreatedAt = new DateTime(2025, 11, 24, 18, 18, 24, 284, DateTimeKind.Utc).AddTicks(2443),
-========
-                            CreatedAt = new DateTime(2025, 11, 26, 17, 50, 0, 734, DateTimeKind.Utc).AddTicks(4913),
->>>>>>>> 0a32592 (Commit Correction DeveloTime):Entity/MigrationsSqlServer/20251126225001_InitialCreate.Designer.cs
->>>>>>>> ac9c60348704fb1fed7cd40219aeb13beb0ef374:Entity/MigrationsSqlServer/20251126225001_InitialCreate.Designer.cs
+                            CreatedAt = new DateTime(2025, 11, 28, 8, 22, 39, 934, DateTimeKind.Utc).AddTicks(6341),
                             FormId = 11,
                             ModuleId = 1,
                             State = true
@@ -2311,15 +1758,7 @@ namespace Entity.MigrationsSqlServer
                         new
                         {
                             Id = 12,
-<<<<<<<< HEAD:Entity/MigrationsSqlServer/20251124231825_InitialCreate.Designer.cs
-                            CreatedAt = new DateTime(2025, 11, 24, 18, 18, 24, 284, DateTimeKind.Utc).AddTicks(2443),
-========
-<<<<<<<< HEAD:Entity/MigrationsSqlServer/20251124231825_InitialCreate.Designer.cs
-                            CreatedAt = new DateTime(2025, 11, 24, 18, 18, 24, 284, DateTimeKind.Utc).AddTicks(2443),
-========
-                            CreatedAt = new DateTime(2025, 11, 26, 17, 50, 0, 734, DateTimeKind.Utc).AddTicks(4913),
->>>>>>>> 0a32592 (Commit Correction DeveloTime):Entity/MigrationsSqlServer/20251126225001_InitialCreate.Designer.cs
->>>>>>>> ac9c60348704fb1fed7cd40219aeb13beb0ef374:Entity/MigrationsSqlServer/20251126225001_InitialCreate.Designer.cs
+                            CreatedAt = new DateTime(2025, 11, 28, 8, 22, 39, 934, DateTimeKind.Utc).AddTicks(6341),
                             FormId = 12,
                             ModuleId = 1,
                             State = true
@@ -2327,15 +1766,7 @@ namespace Entity.MigrationsSqlServer
                         new
                         {
                             Id = 13,
-<<<<<<<< HEAD:Entity/MigrationsSqlServer/20251124231825_InitialCreate.Designer.cs
-                            CreatedAt = new DateTime(2025, 11, 24, 18, 18, 24, 284, DateTimeKind.Utc).AddTicks(2443),
-========
-<<<<<<<< HEAD:Entity/MigrationsSqlServer/20251124231825_InitialCreate.Designer.cs
-                            CreatedAt = new DateTime(2025, 11, 24, 18, 18, 24, 284, DateTimeKind.Utc).AddTicks(2443),
-========
-                            CreatedAt = new DateTime(2025, 11, 26, 17, 50, 0, 734, DateTimeKind.Utc).AddTicks(4913),
->>>>>>>> 0a32592 (Commit Correction DeveloTime):Entity/MigrationsSqlServer/20251126225001_InitialCreate.Designer.cs
->>>>>>>> ac9c60348704fb1fed7cd40219aeb13beb0ef374:Entity/MigrationsSqlServer/20251126225001_InitialCreate.Designer.cs
+                            CreatedAt = new DateTime(2025, 11, 28, 8, 22, 39, 934, DateTimeKind.Utc).AddTicks(6341),
                             FormId = 13,
                             ModuleId = 1,
                             State = true
@@ -2343,15 +1774,7 @@ namespace Entity.MigrationsSqlServer
                         new
                         {
                             Id = 14,
-<<<<<<<< HEAD:Entity/MigrationsSqlServer/20251124231825_InitialCreate.Designer.cs
-                            CreatedAt = new DateTime(2025, 11, 24, 18, 18, 24, 284, DateTimeKind.Utc).AddTicks(2443),
-========
-<<<<<<<< HEAD:Entity/MigrationsSqlServer/20251124231825_InitialCreate.Designer.cs
-                            CreatedAt = new DateTime(2025, 11, 24, 18, 18, 24, 284, DateTimeKind.Utc).AddTicks(2443),
-========
-                            CreatedAt = new DateTime(2025, 11, 26, 17, 50, 0, 734, DateTimeKind.Utc).AddTicks(4913),
->>>>>>>> 0a32592 (Commit Correction DeveloTime):Entity/MigrationsSqlServer/20251126225001_InitialCreate.Designer.cs
->>>>>>>> ac9c60348704fb1fed7cd40219aeb13beb0ef374:Entity/MigrationsSqlServer/20251126225001_InitialCreate.Designer.cs
+                            CreatedAt = new DateTime(2025, 11, 28, 8, 22, 39, 934, DateTimeKind.Utc).AddTicks(6341),
                             FormId = 14,
                             ModuleId = 3,
                             State = true
@@ -2359,15 +1782,7 @@ namespace Entity.MigrationsSqlServer
                         new
                         {
                             Id = 15,
-<<<<<<<< HEAD:Entity/MigrationsSqlServer/20251124231825_InitialCreate.Designer.cs
-                            CreatedAt = new DateTime(2025, 11, 24, 18, 18, 24, 284, DateTimeKind.Utc).AddTicks(2443),
-========
-<<<<<<<< HEAD:Entity/MigrationsSqlServer/20251124231825_InitialCreate.Designer.cs
-                            CreatedAt = new DateTime(2025, 11, 24, 18, 18, 24, 284, DateTimeKind.Utc).AddTicks(2443),
-========
-                            CreatedAt = new DateTime(2025, 11, 26, 17, 50, 0, 734, DateTimeKind.Utc).AddTicks(4913),
->>>>>>>> 0a32592 (Commit Correction DeveloTime):Entity/MigrationsSqlServer/20251126225001_InitialCreate.Designer.cs
->>>>>>>> ac9c60348704fb1fed7cd40219aeb13beb0ef374:Entity/MigrationsSqlServer/20251126225001_InitialCreate.Designer.cs
+                            CreatedAt = new DateTime(2025, 11, 28, 8, 22, 39, 934, DateTimeKind.Utc).AddTicks(6341),
                             FormId = 15,
                             ModuleId = 3,
                             State = true
@@ -2375,15 +1790,7 @@ namespace Entity.MigrationsSqlServer
                         new
                         {
                             Id = 16,
-<<<<<<<< HEAD:Entity/MigrationsSqlServer/20251124231825_InitialCreate.Designer.cs
-                            CreatedAt = new DateTime(2025, 11, 24, 18, 18, 24, 284, DateTimeKind.Utc).AddTicks(2443),
-========
-<<<<<<<< HEAD:Entity/MigrationsSqlServer/20251124231825_InitialCreate.Designer.cs
-                            CreatedAt = new DateTime(2025, 11, 24, 18, 18, 24, 284, DateTimeKind.Utc).AddTicks(2443),
-========
-                            CreatedAt = new DateTime(2025, 11, 26, 17, 50, 0, 734, DateTimeKind.Utc).AddTicks(4913),
->>>>>>>> 0a32592 (Commit Correction DeveloTime):Entity/MigrationsSqlServer/20251126225001_InitialCreate.Designer.cs
->>>>>>>> ac9c60348704fb1fed7cd40219aeb13beb0ef374:Entity/MigrationsSqlServer/20251126225001_InitialCreate.Designer.cs
+                            CreatedAt = new DateTime(2025, 11, 28, 8, 22, 39, 934, DateTimeKind.Utc).AddTicks(6341),
                             FormId = 16,
                             ModuleId = 3,
                             State = true
@@ -2391,15 +1798,7 @@ namespace Entity.MigrationsSqlServer
                         new
                         {
                             Id = 17,
-<<<<<<<< HEAD:Entity/MigrationsSqlServer/20251124231825_InitialCreate.Designer.cs
-                            CreatedAt = new DateTime(2025, 11, 24, 18, 18, 24, 284, DateTimeKind.Utc).AddTicks(2443),
-========
-<<<<<<<< HEAD:Entity/MigrationsSqlServer/20251124231825_InitialCreate.Designer.cs
-                            CreatedAt = new DateTime(2025, 11, 24, 18, 18, 24, 284, DateTimeKind.Utc).AddTicks(2443),
-========
-                            CreatedAt = new DateTime(2025, 11, 26, 17, 50, 0, 734, DateTimeKind.Utc).AddTicks(4913),
->>>>>>>> 0a32592 (Commit Correction DeveloTime):Entity/MigrationsSqlServer/20251126225001_InitialCreate.Designer.cs
->>>>>>>> ac9c60348704fb1fed7cd40219aeb13beb0ef374:Entity/MigrationsSqlServer/20251126225001_InitialCreate.Designer.cs
+                            CreatedAt = new DateTime(2025, 11, 28, 8, 22, 39, 934, DateTimeKind.Utc).AddTicks(6341),
                             FormId = 17,
                             ModuleId = 3,
                             State = true
@@ -2407,15 +1806,7 @@ namespace Entity.MigrationsSqlServer
                         new
                         {
                             Id = 18,
-<<<<<<<< HEAD:Entity/MigrationsSqlServer/20251124231825_InitialCreate.Designer.cs
-                            CreatedAt = new DateTime(2025, 11, 24, 18, 18, 24, 284, DateTimeKind.Utc).AddTicks(2443),
-========
-<<<<<<<< HEAD:Entity/MigrationsSqlServer/20251124231825_InitialCreate.Designer.cs
-                            CreatedAt = new DateTime(2025, 11, 24, 18, 18, 24, 284, DateTimeKind.Utc).AddTicks(2443),
-========
-                            CreatedAt = new DateTime(2025, 11, 26, 17, 50, 0, 734, DateTimeKind.Utc).AddTicks(4913),
->>>>>>>> 0a32592 (Commit Correction DeveloTime):Entity/MigrationsSqlServer/20251126225001_InitialCreate.Designer.cs
->>>>>>>> ac9c60348704fb1fed7cd40219aeb13beb0ef374:Entity/MigrationsSqlServer/20251126225001_InitialCreate.Designer.cs
+                            CreatedAt = new DateTime(2025, 11, 28, 8, 22, 39, 934, DateTimeKind.Utc).AddTicks(6341),
                             FormId = 18,
                             ModuleId = 3,
                             State = true
@@ -2423,15 +1814,7 @@ namespace Entity.MigrationsSqlServer
                         new
                         {
                             Id = 19,
-<<<<<<<< HEAD:Entity/MigrationsSqlServer/20251124231825_InitialCreate.Designer.cs
-                            CreatedAt = new DateTime(2025, 11, 24, 18, 18, 24, 284, DateTimeKind.Utc).AddTicks(2443),
-========
-<<<<<<<< HEAD:Entity/MigrationsSqlServer/20251124231825_InitialCreate.Designer.cs
-                            CreatedAt = new DateTime(2025, 11, 24, 18, 18, 24, 284, DateTimeKind.Utc).AddTicks(2443),
-========
-                            CreatedAt = new DateTime(2025, 11, 26, 17, 50, 0, 734, DateTimeKind.Utc).AddTicks(4913),
->>>>>>>> 0a32592 (Commit Correction DeveloTime):Entity/MigrationsSqlServer/20251126225001_InitialCreate.Designer.cs
->>>>>>>> ac9c60348704fb1fed7cd40219aeb13beb0ef374:Entity/MigrationsSqlServer/20251126225001_InitialCreate.Designer.cs
+                            CreatedAt = new DateTime(2025, 11, 28, 8, 22, 39, 934, DateTimeKind.Utc).AddTicks(6341),
                             FormId = 19,
                             ModuleId = 2,
                             State = true
@@ -2471,15 +1854,7 @@ namespace Entity.MigrationsSqlServer
                         new
                         {
                             Id = 1,
-<<<<<<<< HEAD:Entity/MigrationsSqlServer/20251124231825_InitialCreate.Designer.cs
-                            CreatedAt = new DateTime(2025, 11, 24, 18, 18, 24, 284, DateTimeKind.Utc).AddTicks(2443),
-========
-<<<<<<<< HEAD:Entity/MigrationsSqlServer/20251124231825_InitialCreate.Designer.cs
-                            CreatedAt = new DateTime(2025, 11, 24, 18, 18, 24, 284, DateTimeKind.Utc).AddTicks(2443),
-========
-                            CreatedAt = new DateTime(2025, 11, 26, 17, 50, 0, 734, DateTimeKind.Utc).AddTicks(4913),
->>>>>>>> 0a32592 (Commit Correction DeveloTime):Entity/MigrationsSqlServer/20251126225001_InitialCreate.Designer.cs
->>>>>>>> ac9c60348704fb1fed7cd40219aeb13beb0ef374:Entity/MigrationsSqlServer/20251126225001_InitialCreate.Designer.cs
+                            CreatedAt = new DateTime(2025, 11, 28, 8, 22, 39, 934, DateTimeKind.Utc).AddTicks(6341),
                             Description = "El módulo de seguridad gestiona autenticación, roles, permisos y acceso a los formularios del sistema.",
                             Name = "Security",
                             State = true
@@ -2487,15 +1862,7 @@ namespace Entity.MigrationsSqlServer
                         new
                         {
                             Id = 2,
-<<<<<<<< HEAD:Entity/MigrationsSqlServer/20251124231825_InitialCreate.Designer.cs
-                            CreatedAt = new DateTime(2025, 11, 24, 18, 18, 24, 284, DateTimeKind.Utc).AddTicks(2443),
-========
-<<<<<<<< HEAD:Entity/MigrationsSqlServer/20251124231825_InitialCreate.Designer.cs
-                            CreatedAt = new DateTime(2025, 11, 24, 18, 18, 24, 284, DateTimeKind.Utc).AddTicks(2443),
-========
-                            CreatedAt = new DateTime(2025, 11, 26, 17, 50, 0, 734, DateTimeKind.Utc).AddTicks(4913),
->>>>>>>> 0a32592 (Commit Correction DeveloTime):Entity/MigrationsSqlServer/20251126225001_InitialCreate.Designer.cs
->>>>>>>> ac9c60348704fb1fed7cd40219aeb13beb0ef374:Entity/MigrationsSqlServer/20251126225001_InitialCreate.Designer.cs
+                            CreatedAt = new DateTime(2025, 11, 28, 8, 22, 39, 934, DateTimeKind.Utc).AddTicks(6341),
                             Description = "El módulo operativo gestiona los formularios funcionales principales del sistema.",
                             Name = "Operational",
                             State = true
@@ -2503,15 +1870,7 @@ namespace Entity.MigrationsSqlServer
                         new
                         {
                             Id = 3,
-<<<<<<<< HEAD:Entity/MigrationsSqlServer/20251124231825_InitialCreate.Designer.cs
-                            CreatedAt = new DateTime(2025, 11, 24, 18, 18, 24, 284, DateTimeKind.Utc).AddTicks(2443),
-========
-<<<<<<<< HEAD:Entity/MigrationsSqlServer/20251124231825_InitialCreate.Designer.cs
-                            CreatedAt = new DateTime(2025, 11, 24, 18, 18, 24, 284, DateTimeKind.Utc).AddTicks(2443),
-========
-                            CreatedAt = new DateTime(2025, 11, 26, 17, 50, 0, 734, DateTimeKind.Utc).AddTicks(4913),
->>>>>>>> 0a32592 (Commit Correction DeveloTime):Entity/MigrationsSqlServer/20251126225001_InitialCreate.Designer.cs
->>>>>>>> ac9c60348704fb1fed7cd40219aeb13beb0ef374:Entity/MigrationsSqlServer/20251126225001_InitialCreate.Designer.cs
+                            CreatedAt = new DateTime(2025, 11, 28, 8, 22, 39, 934, DateTimeKind.Utc).AddTicks(6341),
                             Description = "El módulo de parametrización gestiona los formularios que controlan el comportamiento general del sistema.",
                             Name = "Parametrización",
                             State = true
@@ -2556,15 +1915,7 @@ namespace Entity.MigrationsSqlServer
                         {
                             Id = 1,
                             Code = "0001",
-<<<<<<<< HEAD:Entity/MigrationsSqlServer/20251124231825_InitialCreate.Designer.cs
-                            CreatedAt = new DateTime(2025, 11, 24, 18, 18, 24, 284, DateTimeKind.Utc).AddTicks(2443),
-========
-<<<<<<<< HEAD:Entity/MigrationsSqlServer/20251124231825_InitialCreate.Designer.cs
-                            CreatedAt = new DateTime(2025, 11, 24, 18, 18, 24, 284, DateTimeKind.Utc).AddTicks(2443),
-========
-                            CreatedAt = new DateTime(2025, 11, 26, 17, 50, 0, 734, DateTimeKind.Utc).AddTicks(4913),
->>>>>>>> 0a32592 (Commit Correction DeveloTime):Entity/MigrationsSqlServer/20251126225001_InitialCreate.Designer.cs
->>>>>>>> ac9c60348704fb1fed7cd40219aeb13beb0ef374:Entity/MigrationsSqlServer/20251126225001_InitialCreate.Designer.cs
+                            CreatedAt = new DateTime(2025, 11, 28, 8, 22, 39, 934, DateTimeKind.Utc).AddTicks(6341),
                             Description = "Allows the user to query, update, and delete records within the system, granting full access to the management of associated data.",
                             Name = "Reading and writing",
                             State = true
@@ -2573,15 +1924,7 @@ namespace Entity.MigrationsSqlServer
                         {
                             Id = 2,
                             Code = "0002",
-<<<<<<<< HEAD:Entity/MigrationsSqlServer/20251124231825_InitialCreate.Designer.cs
-                            CreatedAt = new DateTime(2025, 11, 24, 18, 18, 24, 284, DateTimeKind.Utc).AddTicks(2443),
-========
-<<<<<<<< HEAD:Entity/MigrationsSqlServer/20251124231825_InitialCreate.Designer.cs
-                            CreatedAt = new DateTime(2025, 11, 24, 18, 18, 24, 284, DateTimeKind.Utc).AddTicks(2443),
-========
-                            CreatedAt = new DateTime(2025, 11, 26, 17, 50, 0, 734, DateTimeKind.Utc).AddTicks(4913),
->>>>>>>> 0a32592 (Commit Correction DeveloTime):Entity/MigrationsSqlServer/20251126225001_InitialCreate.Designer.cs
->>>>>>>> ac9c60348704fb1fed7cd40219aeb13beb0ef374:Entity/MigrationsSqlServer/20251126225001_InitialCreate.Designer.cs
+                            CreatedAt = new DateTime(2025, 11, 28, 8, 22, 39, 934, DateTimeKind.Utc).AddTicks(6341),
                             Description = "Allows the user to only view records within the system, without permission to perform updates or deletions.",
                             Name = "Reading only",
                             State = true
@@ -2650,15 +1993,7 @@ namespace Entity.MigrationsSqlServer
                         {
                             Id = 1,
                             CodeDane = "441001004839",
-<<<<<<<< HEAD:Entity/MigrationsSqlServer/20251124231825_InitialCreate.Designer.cs
-                            CreatedAt = new DateTime(2025, 11, 24, 18, 18, 24, 284, DateTimeKind.Utc).AddTicks(2443),
-========
-<<<<<<<< HEAD:Entity/MigrationsSqlServer/20251124231825_InitialCreate.Designer.cs
-                            CreatedAt = new DateTime(2025, 11, 24, 18, 18, 24, 284, DateTimeKind.Utc).AddTicks(2443),
-========
-                            CreatedAt = new DateTime(2025, 11, 26, 17, 50, 0, 734, DateTimeKind.Utc).AddTicks(4913),
->>>>>>>> 0a32592 (Commit Correction DeveloTime):Entity/MigrationsSqlServer/20251126225001_InitialCreate.Designer.cs
->>>>>>>> ac9c60348704fb1fed7cd40219aeb13beb0ef374:Entity/MigrationsSqlServer/20251126225001_InitialCreate.Designer.cs
+                            CreatedAt = new DateTime(2025, 11, 28, 8, 22, 39, 934, DateTimeKind.Utc).AddTicks(6341),
                             DocumentType = 1,
                             Email = "mariaalejan1080@gmail.com",
                             EmailInstitutional = "mariaa_marinh@soy.sena.com",
@@ -2674,15 +2009,7 @@ namespace Entity.MigrationsSqlServer
                         {
                             Id = 2,
                             CodeDane = "441001004840",
-<<<<<<<< HEAD:Entity/MigrationsSqlServer/20251124231825_InitialCreate.Designer.cs
-                            CreatedAt = new DateTime(2025, 11, 24, 18, 18, 24, 284, DateTimeKind.Utc).AddTicks(2443),
-========
-<<<<<<<< HEAD:Entity/MigrationsSqlServer/20251124231825_InitialCreate.Designer.cs
-                            CreatedAt = new DateTime(2025, 11, 24, 18, 18, 24, 284, DateTimeKind.Utc).AddTicks(2443),
-========
-                            CreatedAt = new DateTime(2025, 11, 26, 17, 50, 0, 734, DateTimeKind.Utc).AddTicks(4913),
->>>>>>>> 0a32592 (Commit Correction DeveloTime):Entity/MigrationsSqlServer/20251126225001_InitialCreate.Designer.cs
->>>>>>>> ac9c60348704fb1fed7cd40219aeb13beb0ef374:Entity/MigrationsSqlServer/20251126225001_InitialCreate.Designer.cs
+                            CreatedAt = new DateTime(2025, 11, 28, 8, 22, 39, 934, DateTimeKind.Utc).AddTicks(6341),
                             DocumentType = 1,
                             Email = "catalina2005cometa@gmail.com",
                             EmailInstitutional = "catalina@soy.sena.com",
@@ -2734,15 +2061,7 @@ namespace Entity.MigrationsSqlServer
                         {
                             Id = 1,
                             Code = "01",
-<<<<<<<< HEAD:Entity/MigrationsSqlServer/20251124231825_InitialCreate.Designer.cs
-                            CreatedAt = new DateTime(2025, 11, 24, 18, 18, 24, 284, DateTimeKind.Utc).AddTicks(2443),
-========
-<<<<<<<< HEAD:Entity/MigrationsSqlServer/20251124231825_InitialCreate.Designer.cs
-                            CreatedAt = new DateTime(2025, 11, 24, 18, 18, 24, 284, DateTimeKind.Utc).AddTicks(2443),
-========
-                            CreatedAt = new DateTime(2025, 11, 26, 17, 50, 0, 734, DateTimeKind.Utc).AddTicks(4913),
->>>>>>>> 0a32592 (Commit Correction DeveloTime):Entity/MigrationsSqlServer/20251126225001_InitialCreate.Designer.cs
->>>>>>>> ac9c60348704fb1fed7cd40219aeb13beb0ef374:Entity/MigrationsSqlServer/20251126225001_InitialCreate.Designer.cs
+                            CreatedAt = new DateTime(2025, 11, 28, 8, 22, 39, 934, DateTimeKind.Utc).AddTicks(6341),
                             Description = "",
                             Name = "SUPERADMIN",
                             State = true
@@ -2751,15 +2070,7 @@ namespace Entity.MigrationsSqlServer
                         {
                             Id = 2,
                             Code = "0002",
-<<<<<<<< HEAD:Entity/MigrationsSqlServer/20251124231825_InitialCreate.Designer.cs
-                            CreatedAt = new DateTime(2025, 11, 24, 18, 18, 24, 284, DateTimeKind.Utc).AddTicks(2443),
-========
-<<<<<<<< HEAD:Entity/MigrationsSqlServer/20251124231825_InitialCreate.Designer.cs
-                            CreatedAt = new DateTime(2025, 11, 24, 18, 18, 24, 284, DateTimeKind.Utc).AddTicks(2443),
-========
-                            CreatedAt = new DateTime(2025, 11, 26, 17, 50, 0, 734, DateTimeKind.Utc).AddTicks(4913),
->>>>>>>> 0a32592 (Commit Correction DeveloTime):Entity/MigrationsSqlServer/20251126225001_InitialCreate.Designer.cs
->>>>>>>> ac9c60348704fb1fed7cd40219aeb13beb0ef374:Entity/MigrationsSqlServer/20251126225001_InitialCreate.Designer.cs
+                            CreatedAt = new DateTime(2025, 11, 28, 8, 22, 39, 934, DateTimeKind.Utc).AddTicks(6341),
                             Description = "Rol para profesores",
                             Name = "Profesor",
                             State = true
@@ -2806,15 +2117,7 @@ namespace Entity.MigrationsSqlServer
                         new
                         {
                             Id = 1,
-<<<<<<<< HEAD:Entity/MigrationsSqlServer/20251124231825_InitialCreate.Designer.cs
-                            CreatedAt = new DateTime(2025, 11, 24, 18, 18, 24, 284, DateTimeKind.Utc).AddTicks(2443),
-========
-<<<<<<<< HEAD:Entity/MigrationsSqlServer/20251124231825_InitialCreate.Designer.cs
-                            CreatedAt = new DateTime(2025, 11, 24, 18, 18, 24, 284, DateTimeKind.Utc).AddTicks(2443),
-========
-                            CreatedAt = new DateTime(2025, 11, 26, 17, 50, 0, 734, DateTimeKind.Utc).AddTicks(4913),
->>>>>>>> 0a32592 (Commit Correction DeveloTime):Entity/MigrationsSqlServer/20251126225001_InitialCreate.Designer.cs
->>>>>>>> ac9c60348704fb1fed7cd40219aeb13beb0ef374:Entity/MigrationsSqlServer/20251126225001_InitialCreate.Designer.cs
+                            CreatedAt = new DateTime(2025, 11, 28, 8, 22, 39, 934, DateTimeKind.Utc).AddTicks(6341),
                             FormId = 1,
                             PermissionId = 1,
                             RoleId = 1,
@@ -2823,15 +2126,7 @@ namespace Entity.MigrationsSqlServer
                         new
                         {
                             Id = 2,
-<<<<<<<< HEAD:Entity/MigrationsSqlServer/20251124231825_InitialCreate.Designer.cs
-                            CreatedAt = new DateTime(2025, 11, 24, 18, 18, 24, 284, DateTimeKind.Utc).AddTicks(2443),
-========
-<<<<<<<< HEAD:Entity/MigrationsSqlServer/20251124231825_InitialCreate.Designer.cs
-                            CreatedAt = new DateTime(2025, 11, 24, 18, 18, 24, 284, DateTimeKind.Utc).AddTicks(2443),
-========
-                            CreatedAt = new DateTime(2025, 11, 26, 17, 50, 0, 734, DateTimeKind.Utc).AddTicks(4913),
->>>>>>>> 0a32592 (Commit Correction DeveloTime):Entity/MigrationsSqlServer/20251126225001_InitialCreate.Designer.cs
->>>>>>>> ac9c60348704fb1fed7cd40219aeb13beb0ef374:Entity/MigrationsSqlServer/20251126225001_InitialCreate.Designer.cs
+                            CreatedAt = new DateTime(2025, 11, 28, 8, 22, 39, 934, DateTimeKind.Utc).AddTicks(6341),
                             FormId = 2,
                             PermissionId = 1,
                             RoleId = 1,
@@ -2840,15 +2135,7 @@ namespace Entity.MigrationsSqlServer
                         new
                         {
                             Id = 3,
-<<<<<<<< HEAD:Entity/MigrationsSqlServer/20251124231825_InitialCreate.Designer.cs
-                            CreatedAt = new DateTime(2025, 11, 24, 18, 18, 24, 284, DateTimeKind.Utc).AddTicks(2443),
-========
-<<<<<<<< HEAD:Entity/MigrationsSqlServer/20251124231825_InitialCreate.Designer.cs
-                            CreatedAt = new DateTime(2025, 11, 24, 18, 18, 24, 284, DateTimeKind.Utc).AddTicks(2443),
-========
-                            CreatedAt = new DateTime(2025, 11, 26, 17, 50, 0, 734, DateTimeKind.Utc).AddTicks(4913),
->>>>>>>> 0a32592 (Commit Correction DeveloTime):Entity/MigrationsSqlServer/20251126225001_InitialCreate.Designer.cs
->>>>>>>> ac9c60348704fb1fed7cd40219aeb13beb0ef374:Entity/MigrationsSqlServer/20251126225001_InitialCreate.Designer.cs
+                            CreatedAt = new DateTime(2025, 11, 28, 8, 22, 39, 934, DateTimeKind.Utc).AddTicks(6341),
                             FormId = 3,
                             PermissionId = 1,
                             RoleId = 1,
@@ -2857,15 +2144,7 @@ namespace Entity.MigrationsSqlServer
                         new
                         {
                             Id = 4,
-<<<<<<<< HEAD:Entity/MigrationsSqlServer/20251124231825_InitialCreate.Designer.cs
-                            CreatedAt = new DateTime(2025, 11, 24, 18, 18, 24, 284, DateTimeKind.Utc).AddTicks(2443),
-========
-<<<<<<<< HEAD:Entity/MigrationsSqlServer/20251124231825_InitialCreate.Designer.cs
-                            CreatedAt = new DateTime(2025, 11, 24, 18, 18, 24, 284, DateTimeKind.Utc).AddTicks(2443),
-========
-                            CreatedAt = new DateTime(2025, 11, 26, 17, 50, 0, 734, DateTimeKind.Utc).AddTicks(4913),
->>>>>>>> 0a32592 (Commit Correction DeveloTime):Entity/MigrationsSqlServer/20251126225001_InitialCreate.Designer.cs
->>>>>>>> ac9c60348704fb1fed7cd40219aeb13beb0ef374:Entity/MigrationsSqlServer/20251126225001_InitialCreate.Designer.cs
+                            CreatedAt = new DateTime(2025, 11, 28, 8, 22, 39, 934, DateTimeKind.Utc).AddTicks(6341),
                             FormId = 4,
                             PermissionId = 1,
                             RoleId = 1,
@@ -2874,15 +2153,7 @@ namespace Entity.MigrationsSqlServer
                         new
                         {
                             Id = 5,
-<<<<<<<< HEAD:Entity/MigrationsSqlServer/20251124231825_InitialCreate.Designer.cs
-                            CreatedAt = new DateTime(2025, 11, 24, 18, 18, 24, 284, DateTimeKind.Utc).AddTicks(2443),
-========
-<<<<<<<< HEAD:Entity/MigrationsSqlServer/20251124231825_InitialCreate.Designer.cs
-                            CreatedAt = new DateTime(2025, 11, 24, 18, 18, 24, 284, DateTimeKind.Utc).AddTicks(2443),
-========
-                            CreatedAt = new DateTime(2025, 11, 26, 17, 50, 0, 734, DateTimeKind.Utc).AddTicks(4913),
->>>>>>>> 0a32592 (Commit Correction DeveloTime):Entity/MigrationsSqlServer/20251126225001_InitialCreate.Designer.cs
->>>>>>>> ac9c60348704fb1fed7cd40219aeb13beb0ef374:Entity/MigrationsSqlServer/20251126225001_InitialCreate.Designer.cs
+                            CreatedAt = new DateTime(2025, 11, 28, 8, 22, 39, 934, DateTimeKind.Utc).AddTicks(6341),
                             FormId = 5,
                             PermissionId = 1,
                             RoleId = 1,
@@ -2891,15 +2162,7 @@ namespace Entity.MigrationsSqlServer
                         new
                         {
                             Id = 6,
-<<<<<<<< HEAD:Entity/MigrationsSqlServer/20251124231825_InitialCreate.Designer.cs
-                            CreatedAt = new DateTime(2025, 11, 24, 18, 18, 24, 284, DateTimeKind.Utc).AddTicks(2443),
-========
-<<<<<<<< HEAD:Entity/MigrationsSqlServer/20251124231825_InitialCreate.Designer.cs
-                            CreatedAt = new DateTime(2025, 11, 24, 18, 18, 24, 284, DateTimeKind.Utc).AddTicks(2443),
-========
-                            CreatedAt = new DateTime(2025, 11, 26, 17, 50, 0, 734, DateTimeKind.Utc).AddTicks(4913),
->>>>>>>> 0a32592 (Commit Correction DeveloTime):Entity/MigrationsSqlServer/20251126225001_InitialCreate.Designer.cs
->>>>>>>> ac9c60348704fb1fed7cd40219aeb13beb0ef374:Entity/MigrationsSqlServer/20251126225001_InitialCreate.Designer.cs
+                            CreatedAt = new DateTime(2025, 11, 28, 8, 22, 39, 934, DateTimeKind.Utc).AddTicks(6341),
                             FormId = 6,
                             PermissionId = 1,
                             RoleId = 1,
@@ -2908,15 +2171,7 @@ namespace Entity.MigrationsSqlServer
                         new
                         {
                             Id = 7,
-<<<<<<<< HEAD:Entity/MigrationsSqlServer/20251124231825_InitialCreate.Designer.cs
-                            CreatedAt = new DateTime(2025, 11, 24, 18, 18, 24, 284, DateTimeKind.Utc).AddTicks(2443),
-========
-<<<<<<<< HEAD:Entity/MigrationsSqlServer/20251124231825_InitialCreate.Designer.cs
-                            CreatedAt = new DateTime(2025, 11, 24, 18, 18, 24, 284, DateTimeKind.Utc).AddTicks(2443),
-========
-                            CreatedAt = new DateTime(2025, 11, 26, 17, 50, 0, 734, DateTimeKind.Utc).AddTicks(4913),
->>>>>>>> 0a32592 (Commit Correction DeveloTime):Entity/MigrationsSqlServer/20251126225001_InitialCreate.Designer.cs
->>>>>>>> ac9c60348704fb1fed7cd40219aeb13beb0ef374:Entity/MigrationsSqlServer/20251126225001_InitialCreate.Designer.cs
+                            CreatedAt = new DateTime(2025, 11, 28, 8, 22, 39, 934, DateTimeKind.Utc).AddTicks(6341),
                             FormId = 7,
                             PermissionId = 1,
                             RoleId = 1,
@@ -2925,15 +2180,7 @@ namespace Entity.MigrationsSqlServer
                         new
                         {
                             Id = 8,
-<<<<<<<< HEAD:Entity/MigrationsSqlServer/20251124231825_InitialCreate.Designer.cs
-                            CreatedAt = new DateTime(2025, 11, 24, 18, 18, 24, 284, DateTimeKind.Utc).AddTicks(2443),
-========
-<<<<<<<< HEAD:Entity/MigrationsSqlServer/20251124231825_InitialCreate.Designer.cs
-                            CreatedAt = new DateTime(2025, 11, 24, 18, 18, 24, 284, DateTimeKind.Utc).AddTicks(2443),
-========
-                            CreatedAt = new DateTime(2025, 11, 26, 17, 50, 0, 734, DateTimeKind.Utc).AddTicks(4913),
->>>>>>>> 0a32592 (Commit Correction DeveloTime):Entity/MigrationsSqlServer/20251126225001_InitialCreate.Designer.cs
->>>>>>>> ac9c60348704fb1fed7cd40219aeb13beb0ef374:Entity/MigrationsSqlServer/20251126225001_InitialCreate.Designer.cs
+                            CreatedAt = new DateTime(2025, 11, 28, 8, 22, 39, 934, DateTimeKind.Utc).AddTicks(6341),
                             FormId = 8,
                             PermissionId = 1,
                             RoleId = 1,
@@ -2942,15 +2189,7 @@ namespace Entity.MigrationsSqlServer
                         new
                         {
                             Id = 9,
-<<<<<<<< HEAD:Entity/MigrationsSqlServer/20251124231825_InitialCreate.Designer.cs
-                            CreatedAt = new DateTime(2025, 11, 24, 18, 18, 24, 284, DateTimeKind.Utc).AddTicks(2443),
-========
-<<<<<<<< HEAD:Entity/MigrationsSqlServer/20251124231825_InitialCreate.Designer.cs
-                            CreatedAt = new DateTime(2025, 11, 24, 18, 18, 24, 284, DateTimeKind.Utc).AddTicks(2443),
-========
-                            CreatedAt = new DateTime(2025, 11, 26, 17, 50, 0, 734, DateTimeKind.Utc).AddTicks(4913),
->>>>>>>> 0a32592 (Commit Correction DeveloTime):Entity/MigrationsSqlServer/20251126225001_InitialCreate.Designer.cs
->>>>>>>> ac9c60348704fb1fed7cd40219aeb13beb0ef374:Entity/MigrationsSqlServer/20251126225001_InitialCreate.Designer.cs
+                            CreatedAt = new DateTime(2025, 11, 28, 8, 22, 39, 934, DateTimeKind.Utc).AddTicks(6341),
                             FormId = 9,
                             PermissionId = 1,
                             RoleId = 1,
@@ -2959,15 +2198,7 @@ namespace Entity.MigrationsSqlServer
                         new
                         {
                             Id = 10,
-<<<<<<<< HEAD:Entity/MigrationsSqlServer/20251124231825_InitialCreate.Designer.cs
-                            CreatedAt = new DateTime(2025, 11, 24, 18, 18, 24, 284, DateTimeKind.Utc).AddTicks(2443),
-========
-<<<<<<<< HEAD:Entity/MigrationsSqlServer/20251124231825_InitialCreate.Designer.cs
-                            CreatedAt = new DateTime(2025, 11, 24, 18, 18, 24, 284, DateTimeKind.Utc).AddTicks(2443),
-========
-                            CreatedAt = new DateTime(2025, 11, 26, 17, 50, 0, 734, DateTimeKind.Utc).AddTicks(4913),
->>>>>>>> 0a32592 (Commit Correction DeveloTime):Entity/MigrationsSqlServer/20251126225001_InitialCreate.Designer.cs
->>>>>>>> ac9c60348704fb1fed7cd40219aeb13beb0ef374:Entity/MigrationsSqlServer/20251126225001_InitialCreate.Designer.cs
+                            CreatedAt = new DateTime(2025, 11, 28, 8, 22, 39, 934, DateTimeKind.Utc).AddTicks(6341),
                             FormId = 10,
                             PermissionId = 1,
                             RoleId = 1,
@@ -2976,15 +2207,7 @@ namespace Entity.MigrationsSqlServer
                         new
                         {
                             Id = 11,
-<<<<<<<< HEAD:Entity/MigrationsSqlServer/20251124231825_InitialCreate.Designer.cs
-                            CreatedAt = new DateTime(2025, 11, 24, 18, 18, 24, 284, DateTimeKind.Utc).AddTicks(2443),
-========
-<<<<<<<< HEAD:Entity/MigrationsSqlServer/20251124231825_InitialCreate.Designer.cs
-                            CreatedAt = new DateTime(2025, 11, 24, 18, 18, 24, 284, DateTimeKind.Utc).AddTicks(2443),
-========
-                            CreatedAt = new DateTime(2025, 11, 26, 17, 50, 0, 734, DateTimeKind.Utc).AddTicks(4913),
->>>>>>>> 0a32592 (Commit Correction DeveloTime):Entity/MigrationsSqlServer/20251126225001_InitialCreate.Designer.cs
->>>>>>>> ac9c60348704fb1fed7cd40219aeb13beb0ef374:Entity/MigrationsSqlServer/20251126225001_InitialCreate.Designer.cs
+                            CreatedAt = new DateTime(2025, 11, 28, 8, 22, 39, 934, DateTimeKind.Utc).AddTicks(6341),
                             FormId = 1,
                             PermissionId = 2,
                             RoleId = 2,
@@ -2993,15 +2216,7 @@ namespace Entity.MigrationsSqlServer
                         new
                         {
                             Id = 12,
-<<<<<<<< HEAD:Entity/MigrationsSqlServer/20251124231825_InitialCreate.Designer.cs
-                            CreatedAt = new DateTime(2025, 11, 24, 18, 18, 24, 284, DateTimeKind.Utc).AddTicks(2443),
-========
-<<<<<<<< HEAD:Entity/MigrationsSqlServer/20251124231825_InitialCreate.Designer.cs
-                            CreatedAt = new DateTime(2025, 11, 24, 18, 18, 24, 284, DateTimeKind.Utc).AddTicks(2443),
-========
-                            CreatedAt = new DateTime(2025, 11, 26, 17, 50, 0, 734, DateTimeKind.Utc).AddTicks(4913),
->>>>>>>> 0a32592 (Commit Correction DeveloTime):Entity/MigrationsSqlServer/20251126225001_InitialCreate.Designer.cs
->>>>>>>> ac9c60348704fb1fed7cd40219aeb13beb0ef374:Entity/MigrationsSqlServer/20251126225001_InitialCreate.Designer.cs
+                            CreatedAt = new DateTime(2025, 11, 28, 8, 22, 39, 934, DateTimeKind.Utc).AddTicks(6341),
                             FormId = 2,
                             PermissionId = 2,
                             RoleId = 2,
@@ -3010,15 +2225,7 @@ namespace Entity.MigrationsSqlServer
                         new
                         {
                             Id = 13,
-<<<<<<<< HEAD:Entity/MigrationsSqlServer/20251124231825_InitialCreate.Designer.cs
-                            CreatedAt = new DateTime(2025, 11, 24, 18, 18, 24, 284, DateTimeKind.Utc).AddTicks(2443),
-========
-<<<<<<<< HEAD:Entity/MigrationsSqlServer/20251124231825_InitialCreate.Designer.cs
-                            CreatedAt = new DateTime(2025, 11, 24, 18, 18, 24, 284, DateTimeKind.Utc).AddTicks(2443),
-========
-                            CreatedAt = new DateTime(2025, 11, 26, 17, 50, 0, 734, DateTimeKind.Utc).AddTicks(4913),
->>>>>>>> 0a32592 (Commit Correction DeveloTime):Entity/MigrationsSqlServer/20251126225001_InitialCreate.Designer.cs
->>>>>>>> ac9c60348704fb1fed7cd40219aeb13beb0ef374:Entity/MigrationsSqlServer/20251126225001_InitialCreate.Designer.cs
+                            CreatedAt = new DateTime(2025, 11, 28, 8, 22, 39, 934, DateTimeKind.Utc).AddTicks(6341),
                             FormId = 11,
                             PermissionId = 1,
                             RoleId = 1,
@@ -3027,15 +2234,7 @@ namespace Entity.MigrationsSqlServer
                         new
                         {
                             Id = 14,
-<<<<<<<< HEAD:Entity/MigrationsSqlServer/20251124231825_InitialCreate.Designer.cs
-                            CreatedAt = new DateTime(2025, 11, 24, 18, 18, 24, 284, DateTimeKind.Utc).AddTicks(2443),
-========
-<<<<<<<< HEAD:Entity/MigrationsSqlServer/20251124231825_InitialCreate.Designer.cs
-                            CreatedAt = new DateTime(2025, 11, 24, 18, 18, 24, 284, DateTimeKind.Utc).AddTicks(2443),
-========
-                            CreatedAt = new DateTime(2025, 11, 26, 17, 50, 0, 734, DateTimeKind.Utc).AddTicks(4913),
->>>>>>>> 0a32592 (Commit Correction DeveloTime):Entity/MigrationsSqlServer/20251126225001_InitialCreate.Designer.cs
->>>>>>>> ac9c60348704fb1fed7cd40219aeb13beb0ef374:Entity/MigrationsSqlServer/20251126225001_InitialCreate.Designer.cs
+                            CreatedAt = new DateTime(2025, 11, 28, 8, 22, 39, 934, DateTimeKind.Utc).AddTicks(6341),
                             FormId = 12,
                             PermissionId = 1,
                             RoleId = 1,
@@ -3044,15 +2243,7 @@ namespace Entity.MigrationsSqlServer
                         new
                         {
                             Id = 15,
-<<<<<<<< HEAD:Entity/MigrationsSqlServer/20251124231825_InitialCreate.Designer.cs
-                            CreatedAt = new DateTime(2025, 11, 24, 18, 18, 24, 284, DateTimeKind.Utc).AddTicks(2443),
-========
-<<<<<<<< HEAD:Entity/MigrationsSqlServer/20251124231825_InitialCreate.Designer.cs
-                            CreatedAt = new DateTime(2025, 11, 24, 18, 18, 24, 284, DateTimeKind.Utc).AddTicks(2443),
-========
-                            CreatedAt = new DateTime(2025, 11, 26, 17, 50, 0, 734, DateTimeKind.Utc).AddTicks(4913),
->>>>>>>> 0a32592 (Commit Correction DeveloTime):Entity/MigrationsSqlServer/20251126225001_InitialCreate.Designer.cs
->>>>>>>> ac9c60348704fb1fed7cd40219aeb13beb0ef374:Entity/MigrationsSqlServer/20251126225001_InitialCreate.Designer.cs
+                            CreatedAt = new DateTime(2025, 11, 28, 8, 22, 39, 934, DateTimeKind.Utc).AddTicks(6341),
                             FormId = 13,
                             PermissionId = 1,
                             RoleId = 1,
@@ -3061,15 +2252,7 @@ namespace Entity.MigrationsSqlServer
                         new
                         {
                             Id = 16,
-<<<<<<<< HEAD:Entity/MigrationsSqlServer/20251124231825_InitialCreate.Designer.cs
-                            CreatedAt = new DateTime(2025, 11, 24, 18, 18, 24, 284, DateTimeKind.Utc).AddTicks(2443),
-========
-<<<<<<<< HEAD:Entity/MigrationsSqlServer/20251124231825_InitialCreate.Designer.cs
-                            CreatedAt = new DateTime(2025, 11, 24, 18, 18, 24, 284, DateTimeKind.Utc).AddTicks(2443),
-========
-                            CreatedAt = new DateTime(2025, 11, 26, 17, 50, 0, 734, DateTimeKind.Utc).AddTicks(4913),
->>>>>>>> 0a32592 (Commit Correction DeveloTime):Entity/MigrationsSqlServer/20251126225001_InitialCreate.Designer.cs
->>>>>>>> ac9c60348704fb1fed7cd40219aeb13beb0ef374:Entity/MigrationsSqlServer/20251126225001_InitialCreate.Designer.cs
+                            CreatedAt = new DateTime(2025, 11, 28, 8, 22, 39, 934, DateTimeKind.Utc).AddTicks(6341),
                             FormId = 14,
                             PermissionId = 1,
                             RoleId = 1,
@@ -3078,15 +2261,7 @@ namespace Entity.MigrationsSqlServer
                         new
                         {
                             Id = 17,
-<<<<<<<< HEAD:Entity/MigrationsSqlServer/20251124231825_InitialCreate.Designer.cs
-                            CreatedAt = new DateTime(2025, 11, 24, 18, 18, 24, 284, DateTimeKind.Utc).AddTicks(2443),
-========
-<<<<<<<< HEAD:Entity/MigrationsSqlServer/20251124231825_InitialCreate.Designer.cs
-                            CreatedAt = new DateTime(2025, 11, 24, 18, 18, 24, 284, DateTimeKind.Utc).AddTicks(2443),
-========
-                            CreatedAt = new DateTime(2025, 11, 26, 17, 50, 0, 734, DateTimeKind.Utc).AddTicks(4913),
->>>>>>>> 0a32592 (Commit Correction DeveloTime):Entity/MigrationsSqlServer/20251126225001_InitialCreate.Designer.cs
->>>>>>>> ac9c60348704fb1fed7cd40219aeb13beb0ef374:Entity/MigrationsSqlServer/20251126225001_InitialCreate.Designer.cs
+                            CreatedAt = new DateTime(2025, 11, 28, 8, 22, 39, 934, DateTimeKind.Utc).AddTicks(6341),
                             FormId = 15,
                             PermissionId = 1,
                             RoleId = 1,
@@ -3095,15 +2270,7 @@ namespace Entity.MigrationsSqlServer
                         new
                         {
                             Id = 18,
-<<<<<<<< HEAD:Entity/MigrationsSqlServer/20251124231825_InitialCreate.Designer.cs
-                            CreatedAt = new DateTime(2025, 11, 24, 18, 18, 24, 284, DateTimeKind.Utc).AddTicks(2443),
-========
-<<<<<<<< HEAD:Entity/MigrationsSqlServer/20251124231825_InitialCreate.Designer.cs
-                            CreatedAt = new DateTime(2025, 11, 24, 18, 18, 24, 284, DateTimeKind.Utc).AddTicks(2443),
-========
-                            CreatedAt = new DateTime(2025, 11, 26, 17, 50, 0, 734, DateTimeKind.Utc).AddTicks(4913),
->>>>>>>> 0a32592 (Commit Correction DeveloTime):Entity/MigrationsSqlServer/20251126225001_InitialCreate.Designer.cs
->>>>>>>> ac9c60348704fb1fed7cd40219aeb13beb0ef374:Entity/MigrationsSqlServer/20251126225001_InitialCreate.Designer.cs
+                            CreatedAt = new DateTime(2025, 11, 28, 8, 22, 39, 934, DateTimeKind.Utc).AddTicks(6341),
                             FormId = 16,
                             PermissionId = 1,
                             RoleId = 1,
@@ -3112,15 +2279,7 @@ namespace Entity.MigrationsSqlServer
                         new
                         {
                             Id = 19,
-<<<<<<<< HEAD:Entity/MigrationsSqlServer/20251124231825_InitialCreate.Designer.cs
-                            CreatedAt = new DateTime(2025, 11, 24, 18, 18, 24, 284, DateTimeKind.Utc).AddTicks(2443),
-========
-<<<<<<<< HEAD:Entity/MigrationsSqlServer/20251124231825_InitialCreate.Designer.cs
-                            CreatedAt = new DateTime(2025, 11, 24, 18, 18, 24, 284, DateTimeKind.Utc).AddTicks(2443),
-========
-                            CreatedAt = new DateTime(2025, 11, 26, 17, 50, 0, 734, DateTimeKind.Utc).AddTicks(4913),
->>>>>>>> 0a32592 (Commit Correction DeveloTime):Entity/MigrationsSqlServer/20251126225001_InitialCreate.Designer.cs
->>>>>>>> ac9c60348704fb1fed7cd40219aeb13beb0ef374:Entity/MigrationsSqlServer/20251126225001_InitialCreate.Designer.cs
+                            CreatedAt = new DateTime(2025, 11, 28, 8, 22, 39, 934, DateTimeKind.Utc).AddTicks(6341),
                             FormId = 17,
                             PermissionId = 1,
                             RoleId = 1,
@@ -3129,15 +2288,7 @@ namespace Entity.MigrationsSqlServer
                         new
                         {
                             Id = 20,
-<<<<<<<< HEAD:Entity/MigrationsSqlServer/20251124231825_InitialCreate.Designer.cs
-                            CreatedAt = new DateTime(2025, 11, 24, 18, 18, 24, 284, DateTimeKind.Utc).AddTicks(2443),
-========
-<<<<<<<< HEAD:Entity/MigrationsSqlServer/20251124231825_InitialCreate.Designer.cs
-                            CreatedAt = new DateTime(2025, 11, 24, 18, 18, 24, 284, DateTimeKind.Utc).AddTicks(2443),
-========
-                            CreatedAt = new DateTime(2025, 11, 26, 17, 50, 0, 734, DateTimeKind.Utc).AddTicks(4913),
->>>>>>>> 0a32592 (Commit Correction DeveloTime):Entity/MigrationsSqlServer/20251126225001_InitialCreate.Designer.cs
->>>>>>>> ac9c60348704fb1fed7cd40219aeb13beb0ef374:Entity/MigrationsSqlServer/20251126225001_InitialCreate.Designer.cs
+                            CreatedAt = new DateTime(2025, 11, 28, 8, 22, 39, 934, DateTimeKind.Utc).AddTicks(6341),
                             FormId = 18,
                             PermissionId = 1,
                             RoleId = 1,
@@ -3145,33 +2296,8 @@ namespace Entity.MigrationsSqlServer
                         },
                         new
                         {
-                            Id = 22,
-<<<<<<<< HEAD:Entity/MigrationsSqlServer/20251124231825_InitialCreate.Designer.cs
-                            CreatedAt = new DateTime(2025, 11, 24, 18, 18, 24, 284, DateTimeKind.Utc).AddTicks(2443),
-========
-<<<<<<<< HEAD:Entity/MigrationsSqlServer/20251124231825_InitialCreate.Designer.cs
-                            CreatedAt = new DateTime(2025, 11, 24, 18, 18, 24, 284, DateTimeKind.Utc).AddTicks(2443),
-========
-                            CreatedAt = new DateTime(2025, 11, 26, 17, 50, 0, 734, DateTimeKind.Utc).AddTicks(4913),
->>>>>>>> 0a32592 (Commit Correction DeveloTime):Entity/MigrationsSqlServer/20251126225001_InitialCreate.Designer.cs
->>>>>>>> ac9c60348704fb1fed7cd40219aeb13beb0ef374:Entity/MigrationsSqlServer/20251126225001_InitialCreate.Designer.cs
-                            FormId = 19,
-                            PermissionId = 2,
-                            RoleId = 2,
-                            State = true
-                        },
-                        new
-                        {
                             Id = 21,
-<<<<<<<< HEAD:Entity/MigrationsSqlServer/20251124231825_InitialCreate.Designer.cs
-                            CreatedAt = new DateTime(2025, 11, 24, 18, 18, 24, 284, DateTimeKind.Utc).AddTicks(2443),
-========
-<<<<<<<< HEAD:Entity/MigrationsSqlServer/20251124231825_InitialCreate.Designer.cs
-                            CreatedAt = new DateTime(2025, 11, 24, 18, 18, 24, 284, DateTimeKind.Utc).AddTicks(2443),
-========
-                            CreatedAt = new DateTime(2025, 11, 26, 17, 50, 0, 734, DateTimeKind.Utc).AddTicks(4913),
->>>>>>>> 0a32592 (Commit Correction DeveloTime):Entity/MigrationsSqlServer/20251126225001_InitialCreate.Designer.cs
->>>>>>>> ac9c60348704fb1fed7cd40219aeb13beb0ef374:Entity/MigrationsSqlServer/20251126225001_InitialCreate.Designer.cs
+                            CreatedAt = new DateTime(2025, 11, 28, 8, 22, 39, 934, DateTimeKind.Utc).AddTicks(6341),
                             FormId = 19,
                             PermissionId = 1,
                             RoleId = 1,
@@ -3214,15 +2340,7 @@ namespace Entity.MigrationsSqlServer
                         new
                         {
                             Id = 1,
-<<<<<<<< HEAD:Entity/MigrationsSqlServer/20251124231825_InitialCreate.Designer.cs
-                            CreatedAt = new DateTime(2025, 11, 24, 18, 18, 24, 284, DateTimeKind.Utc).AddTicks(2443),
-========
-<<<<<<<< HEAD:Entity/MigrationsSqlServer/20251124231825_InitialCreate.Designer.cs
-                            CreatedAt = new DateTime(2025, 11, 24, 18, 18, 24, 284, DateTimeKind.Utc).AddTicks(2443),
-========
-                            CreatedAt = new DateTime(2025, 11, 26, 17, 50, 0, 734, DateTimeKind.Utc).AddTicks(4913),
->>>>>>>> 0a32592 (Commit Correction DeveloTime):Entity/MigrationsSqlServer/20251126225001_InitialCreate.Designer.cs
->>>>>>>> ac9c60348704fb1fed7cd40219aeb13beb0ef374:Entity/MigrationsSqlServer/20251126225001_InitialCreate.Designer.cs
+                            CreatedAt = new DateTime(2025, 11, 28, 8, 22, 39, 934, DateTimeKind.Utc).AddTicks(6341),
                             RoleId = 1,
                             State = true,
                             UserId = 1
@@ -3230,15 +2348,7 @@ namespace Entity.MigrationsSqlServer
                         new
                         {
                             Id = 2,
-<<<<<<<< HEAD:Entity/MigrationsSqlServer/20251124231825_InitialCreate.Designer.cs
-                            CreatedAt = new DateTime(2025, 11, 24, 18, 18, 24, 284, DateTimeKind.Utc).AddTicks(2443),
-========
-<<<<<<<< HEAD:Entity/MigrationsSqlServer/20251124231825_InitialCreate.Designer.cs
-                            CreatedAt = new DateTime(2025, 11, 24, 18, 18, 24, 284, DateTimeKind.Utc).AddTicks(2443),
-========
-                            CreatedAt = new DateTime(2025, 11, 26, 17, 50, 0, 734, DateTimeKind.Utc).AddTicks(4913),
->>>>>>>> 0a32592 (Commit Correction DeveloTime):Entity/MigrationsSqlServer/20251126225001_InitialCreate.Designer.cs
->>>>>>>> ac9c60348704fb1fed7cd40219aeb13beb0ef374:Entity/MigrationsSqlServer/20251126225001_InitialCreate.Designer.cs
+                            CreatedAt = new DateTime(2025, 11, 28, 8, 22, 39, 934, DateTimeKind.Utc).AddTicks(6341),
                             RoleId = 2,
                             State = true,
                             UserId = 2
@@ -3294,15 +2404,7 @@ namespace Entity.MigrationsSqlServer
                         {
                             Id = 1,
                             Code = "0001",
-<<<<<<<< HEAD:Entity/MigrationsSqlServer/20251124231825_InitialCreate.Designer.cs
-                            CreatedAt = new DateTime(2025, 11, 24, 18, 18, 24, 284, DateTimeKind.Utc).AddTicks(2443),
-========
-<<<<<<<< HEAD:Entity/MigrationsSqlServer/20251124231825_InitialCreate.Designer.cs
-                            CreatedAt = new DateTime(2025, 11, 24, 18, 18, 24, 284, DateTimeKind.Utc).AddTicks(2443),
-========
-                            CreatedAt = new DateTime(2025, 11, 26, 17, 50, 0, 734, DateTimeKind.Utc).AddTicks(4913),
->>>>>>>> 0a32592 (Commit Correction DeveloTime):Entity/MigrationsSqlServer/20251126225001_InitialCreate.Designer.cs
->>>>>>>> ac9c60348704fb1fed7cd40219aeb13beb0ef374:Entity/MigrationsSqlServer/20251126225001_InitialCreate.Designer.cs
+                            CreatedAt = new DateTime(2025, 11, 28, 8, 22, 39, 934, DateTimeKind.Utc).AddTicks(6341),
                             Password = "202CB962AC59075B964B07152D234B70",
                             PersonId = 1,
                             State = true,
@@ -3312,15 +2414,7 @@ namespace Entity.MigrationsSqlServer
                         {
                             Id = 2,
                             Code = "0002",
-<<<<<<<< HEAD:Entity/MigrationsSqlServer/20251124231825_InitialCreate.Designer.cs
-                            CreatedAt = new DateTime(2025, 11, 24, 18, 18, 24, 284, DateTimeKind.Utc).AddTicks(2443),
-========
-<<<<<<<< HEAD:Entity/MigrationsSqlServer/20251124231825_InitialCreate.Designer.cs
-                            CreatedAt = new DateTime(2025, 11, 24, 18, 18, 24, 284, DateTimeKind.Utc).AddTicks(2443),
-========
-                            CreatedAt = new DateTime(2025, 11, 26, 17, 50, 0, 734, DateTimeKind.Utc).AddTicks(4913),
->>>>>>>> 0a32592 (Commit Correction DeveloTime):Entity/MigrationsSqlServer/20251126225001_InitialCreate.Designer.cs
->>>>>>>> ac9c60348704fb1fed7cd40219aeb13beb0ef374:Entity/MigrationsSqlServer/20251126225001_InitialCreate.Designer.cs
+                            CreatedAt = new DateTime(2025, 11, 28, 8, 22, 39, 934, DateTimeKind.Utc).AddTicks(6341),
                             Password = "202CB962AC59075B964B07152D234B70",
                             PersonId = 2,
                             State = true,

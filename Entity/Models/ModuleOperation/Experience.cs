@@ -12,7 +12,7 @@ namespace Entity.Models.ModuleOperation
         public string NameExperiences { get; set; } = string.Empty;
         public string Code { get; set; } = string.Empty;
         public string ThematicLocation { get; set; } = string.Empty;
-        public string Developmenttime { get; set; } 
+        public DateTime Developmenttime { get; set; } = DateTime.Now;
         public string Recognition { get; set; } = string.Empty;
         public string Socialization { get; set; } = string.Empty;
 

@@ -4,6 +4,7 @@ using Entity.Context;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Entity.MigrationsSqlServer
 {
     [DbContext(typeof(ApplicationContext))]
-    partial class ApplicationContextModelSnapshot : ModelSnapshot
+    [Migration("20251128132240_InitialCreate")]
+    partial class InitialCreate
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -2289,15 +2292,6 @@ namespace Entity.MigrationsSqlServer
                             FormId = 18,
                             PermissionId = 1,
                             RoleId = 1,
-                            State = true
-                        },
-                        new
-                        {
-                            Id = 22,
-                            CreatedAt = new DateTime(2025, 11, 24, 18, 18, 24, 284, DateTimeKind.Utc).AddTicks(2443),
-                            FormId = 19,
-                            PermissionId = 2,
-                            RoleId = 2,
                             State = true
                         },
                         new

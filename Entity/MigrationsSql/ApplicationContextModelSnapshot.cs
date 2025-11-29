@@ -2293,15 +2293,6 @@ namespace Entity.MigrationsSqlServer
                         },
                         new
                         {
-                            Id = 22,
-                            CreatedAt = new DateTime(2025, 11, 24, 18, 18, 24, 284, DateTimeKind.Utc).AddTicks(2443),
-                            FormId = 19,
-                            PermissionId = 2,
-                            RoleId = 2,
-                            State = true
-                        },
-                        new
-                        {
                             Id = 21,
                             CreatedAt = new DateTime(2025, 11, 28, 8, 22, 39, 934, DateTimeKind.Utc).AddTicks(6341),
                             FormId = 19,
