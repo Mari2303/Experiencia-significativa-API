@@ -22,14 +22,17 @@ using Utilities.JwtAuthentication;
 var builder = WebApplication.CreateBuilder(args);
 
 
-// SQL Server
 builder.Services.AddDbContext<ApplicationContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
 
-// PostgreSQL (habilítalo si lo necesitas)
+
+Console.WriteLine("Connection string usada:");
+Console.WriteLine(builder.Configuration.GetConnectionString("DefaultConnection"));
+
+/*// PostgreSQL (habilítalo si lo necesitas)
 builder.Services.AddDbContext<ApplicationContextPostgres>(options =>
     options.UseNpgsql(builder.Configuration.GetConnectionString("PostgresConnection")));
-
+*/
 // MySQL (deshabilitado por ahora)
 /*
 builder.Services.AddDbContext<ApplicationContextMySQL>(options =>
@@ -122,10 +125,10 @@ var app = builder.Build();
 
 //  MIGRACIONES AUTOMÁTICAS (opcional)
 
-using (var scope = app.Services.CreateScope())
-{
-    var sqlServerContext = scope.ServiceProvider.GetRequiredService<ApplicationContext>();
-    sqlServerContext.Database.Migrate();
+//using (var scope = app.Services.CreateScope())
+//{
+   // var sqlServerContext = scope.ServiceProvider.GetRequiredService<ApplicationContext>();
+   // sqlServerContext.Database.Migrate();
 
     // Si deseas aplicar también las migraciones de otros motores, descomenta:
     
@@ -135,7 +138,7 @@ using (var scope = app.Services.CreateScope())
 //    var mySqlContext = scope.ServiceProvider.GetRequiredService<ApplicationContextMySQL>();
   //  mySqlContext.Database.Migrate();
     
-}
+//}
 
 
 //  CONFIGURACIÓN DEL PIPELINE HTTP
