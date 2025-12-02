@@ -35,7 +35,7 @@ namespace Service.Extensions
             if (!string.IsNullOrWhiteSpace(request.ThematicLocation))
                 experience.ThematicLocation = request.ThematicLocation;
 
-            if (!string.IsNullOrWhiteSpace(request.Developmenttime))
+          if (request.Developmenttime != DateTime.MinValue)
                 experience.Developmenttime = request.Developmenttime;
 
             if (!string.IsNullOrWhiteSpace(request.Recognition))
@@ -207,48 +207,74 @@ namespace Service.Extensions
                         .ToList();
 
                 // Linea tematicas
-
                 if (request.ThematicLineIds != null && request.ThematicLineIds.Any())
                 {
-                    experience.ExperienceLineThematics = request.ThematicLineIds.Select(id =>
-                        new ExperienceLineThematic
+                    // Crear solo los nuevos, no reemplazar toda la lista
+                    foreach (var id in request.ThematicLineIds)
+                    {
+                        if (!experience.ExperienceLineThematics.Any(x => x.LineThematicId == id))
                         {
-                            LineThematicId = id,
-                            State = true,
-                            CreatedAt = DateTime.UtcNow
-                        }).ToList();
-            }
-
-               
-                // grados
-          
-                if (request.GradesUpdate != null && request.GradesUpdate.Any())
-            {
-                    experience.ExperienceGrades = request.GradesUpdate.Select(g =>
-                        new ExperienceGrade
-                {
-                            GradeId = g.Id,
-                            Description = g.Description
-                        }).ToList();
+                            experience.ExperienceLineThematics.Add(new ExperienceLineThematic
+                            {
+                                LineThematicId = id,
+                                State = true,
+                                CreatedAt = DateTime.UtcNow
+                            });
+                        }
+                    }
                 }
 
-               
+
+
+                // grados
+
+                if (request.GradesUpdate != null && request.GradesUpdate.Any())
+                {
+                    foreach (var grade in request.GradesUpdate)
+                    {
+                        var existing = experience.ExperienceGrades
+                            .FirstOrDefault(x => x.GradeId == grade.Id);
+
+                        if (existing != null)
+                        {
+                            // Actualiza solo los campos cambiados
+                            existing.Description = grade.Description ?? existing.Description;
+                        }
+                        else
+                        {
+                            // Agrega si no existe
+                            experience.ExperienceGrades.Add(new ExperienceGrade
+                            {
+                                GradeId = grade.Id,
+                                Description = grade.Description
+                            });
+                        }
+                    }
+                }
+
+
+
                 // poblacion
 
                 if (request.PopulationGradeIds != null && request.PopulationGradeIds.Any())
                 {
-                    experience.ExperiencePopulations = request.PopulationGradeIds.Select(id =>
-                        new ExperiencePopulation
+                    foreach (var id in request.PopulationGradeIds)
                     {
-                            PopulationGradeId = id,
-                            State = true,
-                            CreatedAt = DateTime.UtcNow
-                        }).ToList();
+                        if (!experience.ExperiencePopulations.Any(x => x.PopulationGradeId == id))
+                        {
+                            experience.ExperiencePopulations.Add(new ExperiencePopulation
+                            {
+                                PopulationGradeId = id,
+                                State = true,
+                                CreatedAt = DateTime.UtcNow
+                            });
+                        }
                     }
+                }
 
-                
+
                 // historial
-               
+
                 if (request.HistoryExperiencesUpdate != null && request.HistoryExperiencesUpdate.Any())
                 {
                     experience.HistoryExperiences = request.HistoryExperiencesUpdate.Select(h =>
