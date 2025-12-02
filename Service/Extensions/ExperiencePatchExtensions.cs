@@ -34,7 +34,7 @@ namespace Service.Extensions
 
             if (!string.IsNullOrWhiteSpace(request.ThematicLocation))
                 experience.ThematicLocation = request.ThematicLocation;
-
+            //
           if (request.Developmenttime != DateTime.MinValue)
                 experience.Developmenttime = request.Developmenttime;
 
