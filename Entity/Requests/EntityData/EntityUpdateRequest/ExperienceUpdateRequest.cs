@@ -12,7 +12,7 @@ using Entity.Requests.ModuleGeographic;
 
 namespace Entity.Requests.EntityData.EntityUpdateRequest
 {
-    /// <summary>
+    /// <summary></summary>
     public class ExperienceUpdateRequest
     {
         public int ExperienceId { get; set; }

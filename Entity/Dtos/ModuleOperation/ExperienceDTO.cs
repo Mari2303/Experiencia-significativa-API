@@ -7,7 +7,7 @@ using Entity.Dtos.ModuleBase;
 using Entity.Models.ModuleOperation;
 
 namespace Entity.Dtos.ModuleOperational
-{
+{//
     public class ExperienceDTO : BaseDTO
     {
         public string NameExperiences { get; set; } = string.Empty;

@@ -9,7 +9,7 @@ using Entity.Requests.ModulesParamer;
 namespace Entity.Requests.EntityData.EntityCreateRequest
 {
     public class ExperienceCreateRequest
-    {
+    {//
         public string NameExperiences { get; set; } = string.Empty;
         public string Code { get; set; } = string.Empty;
         public string ThematicLocation { get; set; } = string.Empty;

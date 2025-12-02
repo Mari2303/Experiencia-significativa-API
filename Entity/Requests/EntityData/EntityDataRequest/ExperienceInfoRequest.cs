@@ -12,7 +12,7 @@ using Entity.Requests.ModuleOperation;
 namespace Entity.Requests.EntityData.EntityDataRequest
 {
     public  class ExperienceInfoRequest
-    {
+    {//
         public string NameExperiences { get; set; } = string.Empty;
         public DateTime Developmenttime { get; set; } = DateTime.Now;
         public int StateExperienceId { get; set; }
